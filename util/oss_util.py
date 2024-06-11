@@ -9,6 +9,7 @@ import boto3
 from datetime import datetime
 import random
 from PIL import Image
+from urllib.parse import urlparse
 
 # 设置日志记录
 logging.basicConfig(
@@ -42,7 +43,11 @@ class OSSUtil:
         # 根据url生成名字
         image_name = None
         if url:
-            image_name = url.replace("https://", "").replace("http://", "").replace(".", "-")
+            domain = urlparse(url).netloc
+            path= urlparse(url).path
+            if path and path.endswith("/"):
+                path = path[:-1]
+            image_name = (domain.replace("www.","") + path.replace("/", "-")).replace(".", "-")
         else:
             image_name = random.randint(1, 1000)  # 生成随机值，范围可根据需求调整
         # 如果is_thumbnail True，则添加"thumbnail-"前缀
