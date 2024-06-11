@@ -1,0 +1,9 @@
+beautifulsoup4
+pyppeteer
+flask[async]
+python-dotenv
+groq
+boto3
+datetime
+requests
+Pillow
