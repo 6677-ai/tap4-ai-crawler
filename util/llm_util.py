@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from groq import Groq
 import logging
+from transformers import LlamaTokenizer
 from util.common_util import CommonUtil
 
 # 设置日志记录
@@ -11,6 +12,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 util = CommonUtil()
+# 初始化LLaMA模型的Tokenizer
+tokenizer = LlamaTokenizer.from_pretrained("huggyllama/llama-65b")
 
 class LLMUtil:
     def __init__(self):
@@ -20,6 +23,10 @@ class LLMUtil:
         self.tag_selector_sys_prompt = os.getenv('TAG_SELECTOR_SYS_PROMPT')
         self.language_sys_prompt = os.getenv('LANGUAGE_SYS_PROMPT')
         self.groq_model = os.getenv('GROQ_MODEL')
+        self.groq_max_tokens = int(os.getenv('GROQ_MAX_TOKENS', 5000))
+        self.client = Groq(
+            api_key=self.groq_api_key
+        )
 
     def process_detail(self, user_prompt):
         logger.info("正在处理Detail...")
@@ -59,10 +66,12 @@ class LLMUtil:
 
         logger.info("LLM正在处理")
         try:
-            client = Groq(
-                api_key=self.groq_api_key
-            )
-            chat_completion = client.chat.completions.create(
+            tokens = tokenizer.encode(user_prompt)
+            if len(tokens) > self.groq_max_tokens:
+                truncated_tokens = tokens[:self.groq_max_tokens]
+                user_prompt = tokenizer.decode(truncated_tokens)
+
+            chat_completion = self.client.chat.completions.create(
                 messages=[
                     {
                         "role": "system",
@@ -82,5 +91,5 @@ class LLMUtil:
                 logger.info("LLM完成处理，处理结果为空")
                 return None
         except Exception as e:
-            logger.error(f"LLM处理失败")
+            logger.error(f"LLM处理失败", e)
             return None
