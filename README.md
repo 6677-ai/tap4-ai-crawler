@@ -28,7 +28,7 @@ If you are interested in this project, feel free to scan the QR code to join our
 
 ## Quick Start
 
-- [Register on Zeabur](https://zeabur.com?referralCode=leoli202303)
+- [![Register on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=leoli202303&utm_source=leoli202303&utm_campaign=oss)
 - Create a new project and service on Zeabur
 
 ### （1）Quick Deployment in Zeabur Based on Image Mode
