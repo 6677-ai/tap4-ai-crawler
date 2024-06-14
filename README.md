@@ -34,7 +34,7 @@ If you are interested in this project, feel free to scan the QR code to join our
 ### （1）Quick Deployment in Zeabur Based on Image Mode
 
 **Click the Deploy Button and fill in the environment variables as instructed**<br>
-[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/89NZ05)
+[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/VK9QAP)
 
 ### （2）Deploying in Zeabur based on code mode
 

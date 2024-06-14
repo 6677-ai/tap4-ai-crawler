@@ -33,7 +33,7 @@
 ### （1）在 Zeabur 基于镜像模式的快速部署
 
 **点击 Deploy Button，根据指引填写环境变量即可**<br>
-[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/89NZ05)
+[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/VK9QAP)
 
 ### （2）在 Zeabur 基于代码模式的部署
 
