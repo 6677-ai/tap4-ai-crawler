@@ -1,5 +1,8 @@
 # Tap4 AI Crawler
-This is an open-source AI web scraping project by [Tap4 AI Tools Directory](https://tap4.ai). Our goal is to provide an automated web scraping capability based on the tools directory. This project is based on Python, very lightweight, easy to maintain, suitable for individual developers interested in AI tools directories, and also for learners interested in Python. We welcome everyone to fork and star.
+
+Tap4 AI Crawler is an open source web crawler built by [tap4.ai](https://tap4.ai), that will convert the website into the website summarize info with LLM. Includes powerful scraping, crawling and data extraction capabilities, web page screenshots. With Tap4 AI Crawler, you can not only easily update the ai tool detail for your AI Tools Directory but also summary of the website.
+
+This project is based on Python, very lightweight, easy to maintain, suitable for individual developers interested in AI tools directories, and also for learners interested in Python. We welcome everyone to fork and star.
 
 English | [简体中文](./README.zh-CN.md)
 
@@ -11,26 +14,32 @@ If you find this project helpful, you can buy me a coffee:
 
 <a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-If you are interested in this project, feel free to scan the QR code to join our WeChat group: ![tap4-ai-wx-group](./images/640.jpg)
+If you are interested in this project, feel free to scan the QR code to join our WeChat group: ![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
 
 ## Features
 
-- Support for fetching titles, descriptions, and introductions of specified websites
-- Support for generating screenshots of specified websites
-- Support for using llama3 tool (Groq) to process website introductions and generate Markdown descriptions
+- Fetching titles, descriptions, and introductions of input websites
+- Making screenshots of the input websites
+- Support for using LLM (llama3/chatgpt) to process website introductions and generate Markdown descriptions
 - Quick configuration
 - Fast deployment
 
 ![tai4-ai](./images/tap4-ai.png)
 
 ## Quick Start
-- [Register on Zeabur](<https://zeabur.com?referralCode=leoli202303>)
+
+- [Register on Zeabur](https://zeabur.com?referralCode=leoli202303)
 - Create a new project and service on Zeabur
+
 ### （1）Quick Deployment in Zeabur Based on Image Mode
+
 **Click the Deploy Button and fill in the environment variables as instructed**<br>
 [![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/89NZ05)
+
 ### （2）Deploying in Zeabur based on code mode
+
 Deploying a Github repository after selecting Fork in Zeabur, and configuring environment variables in Zeabur or manually modifying the .env file in the code repository. The environment variables are as follows:
+
 - `GROQ_API_KEY`: Key for Groq, apply for it [Here](https://console.groq.com/keys)
 - `S3_ENDPOINT_URL`: Endpoint for S3(such as Cloudflare R2), apply for [R2](https://www.cloudflare.com/zh-cn/developer-platform/r2/)
 - `S3_BUCKET_NAME`: Bucket name for S3(such as Cloudflare R2)
@@ -134,4 +143,3 @@ Best AI Girl Friend is the AI girl generator and chat product. You can generate 
 ## LICENSE
 
 MIT
-
