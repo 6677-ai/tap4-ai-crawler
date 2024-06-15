@@ -171,7 +171,7 @@ Response Params:
 
 If you are interested in this project, feel free to scan the QR code to join our WeChat group: ![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
 
-## Links to our products
+## Link products
 
 ### TAP4-AI-Directory
 
