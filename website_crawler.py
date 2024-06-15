@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import logging
 import time
+import random
 from pyppeteer import launch
 from util.llm_util import LLMUtil
 from util.oss_util import OSSUtil
@@ -15,6 +16,20 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+global_agent_headers = [
+    "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/537.75.14",
+    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0)",
+    'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
+    'Opera/9.25 (Windows NT 5.1; U; en)',
+    'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)',
+    'Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Kubuntu)',
+    'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.12) Gecko/20070731 Ubuntu/dapper-security Firefox/1.5.0.12',
+    'Lynx/2.8.5rel.1 libwww-FM/2.14 SSL-MM/1.4.1 GNUTLS/1.2.9',
+    "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.04 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
+    "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 "
+]
 
 class WebsitCrawler:
     def __init__(self):
@@ -39,13 +54,15 @@ class WebsitCrawler:
                                             handleSIGINT=False, handleSIGTERM=False, handleSIGHUP=False)
 
             page = await self.browser.newPage()
+            # 设置用户代理
+            await page.setUserAgent(random.choice(global_agent_headers))
 
             # 设置页面视口大小并访问具体URL
             width = 1920  # 默认宽度为 1920
             height = 1080  # 默认高度为 1080
             await page.setViewport({'width': width, 'height': height})
             try:
-                await page.goto(url, {'timeout': 60000, 'waitUntil': 'load'})
+                await page.goto(url, {'timeout': 60000, 'waitUntil': ['load', 'networkidle2']})
             except Exception as e:
                 logger.info(f'页面加载超时,不影响继续执行后续流程:{e}')
 
@@ -61,6 +78,10 @@ class WebsitCrawler:
             meta_description = soup.find('meta', attrs={'name': 'description'})
             if meta_description:
                 description = meta_description['content'].strip()
+
+            if not description:
+                meta_description = soup.find('meta', attrs={'property': 'og:description'})
+                description = meta_description['content'].strip() if meta_description else ''
 
             logger.info(f"url:{url}, title:{title},description:{description}")
 

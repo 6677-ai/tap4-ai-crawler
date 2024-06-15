@@ -25,7 +25,7 @@ def scrape():
         return jsonify({'error': 'URL is required'}), 400
 
     loop = asyncio.get_event_loop()
-    result = loop.run_until_complete(website_crawler.scrape_website(url, tags, languages))
+    result = loop.run_until_complete(website_crawler.scrape_website(url.strip(), tags, languages))
 
     # 若result为None,则 code="10001"，msg="处理异常，请稍后重试"
     code = 200

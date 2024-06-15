@@ -19,6 +19,7 @@ class LLMUtil:
     def __init__(self):
         load_dotenv()
         self.groq_api_key = os.getenv('GROQ_API_KEY')
+        logger.info(f"Groq API Key:{self.groq_api_key}")
         self.detail_sys_prompt = os.getenv('DETAIL_SYS_PROMPT')
         self.tag_selector_sys_prompt = os.getenv('TAG_SELECTOR_SYS_PROMPT')
         self.language_sys_prompt = os.getenv('LANGUAGE_SYS_PROMPT')
@@ -68,6 +69,7 @@ class LLMUtil:
         try:
             tokens = tokenizer.encode(user_prompt)
             if len(tokens) > self.groq_max_tokens:
+                logger.info(f"用户输入长度超过{self.groq_max_tokens}，进行截取")
                 truncated_tokens = tokens[:self.groq_max_tokens]
                 user_prompt = tokenizer.decode(truncated_tokens)
 
@@ -83,6 +85,7 @@ class LLMUtil:
                     }
                 ],
                 model=self.groq_model,
+                temperature=0.2,
             )
             if chat_completion.choices[0] and chat_completion.choices[0].message:
                 logger.info(f"LLM完成处理，成功响应!")
