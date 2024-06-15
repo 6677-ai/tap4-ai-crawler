@@ -105,11 +105,11 @@ git clone https://github.com/6677-ai/tap4-ai-crawler.git
 GROQ_API_KEY=gsk_********
 
 ## Object Storage Configuration: Storage related configuration
-R2_ENDPOINT_URL=https://*****.r2.cloudflarestorage.com
-R2_BUCKET_NAME=tap4ai
-R2_ACCESS_KEY_ID=****
-R2_SECRET_ACCESS_KEY=****
-R2_CUSTOM_DOMAIN=****
+S3_ENDPOINT_URL=https://*****.r2.cloudflarestorage.com
+S3_BUCKET_NAME=tap4ai
+S3_ACCESS_KEY_ID=****
+S3_SECRET_ACCESS_KEY=****
+S3_CUSTOM_DOMAIN=****
 ```
 
 #### (5) Run locally

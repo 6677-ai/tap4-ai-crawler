@@ -33,7 +33,7 @@
 ### （1）在 Zeabur 基于镜像模式的快速部署
 
 **点击 Deploy Button，根据指引填写环境变量即可**<br>
-[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/VK9QAP)
+[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/QWCZYQ)
 
 ### （2）在 Zeabur 基于代码模式的部署
 
@@ -80,11 +80,11 @@ git clone https://github.com/6677-ai/tap4-ai-crawler.git
 GROQ_API_KEY=gsk_********
 
 ## Object Storage Configuration: 存储相关配置
-R2_ENDPOINT_URL=https://*****.r2.cloudflarestorage.com
-R2_BUCKET_NAME=tap4ai
-R2_ACCESS_KEY_ID=****
-R2_SECRET_ACCESS_KEY=****
-R2_CUSTOM_DOMAIN=****
+S3_ENDPOINT_URL=https://*****.r2.cloudflarestorage.com
+S3_BUCKET_NAME=tap4ai
+S3_ACCESS_KEY_ID=****
+S3_SECRET_ACCESS_KEY=****
+S3_CUSTOM_DOMAIN=****
 ```
 
 #### (5) 本地运行
