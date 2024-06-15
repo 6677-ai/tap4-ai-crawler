@@ -181,9 +181,17 @@ The Collection for the AI tools all over the world. | Collect free ChatGPT mirro
 
 Here is the website list for submitting your product to get users. Please visit [StartUp Your Product List](https://github.com/6677-ai/TAP4-AI-Directory/blob/main/Startup-Your-Product-List.md)
 
-### GPT-4o in OpenAI
+### Free Stable Diffusion 3 Online Tool
 
-The amazing new feature released on 2024.05.14. GPT-4o is coming, let's chat with her. Please visit [GPT-4o](https://openai.com/index/hello-gpt-4o/)
+[Free Stable Diffusion 3 Online](https://stable-diffusion-3.online)
+
+### Free Tiny Png Tool
+
+[Free Type Png Tool](https://freetinypng.com)
+
+### Free GPT2 Output Detector
+
+[Free GPT2 Output Detector](https://openai-openai-detector.com/)
 
 ### The Tattoo AI Generator and Design
 
