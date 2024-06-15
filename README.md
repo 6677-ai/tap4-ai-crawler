@@ -130,32 +130,35 @@ After running, a RestAPI will be exposed, access URL suffix: /site/crawl
 
 ## How to request the API
 
-Use curl to verify the API with POST request. 
-Request params: 
-- Format: Json format, 
+Use curl to verify the API with POST request.
+Request params:
+
+- Format: Json format,
 - params: url (such as: https://tap4.ai)
-Request as below:
+  Request as below:
 
 ```sh
 curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}' http://127.0.0.1:8040/site/crawl
 ```
+
 Response Params:
+
 - Format: Json format
 - Params: data-description: Description of website
 - Params: data-detail: Detail content of website
 - Params: data-screenshot_data: Screenshot of website
 - Params: data-screenshot_thumbnail_data: Screenshot thumbnail of website
 - Params: data-title: Title of website
-  
+
 ```sh
 {
     "code": 200,
     "data": {
         "description": "Tap4 AI Directory is a tool provides free AI Tools Directory. Get your favorite AI tools with Tap4 AI Directory, Tap4 AI Directory aims to collect all the AI tools and provide the best for users.",
-        "detail": null,
+        "detail": "### What is Tap4 AI?\n\nTap4 AI is an AI-driven platform that provides access to a vast array of AI technologies for various needs, including ChatGPT, GPT-4o for text generation and image understanding, Dalle3 for image creation, and document analysis.\n\n### How to Use Tap4 AI\n\nEvery user can utilize GPT-4o for free up to 20 times a day on tap4.ai. Subscribing to the platform grants additional benefits and extended access beyond the free usage limits.\n\n### Features of Tap4 AI\n\n#### Can I Generate Images Using Tap4 AI?\n\nYes, with Dalle3's text-to-image generation capability, users can create images, sharing credits with GPT-4o for a seamless creative experience.\n\n#### How Many GPTs are Available on Tap4 AI?\n\nTap4.ai offers nearly 200,000 GPT models for a wide variety of applications in work, study, and everyday life. You can freely use these GPTs without the need for a ChatGPT Plus subscription.\n\n#### How Can I Maximize My Use of Tap4 AI's AI Services?\n\nBy leveraging the daily free uses of GPT-4o document reading, and Dalle's image generation, users can explore a vast range of AI-powered tools to support various tasks.\n\n#### Will My Information Be Used for Your Training Data?\n\nWe highly value user privacy, and your data will not be used for any training purposes. If needed, you can delete your account at any time, and all your data will be removed as well.\n\n#### When Would I Need a Tap4 AI Subscription?\n\nIf the 20 free GPT-4o conversations per day do not meet your needs and you heavily rely on GPT-4o, we invite you to subscribe to our affordable products.",
         "languages": [],
-        "screenshot_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-1718443187.png",
-        "screenshot_thumbnail_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-thumbnail-1718443192.png",
+        "screenshot_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-1718447471.png",
+        "screenshot_thumbnail_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-thumbnail-1718447477.png",
         "tags": null,
         "title": "Get your best AI Tools | Tap4 AI Directory",
         "url": "https://tap4.ai"
