@@ -14,13 +14,11 @@ If you find this project helpful, you can buy me a coffee:
 
 <a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-If you are interested in this project, feel free to scan the QR code to join our WeChat group: ![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
-
 ## Features
 
 - Fetching titles, descriptions, and introductions of input websites
 - Making screenshots of the input websites
-- Support for using LLM (llama3/chatgpt) to process website introductions and generate Markdown descriptions
+- Support for using LLM (llama3/chatgpt) to process website introductions and generate SEO Friendly Markdown descriptions
 - Quick configuration
 - Fast deployment
 
@@ -28,20 +26,46 @@ If you are interested in this project, feel free to scan the QR code to join our
 
 ## Quick Start
 
+- [Register on Cloudflare](https://www.cloudflare.com?utm_source=tap4ai&utm_campaign=oss)
+- Select R2 Service and create a bucket for image store, set for public access(option: set custom domain) and edit CORS Policy.
+  ![Create-cloudflare-R2](./images/cloudflare-r2.png)
+- CORS Policy as below:
+
+```sh
+[
+  {
+    "AllowedOrigins": [
+      "*"
+    ],
+    "AllowedMethods": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "HEAD"
+    ],
+    "AllowedHeaders": [
+      "*"
+    ]
+  }
+]
+```
+
+- Create R2 API Tokens for R2 API and select permission with Object Read & Write. Save your own params: ENDPOINT_URL, BUCKET_NAME, ACCESS_KEY_ID, SECRET_ACCESS_KEY, CUSTOM_DOMAIN. The params will config in the .env for tap4-ai-crawler.
+  ![Create-R2-API-Token](./images/Create-R2-API-Token.png)
+  ![Cloudflare-R2-Token](./images/Cloudflare-R2-Token.png)
+-
+
 - [![Register on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=leoli202303&utm_source=leoli202303&utm_campaign=oss)
 - Create a new project and service on Zeabur
-
-### （1）Quick Deployment in Zeabur Based on Image Mode
-
-**Click the Deploy Button and fill in the environment variables as instructed**<br>
-[![Quickly Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/VK9QAP)
+- Fork [tap4-ai-crawler](https://github.com/6677-ai/tap4-ai-crawler) to your own github and update .env params with your own.
 
 ### （2）Deploying in Zeabur based on code mode
 
-Deploying a Github repository after selecting Fork in Zeabur, and configuring environment variables in Zeabur or manually modifying the .env file in the code repository. The environment variables are as follows:
+Deploying the fork github repository in Zeabur, and configuring environment variables in Zeabur or manually modifying the .env file in the code repository. The environment variables are as follows:
 
 - `GROQ_API_KEY`: Key for Groq, apply for it [Here](https://console.groq.com/keys)
-- `S3_ENDPOINT_URL`: Endpoint for S3(such as Cloudflare R2), apply for [R2](https://www.cloudflare.com/zh-cn/developer-platform/r2/)
+- `S3_ENDPOINT_URL`: Endpoint for S3(Recommand Cloudflare R2), apply for [R2](https://www.cloudflare.com/zh-cn/developer-platform/r2/)
 - `S3_BUCKET_NAME`: Bucket name for S3(such as Cloudflare R2)
 - `S3_ACCESS_KEY_ID`: Access key ID for S3(such as Cloudflare R2)
 - `S3_SECRET_ACCESS_KEY`: Secret access key for S3(such as Cloudflare R2)
@@ -106,11 +130,43 @@ After running, a RestAPI will be exposed, access URL suffix: /site/crawl
 
 ## How to request the API
 
-Use curl to verify the API
+Use curl to verify the API with POST request. 
+Request params: 
+- Format: Json format, 
+- params: url (such as: https://tap4.ai)
+Request as below:
 
 ```sh
-curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai","tags": ["website","navigation", "search","picture","photo"]}' http://127.0.0.1:8040/site/crawl
+curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}' http://127.0.0.1:8040/site/crawl
 ```
+Response Params:
+- Format: Json format
+- Params: data-description: Description of website
+- Params: data-detail: Detail content of website
+- Params: data-screenshot_data: Screenshot of website
+- Params: data-screenshot_thumbnail_data: Screenshot thumbnail of website
+- Params: data-title: Title of website
+  
+```sh
+{
+    "code": 200,
+    "data": {
+        "description": "Tap4 AI Directory is a tool provides free AI Tools Directory. Get your favorite AI tools with Tap4 AI Directory, Tap4 AI Directory aims to collect all the AI tools and provide the best for users.",
+        "detail": null,
+        "languages": [],
+        "screenshot_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-1718443187.png",
+        "screenshot_thumbnail_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-thumbnail-1718443192.png",
+        "tags": null,
+        "title": "Get your best AI Tools | Tap4 AI Directory",
+        "url": "https://tap4.ai"
+    },
+    "msg": "success"
+}
+```
+
+## Join our group in wechat
+
+If you are interested in this project, feel free to scan the QR code to join our WeChat group: ![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
 
 ## Links to our products
 
@@ -132,14 +188,10 @@ Tattoo AI Design is a tattoo AI generator and design tool for tattoo fans. If yo
 
 ## Sponsor List
 
-### Anime Girl Studio -- AI Anime Girl Chat & Generator
+### AI Anime Girlfriend -- AI Anime Girl Chat & Generator
 
-Anime Girl Studio is the AI anime girl generator and chat product. You can generate what you like and chat with the AI anime girl, please visit [Anime Girl Studio](https://animegirl.studio/)
+Anime Girl Studio is the AI anime girl generator and chat product. You can generate what you like and chat with the AI anime girl, please visit [AI Anime Girlfriend](https://animegirl.studio/)
 
-### Best AI Girl Friend -- Best AI Girl Chat & Generator
+### Best AI GirlFriend -- Best AI Girlfriend & Generator
 
-Best AI Girl Friend is the AI girl generator and chat product. You can generate what you like and chat with the AI anime girl, please visit [Best AI Girl Friend](https://aigirl.best/)
-
-## LICENSE
-
-MIT
+Best AI Girl Friend is the AI girl generator and chat product. You can generate what you like and chat with the AI anime girl, please visit [Best AI Girlfriend](https://aigirl.best/)
