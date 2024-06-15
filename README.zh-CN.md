@@ -101,11 +101,11 @@ git clone https://github.com/6677-ai/tap4-ai-crawler.git
 GROQ_API_KEY=gsk_********
 
 ## Object Storage Configuration: 存储相关配置
-R2_ENDPOINT_URL=https://*****.r2.cloudflarestorage.com
-R2_BUCKET_NAME=tap4ai
-R2_ACCESS_KEY_ID=****
-R2_SECRET_ACCESS_KEY=****
-R2_CUSTOM_DOMAIN=****
+S3_ENDPOINT_URL=https://*****.r2.cloudflarestorage.com
+S3_BUCKET_NAME=tap4ai
+S3_ACCESS_KEY_ID=****
+S3_SECRET_ACCESS_KEY=****
+S3_CUSTOM_DOMAIN=****
 ```
 
 #### (5) 本地运行
@@ -126,7 +126,7 @@ python main_api.py
 
 ## 如何请求 API
 
-可以使用curl发送Post请求验证API是否可用。
+可以使用 curl 发送 Post 请求验证 API 是否可用。
 请求参数说明:
 
 - 格式: Json format,
@@ -144,7 +144,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}'
 - 参数: data-description: 网站描述
 - 参数: data-detail: 网站具体介绍
 - 参数: data-screenshot_data: 网站截图
-- 参数: data-screenshot_thumbnail_data:网站截图缩略图，0.5倍分辨率
+- 参数: data-screenshot_thumbnail_data:网站截图缩略图，0.5 倍分辨率
 - 参数: data-title: 网站标题
 
 ```sh
@@ -167,26 +167,25 @@ curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}'
 ## 加入我们的微信群
 
 欢迎加入微信群交流:
- ![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
+![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
 
 ## 产品链接
 
-### TAP4-AI导航站
+### TAP4-AI 导航站
 
-全球AI工具导航站，搜集全球主流的AI工具，目前支持免费提交收录AI工具。更多详情，请访问: [Tap4 AI](https://tap4.ai)
+全球 AI 工具导航站，搜集全球主流的 AI 工具，目前支持免费提交收录 AI 工具。更多详情，请访问: [Tap4 AI](https://tap4.ai)
 
 ### 如何获得冷启动的第一批用户
 
 以下是提交产品以获取用户的网站列表。请访问
 [StartUp Your Product List](https://github.com/6677-ai/TAP4-AI-Directory/blob/main/Startup-Your-Product-List.md)
 
-
-### AI纹身生成器
+### AI 纹身生成器
 
 Tattao AI Design 是为纹身爱好者设计的纹身 AI 生成器和设计工具。如果你对此感兴趣，请访问：
 [Tattoo AI Design](https://tattooai.design)
 
-### Stable Diffusion 3在线免费工具
+### Stable Diffusion 3 在线免费工具
 
 [Free Stable Diffusion 3 Online](https://stable-diffusion-3.online)
 
@@ -194,6 +193,6 @@ Tattao AI Design 是为纹身爱好者设计的纹身 AI 生成器和设计工�
 
 [Free Type Png Tool](https://freetinypng.com)
 
-### 免费在线AI内容检测工具
+### 免费在线 AI 内容检测工具
 
 [Free GPT2 Output Detector](https://openai-openai-detector.com/)
