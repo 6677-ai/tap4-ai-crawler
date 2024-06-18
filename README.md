@@ -169,7 +169,8 @@ Response Params:
 
 ## Join our group in wechat
 
-If you are interested in this project, feel free to scan the QR code to join our WeChat group: ![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
+If you are interested in this project, please add friend with my wechat:helloleo2023， comment: "tap4 ai open-source" and i will add you to wechat group.
+
 
 ## Link products
 
