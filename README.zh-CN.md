@@ -166,8 +166,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}'
 
 ## 加入我们的微信群
 
-欢迎加入微信群交流:
-![tap4-ai-wx-group](./images/tap4-ai-wechat-group.jpeg)
+如果你对项目有兴趣，欢迎添加我微信：helloleo2023， 备注："tap4 ai开源"，我会拉你进微信交流群.
 
 ## 产品链接
 
