@@ -3,6 +3,8 @@ import logging
 import time
 import random
 from pyppeteer import launch
+
+from util.common_util import CommonUtil
 from util.llm_util import LLMUtil
 from util.oss_util import OSSUtil
 
@@ -73,6 +75,9 @@ class WebsitCrawler:
             # 通过标签名提取内容
             title = soup.title.string.strip() if soup.title else ''
 
+            # 根据url提取域名生成name
+            name = CommonUtil.get_name_by_url(url)
+
             # 获取网页描述
             description = ''
             meta_description = soup.find('meta', attrs={'name': 'description'})
@@ -134,6 +139,7 @@ class WebsitCrawler:
 
             logger.info(url + "站点处理成功")
             return {
+                'name': name,
                 'url': url,
                 'title': title,
                 'description': description,
