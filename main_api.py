@@ -1,10 +1,14 @@
 import asyncio
 import logging
+import os
+from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from website_crawler import WebsitCrawler
 
 app = Flask(__name__)
 website_crawler = WebsitCrawler()
+load_dotenv()
+auth_secret = 'Bearer ' + os.getenv('AUTH_SECRET')
 
 # 设置日志记录
 logging.basicConfig(
@@ -21,8 +25,16 @@ def scrape():
     tags = data.get('tags')  # tag数组
     languages = data.get('languages')  # 需要翻译的多语言列表
 
+    auth_header = request.headers.get('Authorization')
+
     if not url:
         return jsonify({'error': 'URL is required'}), 400
+
+    if not auth_header:
+        return jsonify({'error': 'Authorization is required'}), 400
+
+    if auth_secret != auth_header:
+        return jsonify({'error': 'Authorization is error'}), 400
 
     loop = asyncio.get_event_loop()
     result = loop.run_until_complete(website_crawler.scrape_website(url.strip(), tags, languages))
