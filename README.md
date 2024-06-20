@@ -6,13 +6,9 @@ This project is based on Python, very lightweight, easy to maintain, suitable fo
 
 English | [简体中文](./README.zh-CN.md)
 
-## Follow Us
+## Support Tap4 AI in Product Hunt
 
-Follow us on Twitter: https://x.com/tap4ai
-
-If you find this project helpful, you can buy me a coffee:
-
-<a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.producthunt.com/posts/ai-tools-directory-by-tap4-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;tools&#0045;directory&#0045;by&#0045;tap4&#0045;ai" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464357&theme=light" alt="AI&#0032;Tools&#0032;Directory&#0032;by&#0032;Tap4&#0032;AI - Open&#0045;source&#0032;AI&#0032;navigation&#0032;&#0038;&#0032;discovery&#0032;with&#0032;multi&#0045;language | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ## Features
 
@@ -23,6 +19,17 @@ If you find this project helpful, you can buy me a coffee:
 - Fast deployment
 
 ![tai4-ai](./images/tap4-ai.png)
+
+## Follow and Support Links
+
+Please follow our Twitter: https://x.com/tap4ai
+
+If you find the project helpful, please consider buying me a coffee:
+
+<a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+If you are interested in the project, please add my WeChat: helloleo2023, note: "tap4 ai open source", or scan the QR
+code: ![tap4-ai-wx](./images/tap4-ai-wechat.jpg)
 
 ## Quick Start
 
@@ -58,6 +65,7 @@ If you find this project helpful, you can buy me a coffee:
 
 - [![Register on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=leoli202303&utm_source=leoli202303&utm_campaign=oss)
 - Create a new project and service on Zeabur
+  **Note: Web scraping requires certain server configurations. It is recommended to purchase paid services from Zeabur and prioritize selecting U.S. nodes.**
 - Fork [tap4-ai-crawler](https://github.com/6677-ai/tap4-ai-crawler) to your own github and update .env params with your own.
 
 ### （2）Deploying in Zeabur based on code mode
@@ -70,6 +78,7 @@ Deploying the fork github repository in Zeabur, and configuring environment vari
 - `S3_ACCESS_KEY_ID`: Access key ID for S3(such as Cloudflare R2)
 - `S3_SECRET_ACCESS_KEY`: Secret access key for S3(such as Cloudflare R2)
 - `S3_CUSTOM_DOMAIN`: Custom domain for S3(such as Cloudflare R2), if you have a custom domain, fill it in; otherwise, it can be left blank.
+- `AUTH_SECRET`: Custom access key for Rest API.
 
 ## Runs on local
 
@@ -110,6 +119,7 @@ S3_BUCKET_NAME=tap4ai
 S3_ACCESS_KEY_ID=****
 S3_SECRET_ACCESS_KEY=****
 S3_CUSTOM_DOMAIN=****
+AUTH_SECRET=****
 ```
 
 #### (5) Run locally
@@ -138,7 +148,7 @@ Request params:
   Request as below:
 
 ```sh
-curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}' http://127.0.0.1:8040/site/crawl
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer xxxxx" -d '{"url": "https://tap4.ai", "tags": [ "selected tags: ai-detector","chatbot","text-writing","image","code-it"]}' http://127.0.0.1:8040/site/crawl
 ```
 
 Response Params:
@@ -159,7 +169,7 @@ Response Params:
         "languages": [],
         "screenshot_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-1718447471.png",
         "screenshot_thumbnail_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-thumbnail-1718447477.png",
-        "tags": null,
+        "tags": ["code-it","text-writing"],
         "title": "Get your best AI Tools | Tap4 AI Directory",
         "url": "https://tap4.ai"
     },
@@ -167,10 +177,12 @@ Response Params:
 }
 ```
 
-## Join our group in wechat
+## FAQ
 
-If you are interested in this project, please add friend with my wechat:helloleo2023， comment: "tap4 ai open-source" and i will add you to wechat group.
-
+- Due to potential anti-scraping measures on the website, crawling may fail, and manual secondary checks are required.
+- The information processed by the LLM may not meet expectations; you can try optimizing the prompt content yourself.
+- The content processed by the LLM may still be the template passed through the prompts, which is also caused by anti-scraping measures and requires manual secondary checks.
+- Web scraping requires certain server configurations. It is recommended to purchase paid services from Zeabur and prioritize selecting U.S. nodes.
 
 ## Link products
 

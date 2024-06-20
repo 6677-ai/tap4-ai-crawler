@@ -6,13 +6,9 @@ Tap4 AI Crawler 是由 [tap4.ai](https://tap4.ai) 开发的开源爬虫，它将
 
 简体中文 | [English](./README.md)
 
-## 关注我们
+# 请在 Product Hunt 支持下 Tap4 AI
 
-在 Twitter 上关注我们: https://x.com/tap4ai
-
-如果您觉得这个项目有帮助，您可以请我喝杯咖啡：
-
-<a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.producthunt.com/posts/ai-tools-directory-by-tap4-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;tools&#0045;directory&#0045;by&#0045;tap4&#0045;ai" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464357&theme=light" alt="AI&#0032;Tools&#0032;Directory&#0032;by&#0032;Tap4&#0032;AI - Open&#0045;source&#0032;AI&#0032;navigation&#0032;&#0038;&#0032;discovery&#0032;with&#0032;multi&#0045;language | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ## 特征
 
@@ -23,6 +19,17 @@ Tap4 AI Crawler 是由 [tap4.ai](https://tap4.ai) 开发的开源爬虫，它将
 - 快速部署
 
 ![tai4-ai](./images/tap4-ai.png)
+
+## 感谢关注链接
+
+欢迎关注我们的 Twitter: https://x.com/tap4ai
+
+如果觉得项目对你有帮助，欢迎请我喝杯咖啡：
+
+<a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+如果你对项目有兴趣，欢迎添加我微信: helloleo2023, 备注: "tap4 ai 开源"，也可以扫描二维码:
+![tap4-ai-wx](./images/tap4-ai-wechat.jpg)
 
 ## 快速开始
 
@@ -66,6 +73,9 @@ Tap4 AI Crawler 是由 [tap4.ai](https://tap4.ai) 开发的开源爬虫，它将
 - `S3_ACCESS_KEY_ID`: S3 的 access key id
 - `S3_SECRET_ACCESS_KEY`: S3 的 secret access key
 - `S3_CUSTOM_DOMAIN`: S3 的 custom domain，若有自定义域名，则填入，否则可不填写
+- `AUTH_SECRET`: 自定义的对外 REST API 需要的 KEY
+
+**注：爬虫对服务器配置有一定的要求，建议 Zeabur 购买付费服务，优先选择美国节点**
 
 ## 本地运行
 
@@ -106,6 +116,7 @@ S3_BUCKET_NAME=tap4ai
 S3_ACCESS_KEY_ID=****
 S3_SECRET_ACCESS_KEY=****
 S3_CUSTOM_DOMAIN=****
+AUTH_SECRET=****
 ```
 
 #### (5) 本地运行
@@ -135,7 +146,7 @@ python main_api.py
 请求示例如下:
 
 ```sh
-curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}' http://127.0.0.1:8040/site/crawl
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer xxxxx" -d '{"url": "https://tap4.ai", "tags": [ "selected tags: ai-detector","chatbot","text-writing","image","code-it"]}' http://127.0.0.1:8040/site/crawl
 ```
 
 返回参数:
@@ -156,7 +167,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}'
         "languages": [],
         "screenshot_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-1718447471.png",
         "screenshot_thumbnail_data": "https://demo.tap4.cn/tools/2024/6/15/tap4-ai-thumbnail-1718447477.png",
-        "tags": null,
+        "tags": ["code-it","text-writing"],
         "title": "Get your best AI Tools | Tap4 AI Directory",
         "url": "https://tap4.ai"
     },
@@ -164,9 +175,12 @@ curl -X POST -H "Content-Type: application/json" -d '{"url": "https://tap4.ai"}'
 }
 ```
 
-## 加入我们的微信群
+## 常见问题
 
-如果你对项目有兴趣，欢迎添加我微信：helloleo2023， 备注："tap4 ai开源"，我会拉你进微信交流群.
+- 由于网站可能出现反爬虫，导致爬取失败，需要人工做二次检查
+- LLM 洗出来的信息不服务期望，可以尝试自己去优化 prompt 提示词内容
+- LLM 洗出来的内容可能仍然是提示词传过去的模板，这种也是反爬虫引起的问题，需要人工做二次检查
+- 爬虫对服务器配置有一定的要求，Zeabur 上使用免费模式很容易出现无法正常运行问题，建议付费
 
 ## 产品链接
 
