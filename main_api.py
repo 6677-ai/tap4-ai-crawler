@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 import threading
+import requests
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from website_crawler import WebsitCrawler
@@ -101,11 +102,13 @@ def scrape_async():
 def async_worker(loop, url, tags, languages, callback_url, key):
     # 爬虫处理封装为一个异步任务
     result = loop.run_until_complete(website_crawler.scrape_website(url.strip(), tags, languages))
-    # 通过request post 请求调用call_back_url， 携带参数result， heaer 为key
+    # 通过requests post 请求调用call_back_url， 携带参数result， heaer 为key
     try:
-        request.post(callback_url, json=result, headers={'Authorization': 'Bearer ' + key})
+        logger.info(f'callback begin:{callback_url}')
+        requests.post(callback_url, json=result, headers={'Authorization': 'Bearer ' + key})
+        logger.info(f'callback success:{callback_url}')
     except Exception as e:
-        logger.error('call_back_url error',e)
+        logger.error(f'call_back error:{callback_url}',e)
 
 
 if __name__ == '__main__':
