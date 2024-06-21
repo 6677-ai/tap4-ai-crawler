@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import os
+import threading
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from website_crawler import WebsitCrawler
@@ -53,6 +54,58 @@ def scrape():
         'data': result
     }
     return jsonify(response)
+
+
+@app.route('/site/crawl_async', methods=['POST'])
+def scrape_async():
+    data = request.get_json()
+    url = data.get('url')
+    callback_url = data.get('callback_url')
+    key = data.get('key')  # 请求回调接口，放header Authorization: 'Bear key'
+    tags = data.get('tags')  # tag数组
+    languages = data.get('languages')  # 需要翻译的多语言列表
+
+    auth_header = request.headers.get('Authorization')
+
+    if not url:
+        return jsonify({'error': 'url is required'}), 400
+
+    if not callback_url:
+        return jsonify({'error': 'call_back_url is required'}), 400
+
+    if not auth_header:
+        return jsonify({'error': 'Authorization is required'}), 400
+
+    if auth_secret != auth_header:
+        return jsonify({'error': 'Authorization is error'}), 400
+
+    loop = asyncio.get_event_loop()
+
+    # 创建线程，传递参数
+    t = threading.Thread(target=async_worker, args=(loop, url, tags, languages, callback_url, key))
+    # 启动线程
+    t.start()
+
+    # 若result为None,则 code="10001"，msg="处理异常，请稍后重试"
+    code = 200
+    msg = 'success'
+
+    # 将数据映射到 'data' 键下
+    response = {
+        'code': code,
+        'msg': msg
+    }
+    return jsonify(response)
+
+
+def async_worker(loop, url, tags, languages, callback_url, key):
+    # 爬虫处理封装为一个异步任务
+    result = loop.run_until_complete(website_crawler.scrape_website(url.strip(), tags, languages))
+    # 通过request post 请求调用call_back_url， 携带参数result， heaer 为key
+    try:
+        request.post(callback_url, json=result, headers={'Authorization': 'Bearer ' + key})
+    except Exception as e:
+        logger.error('call_back_url error',e)
 
 
 if __name__ == '__main__':
