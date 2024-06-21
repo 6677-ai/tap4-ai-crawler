@@ -105,10 +105,13 @@ def async_worker(loop, url, tags, languages, callback_url, key):
     # 通过requests post 请求调用call_back_url， 携带参数result， heaer 为key
     try:
         logger.info(f'callback begin:{callback_url}')
-        requests.post(callback_url, json=result, headers={'Authorization': 'Bearer ' + key})
-        logger.info(f'callback success:{callback_url}')
+        response = requests.post(callback_url, json=result, headers={'Authorization': 'Bearer ' + key})
+        if response.status_code != 200:
+            logger.error(f'callback error:{callback_url}',response.text)
+        else:
+            logger.info(f'callback success:{callback_url}')
     except Exception as e:
-        logger.error(f'call_back error:{callback_url}',e)
+        logger.error(f'call_back exception:{callback_url}',e)
 
 
 if __name__ == '__main__':
