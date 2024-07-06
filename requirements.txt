@@ -1,6 +1,7 @@
 beautifulsoup4
 pyppeteer
-flask[async]
+fastapi[all]
+uvicorn
 python-dotenv
 groq
 boto3
