@@ -4,7 +4,7 @@ Tap4 AI Crawler is an open source web crawler built by [tap4.ai](https://tap4.ai
 
 This project is based on Python, very lightweight, easy to maintain, suitable for individual developers interested in AI tools directories, and also for learners interested in Python. We welcome everyone to fork and star.
 
-English | [简体中文](./README.zh-CN.md)
+English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md)
 
 ## Support Tap4 AI in Product Hunt
 
