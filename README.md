@@ -209,13 +209,3 @@ Here is the website list for submitting your product to get users. Please visit 
 ### The Tattoo AI Generator and Design
 
 Tattoo AI Design is a tattoo AI generator and design tool for tattoo fans. If you are interested, visit [Tattoo AI Design](https://tattooai.design/)
-
-## Sponsor List
-
-### AI Anime Girlfriend -- AI Anime Girl Chat & Generator
-
-Anime Girl Studio is the AI anime girl generator and chat product. You can generate what you like and chat with the AI anime girl, please visit [AI Anime Girlfriend](https://animegirl.studio/)
-
-### Best AI GirlFriend -- Best AI Girlfriend & Generator
-
-Best AI Girl Friend is the AI girl generator and chat product. You can generate what you like and chat with the AI anime girl, please visit [Best AI Girlfriend](https://aigirl.best/)
