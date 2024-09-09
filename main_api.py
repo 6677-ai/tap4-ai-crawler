@@ -1,18 +1,20 @@
 import logging
 import os
 from typing import List, Optional
-
+import json
 import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, BackgroundTasks, HTTPException
 from pydantic import BaseModel
-
+from inputData import insert_website_data
 from website_crawler import WebsitCrawler
 
+string = os.getenv('CONNECTION_SUPABASS_URL')
 app = FastAPI()
 website_crawler = WebsitCrawler()
 load_dotenv()
 system_auth_secret = os.getenv('AUTH_SECRET')
+supabass_url = os.getenv('CONNECTION_SUPABASS_URL')
 
 # 设置日志记录
 logging.basicConfig(
@@ -58,6 +60,11 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
         'msg': msg,
         'data': result
     }
+
+    # with open('response.json', 'a') as file:
+    #     json.dump(result, file)
+    #     file.write('\n')
+    insert_website_data(supabass_url, result)
     return response
 
 
