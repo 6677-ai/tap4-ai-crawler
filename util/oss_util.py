@@ -36,6 +36,13 @@ class OSSUtil:
             config=Config(signature_version='s3v4')  # 使用S3兼容签名版本
         )
 
+    def compress_image_to_webp(self, image_data, quality=85):
+        image = Image.open(BytesIO(image_data))
+        buffer = BytesIO()
+        image.save(buffer, format='WEBP', quality=quality)
+        buffer.seek(0)
+        return buffer.getvalue()
+
     def get_default_file_key(self, url, is_thumbnail=False):
         now = datetime.now()
         year = now.year
@@ -66,9 +73,15 @@ class OSSUtil:
                     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
                 })
                 image_data = response.content
-                self.s3.upload_fileobj(BytesIO(image_data), self.S3_BUCKET_NAME, file_key)
+                # 压缩图片为WebP格式
+                compressed_image_data = self.compress_image_to_webp(image_data)
+                self.s3.upload_fileobj(BytesIO(compressed_image_data), self.S3_BUCKET_NAME, file_key)
             else:
-                self.s3.upload_file(file_path, self.S3_BUCKET_NAME, file_key)
+                with open(file_path, 'rb') as f:
+                    image_data = f.read()
+                    # 压缩图片为WebP格式
+                    compressed_image_data = self.compress_image_to_webp(image_data)
+                    self.s3.upload_fileobj(BytesIO(compressed_image_data), self.S3_BUCKET_NAME, file_key)
 
             logger.info(f"文件 '{file_path}' 成功上传到 '{self.S3_BUCKET_NAME}/{file_key}'")
             if os.path.exists(file_path):
@@ -105,9 +118,12 @@ class OSSUtil:
         resized_image.save(thumbnail_buffer, format='PNG')
         thumbnail_buffer.seek(0)
 
+        # 压缩缩略图为WebP格式
+        compressed_thumbnail_data = self.compress_image_to_webp(thumbnail_buffer.getvalue())
+
         # 将缩略图上传回S3
         thumbnail_key = self.get_default_file_key(url, is_thumbnail=True)
-        self.s3.put_object(Bucket=self.S3_BUCKET_NAME, Key=thumbnail_key, Body=thumbnail_buffer)
+        self.s3.put_object(Bucket=self.S3_BUCKET_NAME, Key=thumbnail_key, Body=compressed_thumbnail_data)
 
         # 如果提供了自定义域名
         if self.S3_CUSTOM_DOMAIN:
