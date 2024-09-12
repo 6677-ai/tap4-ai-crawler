@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from inputData import insert_website_data
 from website_crawler import WebsitCrawler
 
-string = os.getenv('CONNECTION_SUPABASS_URL')
+string = os.getenv('CONNECTION_SUPABASE_URL')
 app = FastAPI()
 website_crawler = WebsitCrawler()
 load_dotenv()
@@ -61,10 +61,10 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
         'data': result
     }
 
-    # with open('response.json', 'a') as file:
-    #     json.dump(result, file)
+    # with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
+    #     json.dump(result, file, ensure_ascii=False)
     #     file.write('\n')
-    insert_website_data(supabass_url, result)
+    #     insert_website_data(supabass_url, result)
     return response
 
 

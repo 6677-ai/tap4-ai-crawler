@@ -120,6 +120,7 @@ class WebsitCrawler:
             # 使用llm工具处理content
             detail = llm.process_detail(content)
             await page.close()
+            await page.close()
 
             # 如果tags为非空数组，则使用llm工具处理tags
             processed_tags = None
