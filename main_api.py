@@ -14,7 +14,7 @@ app = FastAPI()
 website_crawler = WebsitCrawler()
 load_dotenv()
 system_auth_secret = os.getenv('AUTH_SECRET')
-supabass_url = os.getenv('CONNECTION_SUPABASS_URL')
+supabass_url = os.getenv('CONNECTION_SUPABASE_URL')
 
 # 设置日志记录
 logging.basicConfig(
@@ -61,10 +61,10 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
         'data': result
     }
 
-    # with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
-    #     json.dump(result, file, ensure_ascii=False)
-    #     file.write('\n')
-    #     insert_website_data(supabass_url, result)
+    with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
+        json.dump(result, file, ensure_ascii=False)
+        file.write('\n')
+        insert_website_data(supabass_url, result)
     return response
 
 

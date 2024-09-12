@@ -2,69 +2,12 @@ import psycopg2
 from psycopg2 import sql
 import json
 from datetime import datetime
+from config import language_map
+from config import fields
 from dotenv import load_dotenv
 import os
-
 load_dotenv()
 
-
-# 数据库字段
-# fields = [
-#     "id",
-#     "name",
-#     "tag_name",
-#     "category_name",
-#     "url",
-#     "thumbnail_url",
-#     "image_url",
-#     "collection_time",
-#     "star_rating",
-#     "title_en",
-#     "content_en",
-#     "detail_en",
-#     "introduction_en",
-#     "website_data_en",
-#     "title_cn",
-#     "content_cn",
-#     "introduction_cn",
-#     "website_data_cn",
-#     "detail_cn",
-#     "website_data_de",
-#     "website_data_es",
-#     "website_data_fr",
-#     "website_data_jp",
-#     "website_pt",
-#     "website_data_ru",
-#     "website_data_tw",
-#     "detail_de",
-#     "detail_es",
-#     "detail_fr",
-#     "detail_jp",
-#     "detail_pt",
-#     "detail_ru",
-#     "detail_tw",
-#     "introduction_de",
-#     "introduction_es",
-#     "introduction_fr",
-#     "introduction_jp",
-#     "introduction_pt",
-#     "introduction_tw",
-#     "introduction_ru",
-#     "title_de",
-#     "title_es",
-#     "title_fr",
-#     "title_jp",
-#     "title_pt",
-#     "title_ru",
-#     "title_tw",
-#     "content_de",
-#     "content_es",
-#     "content_fr",
-#     "content_pt",
-#     "content_jp",
-#     "content_ru",
-#     "content_tw"
-# ]
 
 def insert_website_data(connection_string, json_data):
     """
@@ -72,7 +15,8 @@ def insert_website_data(connection_string, json_data):
     :param connection_string: Database connection string
     """
     # 表名
-    table_name = "websiteData-demo"
+    table_name = "web_navigation"
+
     try:
         conn = psycopg2.connect(connection_string)
         print("INFO: Connected to the database successfully.")
@@ -81,33 +25,38 @@ def insert_website_data(connection_string, json_data):
         cur.execute(sql.SQL("SELECT MAX(id) FROM {}").format(sql.Identifier(table_name)))
         max_id = cur.fetchone()[0]
         new_id = (max_id + 1) if max_id is not None else 1
-        print("json_data['name']", json_data["name"])
-        fields = [
-            "id",
-            "created_dt",
-            "name",
-            "url",
-            "title",
-            "description",
-            "detail",
-            "screenshot_data",
-            "tags",
-            "languages"
-        ]
+        # print("json_data['name']", json_data["name"])
 
-        data = (
-            new_id,
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S%z"),
-            json_data["name"],
-            json_data["url"],
-            json_data["title"],
-            json_data["description"],
-            json_data["detail"],
-            json_data["screenshot_data"],
-            json.dumps(json_data["tags"]),
-            json.dumps(json_data["languages"]),
-        )
-        #sql语句
+        data = {
+            "id": new_id,
+            "collection_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S%z"),
+            "name": json_data["name"],
+            "url": json_data["url"],
+            "thumbnail_url": json_data["screenshot_thumbnail_data"],
+            "image_url": json_data["screenshot_data"],
+            "title": json_data["title"],
+            "description": json_data["description"],
+            "detail": json_data["detail"],
+            "screenshot_data": json_data["screenshot_data"],
+            "tag_name": json.dumps(json_data["tags"]),
+            "languages": json.dumps(json_data["languages"]),
+        }
+        for lang_data in json_data.get("languages", []):
+            lang_code = lang_data["language"]
+            lang_suffix = language_map.get(lang_code)
+            if lang_suffix:
+                data[f"title_{lang_suffix}"] = lang_data.get("title")
+                data[f"content_{lang_suffix}"] = lang_data.get("description")
+                data[f"detail_{lang_suffix}"] = lang_data.get("detail")
+                data[f"introduction_{lang_suffix}"] = lang_data.get("introduction")
+                data[f"website_data_{lang_suffix}"] = lang_data.get("website_data")
+
+        # 赋空值确保有数据
+        for field in fields:
+            if field not in data:
+                data[field] = None
+
+        # sql语句
         insert_query = sql.SQL(
             "INSERT INTO {table} ({fields}) VALUES ({values})"
         ).format(
@@ -115,18 +64,14 @@ def insert_website_data(connection_string, json_data):
             fields=sql.SQL(', ').join(map(sql.Identifier, fields)),
             values=sql.SQL(', ').join(sql.Placeholder() * len(fields))
         )
-        # # for language_info in json_data["languages"]:
-        # #     language = language_info.get("language")
-        # #     title = language_info.get("title")
-        # #     description = language_info.get("description")
-        # #     detail = language_info.get("detail")
 
         # 执行sql
-        cur.execute(insert_query, data)
+        # cur.execute(insert_query, data)
+        cur.execute(insert_query, tuple(data[field] for field in fields))
         conn.commit()
-        print("Data inserted successfully.")
+        print("INFO: Data inserted successfully.")
     except psycopg2.Error as e:
-        print("Unable to connect to the database or execute query.")
+        print("ERROR: Unable to connect to the database or execute query.")
         print(e)
     finally:
         if cur is not None:
@@ -152,4 +97,5 @@ if __name__ == "__main__":
     data = read_file(file_path)
     if data is not None:
         supabase_url = os.getenv('CONNECTION_SUPABASE_URL')
+        # print('supabase-url:', supabase_url)
         insert_website_data(supabase_url, data)

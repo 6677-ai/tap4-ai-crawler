@@ -2,7 +2,9 @@ import json
 import requests
 import csv
 
-#  "tags": [ "selected tags: ai-detector","chatbot","text-writing","image","code-it"]}
+#  CSV 文件路径
+csv_file_path = './Data/websiteDataAndTags.csv'
+
 tags = ["selected tags: proxy"]
 
 
@@ -38,31 +40,35 @@ def test(site):
 
 # for site_data in sites_data:
 #     site_url = site_data["Site"]
-#
 #     # 发送请求
 #     response = send_proxy_request(site_url, tags)
 
-#  CSV 文件路径
-csv_file_path = './Data/website_data.csv'
 
-
-def read_site_file(file_path):
-    with open(csv_file_path, 'r', encoding='utf-8') as file:
-        csv_reader = csv.reader(file)
-
+def read_site_data_file(file_path):
+    with open(file_path, 'r', encoding='utf-8',  errors='replace') as file:
+        csv_reader = csv.DictReader(file)
+        # print("Column names:", csv_reader.fieldnames)  # 打印列名
         for row in csv_reader:
-            json_string = row[0]
+            # 合并 page_type, page_location 和 page_usage
+            page_type = json.loads(row.get('page_type', '[]'))
+            page_location = json.loads(row.get('page_location', '[]'))
+            page_usage = json.loads(row.get('page_usage', '[]'))
+
+            # 合并并去重
+            combined_array = list(set(page_type + page_location + page_usage))
             try:
-                data = json.loads(json_string)
-                site = data.get('Site')
+                details = json.loads(row['details'])
+                site = details.get('Site')
                 if site:
-                    # send_proxy_request(site, tags)
-                    test(site)
+                    print(f"Site: {site}, Combined Array: {combined_array}")
+                    # send_proxy_request(site, combined_array)  # 这里是你实际调用的函数
+                    # test(site)
                 else:
-                    print("Site not found in JSON data.")
-
+                    print("Site not found in details.")
             except json.JSONDecodeError:
-                print("Error decoding JSON from row:", json_string)
+                print("Error decoding JSON from details:", row['details'])
 
 
-send_proxy_request("https://anyip.io/", tags)
+# send_proxy_request("https://anyip.io/", tags)
+if __name__ == '__main__':
+    read_site_data_file(csv_file_path)
