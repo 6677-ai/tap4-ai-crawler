@@ -6,7 +6,7 @@ import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, BackgroundTasks, HTTPException
 from pydantic import BaseModel
-from inputData import insert_website_data
+from insert_data import insert_website_data
 from website_crawler import WebsitCrawler
 
 string = os.getenv('CONNECTION_SUPABASE_URL')
@@ -61,10 +61,10 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
         'data': result
     }
 
-    with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
-        json.dump(result, file, ensure_ascii=False)
+    with open('./Data/all_res.json', 'a', encoding='utf-8') as file:
+        json.dump(response, file, ensure_ascii=False)
         file.write('\n')
-        insert_website_data(supabass_url, result)
+        # insert_website_data(supabass_url, result)
     return response
 
 

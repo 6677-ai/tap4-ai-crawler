@@ -1,7 +1,14 @@
 # 语言字典
 language_map = {
-    "en": "en", "zh-CN": "cn", "zh-TW": "tw", "de": "de", "es": "es",
-    "fr": "fr", "jp": "jp", "pt": "pt", "ru": "ru", "tw": "tw"
+    "zh-CN": "cn",
+    "zh-TW": "tw",
+    "en": "en",
+    "German": "de",
+    "es": "es",
+    "fr": "fr",
+    "Japanese": "jp",
+    "Portuguese": "pt",
+    "ru": "ru",
 }
 # 数据库字段
 fields = [

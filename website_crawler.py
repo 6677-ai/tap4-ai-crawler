@@ -156,5 +156,6 @@ class WebsitCrawler:
         finally:
             # 计算程序执行时间
             execution_time = int(time.time()) - start_time
+
             # 输出程序执行时间
             logger.info("处理" + url + "用时：" + str(execution_time) + " 秒")
