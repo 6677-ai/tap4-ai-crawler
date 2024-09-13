@@ -4,7 +4,7 @@ Tap4 AI Crawler 是由 [tap4.ai](https://tap4.ai) 开发的开源爬虫，它将
 
 该项目基于 Python，非常轻量级，易于维护，适合对 AI 工具目录感兴趣的个人开发者，也适合对 Python 感兴趣的学习者。我们欢迎大家 fork 和 star。
 
-简体中文 | [English](./README.md)
+简体中文 | [English](./README.md) | [日本語](./README.ja.md)
 
 # 请在 Product Hunt 支持下 Tap4 AI
 
