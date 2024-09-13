@@ -10,3 +10,4 @@ requests
 Pillow
 sentencepiece
 transformers
+asyncpg

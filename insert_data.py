@@ -20,70 +20,62 @@ def insert_website_data(connection_string, json_data):
         return
     # 表名
     table_name = "web_navigation"
-    print('连接字符串', connection_string)
+    # print('连接字符串', connection_string)
     # 初始化
     cur = None
     conn = None
-
     try:
-        conn = psycopg2.connect(connection_string)
-        print("INFO: Connected to the database successfully.")
-        cur = conn.cursor()
+        with psycopg2.connect(connection_string) as conn:
+            with conn.cursor() as cur:
+                print("INFO: Connected to the database successfully.")
+                cur.execute(sql.SQL("SELECT MAX(id) FROM {}").format(sql.Identifier(table_name)))
+                max_id = cur.fetchone()[0]
+                new_id = (max_id + 1) if max_id is not None else 1
+                # 构建数据
+                data = {
+                    "id": new_id,
+                    "collection_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S%z"),
+                    "name": json_data["name"],
+                    "url": json_data["url"],
+                    "thumbnail_url": json_data["screenshot_thumbnail_data"],
+                    "image_url": json_data["screenshot_data"],
+                    "description": json_data["description"],
+                    "detail": json_data["detail"],
+                    "screenshot_data": json_data["screenshot_data"],
+                    "tag_name": json.dumps(json_data["tags"]),
+                    "languages": json.dumps(json_data["languages"]),
+                    "category_name": json_data.get("category_name", None),
+                }
+                # 添加多语言字段
+                for lang_data in json_data.get("languages", []):
+                    lang_code = lang_data["language"]
+                    lang_suffix = language_map.get(lang_code)
+                    if lang_suffix:
+                        data[f"title_{lang_suffix}"] = lang_data.get("title")
+                        data[f"content_{lang_suffix}"] = lang_data.get("description")
+                        data[f"detail_{lang_suffix}"] = lang_data.get("detail")
+                        data[f"introduction_{lang_suffix}"] = lang_data.get("introduction")
+                        data[f"website_data_{lang_suffix}"] = lang_data.get("website_data")
+                # 赋空值确保有数据
+                for field in fields:
+                    if field not in data:
+                        data[field] = None
 
-        cur.execute(sql.SQL("SELECT MAX(id) FROM {}").format(sql.Identifier(table_name)))
-        max_id = cur.fetchone()[0]
-        new_id = (max_id + 1) if max_id is not None else 1
-        data = {
-            "id": new_id,
-            "collection_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S%z"),
-            "name": json_data["name"],
-            "url": json_data["url"],
-            "thumbnail_url": json_data["screenshot_thumbnail_data"],
-            "image_url": json_data["screenshot_data"],
-            "title": json_data["title"],
-            "description": json_data["description"],
-            "detail": json_data["detail"],
-            "screenshot_data": json_data["screenshot_data"],
-            "tag_name": json.dumps(json_data["tags"]),
-            "languages": json.dumps(json_data["languages"]),
-        }
-        for lang_data in json_data.get("languages", []):
-            lang_code = lang_data["language"]
-            lang_suffix = language_map.get(lang_code)
-            if lang_suffix:
-                data[f"title_{lang_suffix}"] = lang_data.get("title")
-                data[f"content_{lang_suffix}"] = lang_data.get("description")
-                data[f"detail_{lang_suffix}"] = lang_data.get("detail")
-                data[f"introduction_{lang_suffix}"] = lang_data.get("introduction")
-                data[f"website_data_{lang_suffix}"] = lang_data.get("website_data")
-
-        # 赋空值确保有数据
-        for field in fields:
-            if field not in data:
-                data[field] = None
-
-        # sql语句
-        insert_query = sql.SQL(
-            "INSERT INTO {table} ({fields}) VALUES ({values})"
-        ).format(
-            table=sql.Identifier(table_name),
-            fields=sql.SQL(', ').join(map(sql.Identifier, fields)),
-            values=sql.SQL(', ').join(sql.Placeholder() * len(fields))
-        )
-
-        # 执行sql
-        # cur.execute(insert_query, data)
-        cur.execute(insert_query, tuple(data[field] for field in fields))
-        conn.commit()
-        print("INFO: Data inserted successfully.")
+                # 插入SQL
+                insert_query = sql.SQL(
+                    "INSERT INTO {table} ({fields}) VALUES ({values})"
+                ).format(
+                    table=sql.Identifier(table_name),
+                    fields=sql.SQL(', ').join(map(sql.Identifier, fields)),
+                    values=sql.SQL(', ').join(sql.Placeholder() * len(fields))
+                )
+                cur.execute(insert_query, tuple(data[field] for field in fields))
+                conn.commit()
+                print("INFO: Data inserted successfully.")
+                return
     except psycopg2.Error as e:
         print("ERROR: Unable to connect to the database or execute query.")
         print(e)
-    finally:
-        if cur is not None:
-            cur.close()
-        if conn is not None:
-            conn.close()
 
 
 def read_file(file):
@@ -96,7 +88,6 @@ def read_file(file):
     except json.JSONDecodeError:
         print(f"Error decoding JSON from file: {file}")
         return None
-
 
 # if __name__ == "__main__":
 #     file_path = './Data/res_data1.json'

@@ -6,14 +6,18 @@ import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, BackgroundTasks, HTTPException
 from pydantic import BaseModel
-from insert_data import insert_website_data
 from website_crawler import WebsitCrawler
+import json
+from insert_data_async import insert_website_data
+load_dotenv()
 
-string = os.getenv('CONNECTION_SUPABASE_URL')
+
 app = FastAPI()
 website_crawler = WebsitCrawler()
-load_dotenv()
+
+
 system_auth_secret = os.getenv('AUTH_SECRET')
+# supabase数据库连接字符串
 supabass_url = os.getenv('CONNECTION_SUPABASE_URL')
 
 # 设置日志记录
@@ -64,7 +68,8 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
     with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
         file.write('\n')
-    insert_website_data(supabass_url, result)
+    print("INFO: Scraping data successfully. Waiting insert data to database.")
+    await insert_website_data(supabass_url, result)
     return response
 
 
