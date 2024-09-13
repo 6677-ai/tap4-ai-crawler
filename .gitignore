@@ -55,6 +55,7 @@ build/
 # 忽略所有 *.egg-info 目录
 *.egg-info/
 
-# 忽略 Data 文件夹下的 
-Data/res_data.json
-Data/response.json
+## 忽略 Data 文件夹下的
+#./Data/res_data.json
+#
+#./Data/response.json

@@ -4,6 +4,8 @@ import asyncpg
 from datetime import datetime
 from config import language_map
 from config import fields
+
+
 # url = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
 
 
@@ -20,7 +22,7 @@ async def insert_website_data(connection_string, json_data):
         if conn:
             print("INFO: Connected to the database successfully.")
         async with conn.transaction():
-            max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation_demo')
+            max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation')
             new_id = (max_id + 1) if max_id is not None else 1
             print('new_id', new_id)
             data = {
@@ -48,11 +50,19 @@ async def insert_website_data(connection_string, json_data):
                 if field not in data:
                     data[field] = None
 
-            columns = ', '.join(data.keys())
-            values = ', '.join(f'${i + 1}' for i in range(len(data)))
+            # 获取表结构中的所有列
+            table_columns = await conn.fetch('SELECT column_name FROM information_schema.columns WHERE table_name = $1',
+                                             table_name)
+            table_columns = [col['column_name'] for col in table_columns]
+
+            # 只插入表结构中存在的字段
+            data_to_insert = {k: v for k, v in data.items() if k in table_columns}
+
+            columns = ', '.join(data_to_insert.keys())
+            values = ', '.join(f'${i + 1}' for i in range(len(data_to_insert)))
             query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
 
-            await conn.execute(query, *data.values())
+            await conn.execute(query, *data_to_insert.values())
             print("INFO: Data inserted successfully.")
     except Exception as e:
         print("ERROR: Unable to connect to the database or execute query.")
@@ -72,7 +82,6 @@ def read_file(file):
         print(f"Error decoding JSON from file: {file}")
         return None
 
-
 # async def main():
 #     file_path = './Data/response.json'
 #     connection_string = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
@@ -84,5 +93,3 @@ def read_file(file):
 
 # if __name__ == "__main__":
 #     asyncio.run(main())
-
-
