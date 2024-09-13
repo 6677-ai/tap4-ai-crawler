@@ -5,7 +5,7 @@ tags = ["selected tags: proxy"]
 
 
 # 封装请求的函数
-def send_proxy_request(site_url: object, tags: object) -> object:
+def send_proxy_request(site_url, tags) :
     headers = {
         "Content-Type": "application/json",
         "Authorization": "Bearer 4487f197tap4ai8Zh42Ufi6mAHdfdf"
@@ -13,7 +13,7 @@ def send_proxy_request(site_url: object, tags: object) -> object:
     data = {
         "url": site_url,
         "tags": tags,
-        "languages": ["zh-CN", "zh-TW"],
+        "languages": ["zh-CN", "zh-TW", "en", "German", "es", "fr", "Japanese", "Portuguese", "ru"],
     }
 
     json_data = json.dumps(data)
@@ -27,9 +27,9 @@ def send_proxy_request(site_url: object, tags: object) -> object:
     return response
 
 
-# send_proxy_request("anyip.io", tags)
+send_proxy_request("anyip.io", tags)
 # https://soax.com
-if __name__ == '__main__':
-    # send_proxy_request("proxyma.io", tags)
-    # send_proxy_request("soax.com", tags)
-    send_proxy_request("https://tattooease.net", tags)
+
+# send_proxy_request("proxyma.io", tags)
+# send_proxy_request("soax.com", tags)
+# send_proxy_request("https://tattooease.net", tags)
