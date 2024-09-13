@@ -23,7 +23,7 @@ def send_proxy_request(site_url, tags):
             json=data,
             timeout=300
         )
-        print(response.json())
+        # print(response.json())
         if response.status_code == 200:
             print(f"INFO：{site_url} 请求成功")
             return True
@@ -49,18 +49,38 @@ def load_site_data(file_path):
             site = row['site']
             tags = row['tags'].strip('][').split('", "')
             site_data.append((site, tags))
+
     return site_data
 
 
-def interactive_request_process(site_data):
-    """
-    交互式处理网站请求
-    :param site_data: 包含网站和标签数据的列表
-    :return: None
-    """
+# def interactive_request_process(site_data):
+#     """
+#     交互式处理网站请求
+#     :param site_data: 包含网站和标签数据的列表
+#     :return: None
+#     """
+#     for idx, (site, tags) in enumerate(site_data):
+#         input(f"按回车键来处理下一个站点 [{idx + 1}/{len(site_data)}]：{site}")
+#         # success = test(site, tags)
+#         print(f"INFO：站点 {site} 请求发送中...")
+#         success = send_proxy_request(site, tags)
+#         if success:
+#             print(f"INFO：站点 {site} 请求返回True")
+#             flag = 1
+#         else:
+#             flag = 0
+#             print(f"ERROR：站点 {site} 请求返回参数错误")
+#         site_data[idx] = (site, tags, flag)
+#     with open('./Data/website_data_flag.csv', 'w', newline='') as csvfile:
+#         fieldnames = ['site', 'tags', 'flag']
+#         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+#         writer.writeheader()
+#         for item in site_data:
+#             writer.writerow({'site': item[0], 'tags': item[1], 'flag': item[2]})
+
+
+def handle_request(site_data):
     for idx, (site, tags) in enumerate(site_data):
-        input(f"按回车键来处理下一个站点 [{idx + 1}/{len(site_data)}]：{site}")
-        # success = test(site, tags)
         print(f"INFO：站点 {site} 请求发送中...")
         success = send_proxy_request(site, tags)
         if success:
@@ -80,5 +100,4 @@ def interactive_request_process(site_data):
 
 file_path = './Data/website_data.csv'
 site_data = load_site_data(file_path)
-
-interactive_request_process(site_data)
+handle_request(site_data)

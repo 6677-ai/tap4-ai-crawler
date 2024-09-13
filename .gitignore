@@ -1,0 +1,60 @@
+# 忽略所有 .pyc 文件
+*.pyc
+
+# 忽略所有 .log 文件
+*.log
+
+# 忽略所有 .env 文件
+*.env
+
+# 忽略所有 .DS_Store 文件
+.DS_Store
+
+# 忽略所有 __pycache__ 目录
+__pycache__/
+
+# 忽略所有 venv 目录
+venv/
+
+# 忽略所有 .idea 目录
+.idea/
+
+# 忽略所有 .pytest_cache 目录
+.pytest_cache/
+
+# 忽略所有 .vscode 目录
+.vscode/
+
+# 忽略所有 .ipynb_checkpoints 目录
+.ipynb_checkpoints/
+
+# 忽略所有 .coverage 文件
+.coverage
+
+# 忽略所有 .coverage.* 文件
+.coverage.*
+
+# 忽略所有 .cache 目录
+.cache/
+
+# 忽略所有 .mypy_cache 目录
+.mypy_cache/
+
+# 忽略所有 .tox 目录
+.tox/
+
+# 忽略所有 .eggs 目录
+.eggs/
+
+# 忽略所有 dist 目录
+dist/
+
+# 忽略所有 build 目录
+build/
+
+# 忽略所有 *.egg-info 目录
+*.egg-info/
+
+# 忽略 Data 文件夹下的 
+Data/res_data.json
+Data/response.json

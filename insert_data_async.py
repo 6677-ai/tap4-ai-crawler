@@ -25,13 +25,14 @@ async def insert_website_data(connection_string, json_data):
             print('new_id', new_id)
             data = {
                 "id": new_id,
-                "collection_time": datetime.now(),
                 "name": json_data["name"],
+                "collection_time": datetime.now(),
+                "image_url": json_data["screenshot_data"],
                 "url": json_data["url"],
                 "thumbnail_url": json_data["screenshot_thumbnail_data"],
-                "image_url": json_data["screenshot_data"],
-                "tag_name": json.dumps(json_data["tags"]),
                 "category_name": json_data.get("category_name", None),
+                "tag_name": json.dumps(json_data["tags"]),
+
             }
             # 添加多语言字段
             for lang_data in json_data.get("languages", []):
@@ -72,14 +73,14 @@ def read_file(file):
         return None
 
 
-async def main():
-    file_path = './Data/response.json'
-    connection_string = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
-
-    data = read_file(file_path)
-    if data is not None:
-        await insert_website_data(connection_string, data)
-
+# async def main():
+#     file_path = './Data/response.json'
+#     connection_string = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
+#
+#     data = read_file(file_path)
+#     if data is not None:
+#         await insert_website_data(connection_string, data)
+#
 
 # if __name__ == "__main__":
 #     asyncio.run(main())
