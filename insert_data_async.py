@@ -36,7 +36,7 @@ async def insert_website_data(connection_string, json_data):
                 "image_url": json_data["screenshot_data"],
                 "url": json_data["url"],
                 "thumbnail_url": json_data["screenshot_thumbnail_data"],
-                "category_name": "proxy",
+                "category_name": json.dumps(["proxy"]),
                 "tag_name": json.dumps(json_data["tags"]),
 
             }
@@ -45,11 +45,14 @@ async def insert_website_data(connection_string, json_data):
                 lang_code = lang_data["language"]
                 lang_suffix = language_map.get(lang_code)
                 if lang_suffix:
-                    data[f"title_{lang_suffix}"] = lang_data.get("title")
-                    data[f"content_{lang_suffix}"] = lang_data.get("description")
-                    data[f"detail_{lang_suffix}"] = lang_data.get("detail")
-                    data[f"introduction_{lang_suffix}"] = lang_data.get("introduction")
-                    data[f"website_data_{lang_suffix}"] = lang_data.get("website_data")
+                    data[f"title_{lang_suffix}"] = json.dumps(lang_data.get("title"))
+                    data[f"content_{lang_suffix}"] = json.dumps(
+                        lang_data.get("description"))
+                    data[f"detail_{lang_suffix}"] = json.dumps(lang_data.get("detail"))
+                    data[f"introduction_{lang_suffix}"] = json.dumps(
+                        lang_data.get("introduction"))
+                    data[f"website_data_{lang_suffix}"] = json.dumps(
+                        lang_data.get("website_data"))
             for field in fields:
                 if field not in data:
                     data[field] = None
@@ -72,7 +75,9 @@ async def insert_website_data(connection_string, json_data):
         print("ERROR: Unable to connect to the database or execute query.")
         print(e)
     finally:
-        await conn.close()
+        if conn:
+            await conn.close()
+            print("INFO: Connection closed.")
 
 
 def read_file(file):
@@ -94,6 +99,6 @@ async def main():
         connection_string = os.getenv('CONNECTION_SUPABASE_URL')
         await insert_website_data(connection_string, data)
 
-#
-# if __name__ == "__main__":
-#     asyncio.run(main())
+
+if __name__ == "__main__":
+    asyncio.run(main())

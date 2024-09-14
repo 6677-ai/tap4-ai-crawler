@@ -11,7 +11,6 @@ import random
 from PIL import Image
 from util.common_util import CommonUtil
 
-
 # 设置日志记录
 logging.basicConfig(
     level=logging.INFO,
@@ -28,6 +27,7 @@ class OSSUtil:
         self.S3_SECRET_ACCESS_KEY = os.getenv('S3_SECRET_ACCESS_KEY')
         self.S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
         self.S3_CUSTOM_DOMAIN = os.getenv('S3_CUSTOM_DOMAIN')
+        self.S3_SOURCE_POINT = os.getenv('S3_SOURCE_POINT')
         self.s3 = boto3.client(
             's3',
             endpoint_url=self.S3_ENDPOINT_URL,
@@ -66,19 +66,17 @@ class OSSUtil:
                     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
                 })
                 image_data = response.content
-                self.s3.upload_fileobj(BytesIO(image_data), self.S3_BUCKET_NAME, file_key)
+                self.s3.upload_fileobj(BytesIO(image_data), self.S3_BUCKET_NAME, file_key,
+                                       ExtraArgs={'ACL': 'public-read'})
             else:
-                self.s3.upload_file(file_path, self.S3_BUCKET_NAME, file_key)
+                self.s3.upload_file(file_path, self.S3_BUCKET_NAME, file_key, ExtraArgs={'ACL': 'public-read'})
 
             logger.info(f"文件 '{file_path}' 成功上传到 '{self.S3_BUCKET_NAME}/{file_key}'")
             if os.path.exists(file_path):
                 os.remove(file_path)
 
-            # 如果提供了自定义域名
-            if self.S3_CUSTOM_DOMAIN:
-                file_url = f"https://{self.S3_CUSTOM_DOMAIN}/{file_key}"
-            else:
-                file_url = f"{self.S3_ENDPOINT_URL}/{self.S3_BUCKET_NAME}/{file_key}"
+            # 使用 source_point 构建文件URL
+            file_url = f"{self.S3_SOURCE_POINT}/{file_key}"
 
             logger.info(f"文件URL: {file_url}")
             return file_url
@@ -107,12 +105,9 @@ class OSSUtil:
 
         # 将缩略图上传回S3
         thumbnail_key = self.get_default_file_key(url, is_thumbnail=True)
-        self.s3.put_object(Bucket=self.S3_BUCKET_NAME, Key=thumbnail_key, Body=thumbnail_buffer)
+        self.s3.put_object(Bucket=self.S3_BUCKET_NAME, Key=thumbnail_key, Body=thumbnail_buffer, ACL='public-read')
 
-        # 如果提供了自定义域名
-        if self.S3_CUSTOM_DOMAIN:
-            file_url = f"https://{self.S3_CUSTOM_DOMAIN}/{thumbnail_key}"
-        else:
-            file_url = f"{self.S3_ENDPOINT_URL}/{self.S3_BUCKET_NAME}/{thumbnail_key}"
+        # 使用 source_point 构建缩略图URL
+        file_url = f"{self.S3_SOURCE_POINT}/{thumbnail_key}"
         logger.info(f"缩略图文件URL: {file_url}")
         return file_url
