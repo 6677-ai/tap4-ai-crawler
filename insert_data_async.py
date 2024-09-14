@@ -45,14 +45,11 @@ async def insert_website_data(connection_string, json_data):
                 lang_code = lang_data["language"]
                 lang_suffix = language_map.get(lang_code)
                 if lang_suffix:
-                    data[f"title_{lang_suffix}"] = json.dumps(lang_data.get("title"))
-                    data[f"content_{lang_suffix}"] = json.dumps(
-                        lang_data.get("description"))
-                    data[f"detail_{lang_suffix}"] = json.dumps(lang_data.get("detail"))
-                    data[f"introduction_{lang_suffix}"] = json.dumps(
-                        lang_data.get("introduction"))
-                    data[f"website_data_{lang_suffix}"] = json.dumps(
-                        lang_data.get("website_data"))
+                    data[f"title_{lang_suffix}"] = lang_data.get("title")
+                    data[f"content_{lang_suffix}"] = lang_data.get("description")
+                    data[f"detail_{lang_suffix}"] = lang_data.get("detail")
+                    data[f"introduction_{lang_suffix}"] = lang_data.get("introduction")
+                    data[f"website_data_{lang_suffix}"] = lang_data.get("website_data")
             for field in fields:
                 if field not in data:
                     data[field] = None

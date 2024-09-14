@@ -22,6 +22,7 @@ venv/
 # 忽略所有 .pytest_cache 目录
 .pytest_cache/
 
+.__pycache__/
 # 忽略所有 .vscode 目录
 .vscode/
 
@@ -59,3 +60,5 @@ build/
 ./Log/
 
 ./Data/
+
+./Data/response.json/
