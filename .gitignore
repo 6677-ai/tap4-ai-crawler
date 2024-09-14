@@ -61,4 +61,4 @@ build/
 ./Data/response.json
 
 ./Data/all_website_data.csv
-/Data/res_data.json
+./Data
