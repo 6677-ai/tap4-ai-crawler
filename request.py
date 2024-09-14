@@ -53,32 +53,6 @@ def load_site_data(file_path):
     return site_data
 
 
-# def interactive_request_process(site_data):
-#     """
-#     交互式处理网站请求
-#     :param site_data: 包含网站和标签数据的列表
-#     :return: None
-#     """
-#     for idx, (site, tags) in enumerate(site_data):
-#         input(f"按回车键来处理下一个站点 [{idx + 1}/{len(site_data)}]：{site}")
-#         # success = test(site, tags)
-#         print(f"INFO：站点 {site} 请求发送中...")
-#         success = send_proxy_request(site, tags)
-#         if success:
-#             print(f"INFO：站点 {site} 请求返回True")
-#             flag = 1
-#         else:
-#             flag = 0
-#             print(f"ERROR：站点 {site} 请求返回参数错误")
-#         site_data[idx] = (site, tags, flag)
-#     with open('./Data/website_data_flag.csv', 'w', newline='') as csvfile:
-#         fieldnames = ['site', 'tags', 'flag']
-#         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-#         writer.writeheader()
-#         for item in site_data:
-#             writer.writerow({'site': item[0], 'tags': item[1], 'flag': item[2]})
-
-
 def handle_request(site_data):
     for idx, (site, tags) in enumerate(site_data):
         print(f"INFO：站点 {site} 请求发送中...")

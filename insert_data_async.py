@@ -4,6 +4,10 @@ import asyncpg
 from datetime import datetime
 from config import language_map
 from config import fields
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # url = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
@@ -16,9 +20,9 @@ async def insert_website_data(connection_string, json_data):
     conn = None
     table_name = "web_navigation"
 
-    print('database_string', connection_string)
+    # print('database_string:', connection_string)
     try:
-        conn = await asyncpg.connect(dsn=connection_string)
+        conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
         if conn:
             print("INFO: Connected to the database successfully.")
         async with conn.transaction():
@@ -82,14 +86,14 @@ def read_file(file):
         print(f"Error decoding JSON from file: {file}")
         return None
 
-# async def main():
-#     file_path = './Data/response.json'
-#     connection_string = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
-#
-#     data = read_file(file_path)
-#     if data is not None:
-#         await insert_website_data(connection_string, data)
-#
 
+async def main():
+    file_path = './Data/response.json'
+    data = read_file(file_path)
+    if data is not None:
+        connection_string = os.getenv('CONNECTION_SUPABASE_URL')
+        await insert_website_data(connection_string, data)
+
+#
 # if __name__ == "__main__":
 #     asyncio.run(main())

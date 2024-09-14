@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d09a1a7a-6361-414f-aff7-93f3d858b247" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/all_website_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/res_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/res_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/response.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/response.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/website_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/website_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/website_data_flag.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/website_data_flag.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insert_data.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/insert_data_async.py" beforeDir="false" afterPath="$PROJECT_DIR$/insert_data_async.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/handle_file_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/handle_file_util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,57 +46,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.inputData.executor&quot;: &quot;Run&quot;,
-    &quot;Python.insert_data (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.insert_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.request.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test-api.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Project/work-test/tap4-ai-crawler&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.inputData.executor": "Run",
+    "Python.insert_data (1).executor": "Run",
+    "Python.insert_data.executor": "Run",
+    "Python.insert_data_async (1).executor": "Run",
+    "Python.insert_data_async.executor": "Run",
+    "Python.main_api.executor": "Run",
+    "Python.request.executor": "Run",
+    "Python.test-api.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Project/work-test/tap4-ai-crawler",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Project\work-test\tap4-ai-crawler-inital\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.request">
-    <configuration name="insert_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="tap4-ai-crawler-inital" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\Project\work-test\tap4-ai-crawler\insert_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.insert_data_async">
     <configuration name="insert_data_async" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tap4-ai-crawler-inital" />
       <option name="ENV_FILES" value="" />
@@ -162,9 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.request" />
         <item itemvalue="Python.insert_data_async" />
-        <item itemvalue="Python.insert_data" />
+        <item itemvalue="Python.request" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +174,7 @@
       <workItem from="1726134161258" duration="1134000" />
       <workItem from="1726135539945" duration="4658000" />
       <workItem from="1726142145672" duration="9997000" />
-      <workItem from="1726195517080" duration="29383000" />
+      <workItem from="1726195517080" duration="33398000" />
     </task>
     <servers />
   </component>
@@ -213,12 +197,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tap4_ai_crawler$insert_data.coverage" NAME="insert_data 覆盖结果" MODIFIED="1726189571544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tap4_ai_crawler$test_api.coverage" NAME="test-api 覆盖结果" MODIFIED="1726220775706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tap4_ai_crawler$test_api.coverage" NAME="insert_data_async 覆盖结果" MODIFIED="1726277736718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tap4_ai_crawler$insert_data_async__1_.coverage" NAME="insert_data_async (1) 覆盖结果" MODIFIED="1726276896142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tap4_ai_crawler_inital$test_api.coverage" NAME="test-api 覆盖结果" MODIFIED="1726048284675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tap4_ai_crawler$main_api.coverage" NAME="main_api 覆盖结果" MODIFIED="1726226978855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tap4_ai_crawler$request.coverage" NAME="request 覆盖结果" MODIFIED="1726226984988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tap4_ai_crawler$main_api.coverage" NAME="main_api 覆盖结果" MODIFIED="1726276665332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tap4_ai_crawler$request.coverage" NAME="request 覆盖结果" MODIFIED="1726227481481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tap4_ai_crawler_inital$inputData.coverage" NAME="inputData 覆盖结果" MODIFIED="1726017075523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tap4_ai_crawler$insert_data__1_.coverage" NAME="insert_data (1) 覆盖结果" MODIFIED="1726144724338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tap4_ai_crawler$insert_data__1_.coverage" NAME="insert_data (1) 覆盖结果" MODIFIED="1726276739734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tap4_ai_crawler_inital$main_api.coverage" NAME="main_api 覆盖结果" MODIFIED="1726048105013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tap4_ai_crawler$inputData.coverage" NAME="inputData 覆盖结果" MODIFIED="1726134953551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

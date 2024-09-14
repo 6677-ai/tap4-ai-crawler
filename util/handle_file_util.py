@@ -1,7 +1,7 @@
 import json
 import csv
 
-csv_file_path = '../Data/websiteDataAndTags.csv'
+csv_file_path = '../Data/all_website_data.csv'
 output_path = '../Data/website_data.csv'
 
 

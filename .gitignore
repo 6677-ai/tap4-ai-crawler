@@ -56,6 +56,8 @@ build/
 *.egg-info/
 
 ## 忽略 Data 文件夹下的
-#./Data/res_data.json
-#
-#./Data/response.json
+./Data/res_data.json
+
+./Data/response.json
+
+./Data/all_website_data.csv
