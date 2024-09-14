@@ -1,3 +1,5 @@
+import asyncio
+
 from bs4 import BeautifulSoup
 import logging
 import time
@@ -63,10 +65,18 @@ class WebsitCrawler:
             width = 1920  # 默认宽度为 1920
             height = 1080  # 默认高度为 1080
             await page.setViewport({'width': width, 'height': height})
-            try:
-                await page.goto(url, {'timeout': 60000, 'waitUntil': ['load', 'networkidle2']})
-            except Exception as e:
-                logger.info(f'页面加载超时,不影响继续执行后续流程:{e}')
+            max_retries = 3  # 最大重试次数
+            retry_delay = 2  # 每次重试之间的等待时间（秒）
+            for attempt in range(max_retries):
+                try:
+                    await page.goto(url, {'timeout': 60000, 'waitUntil': ['load', 'networkidle2']})
+                    break  # 成功加载页面，跳出循环
+                except Exception as e:
+                    logger.info(f'页面加载超时, 尝试重新加载 (尝试次数: {attempt + 1}/{max_retries}): {e}')
+                    if attempt == max_retries - 1:
+                        logger.error(f'页面加载超时, 达到最大重试次数: {e}')
+                        return None
+                    await asyncio.sleep(retry_delay)  # 等待一段时间后重试
 
             # 获取网页内容
             origin_content = await page.content()

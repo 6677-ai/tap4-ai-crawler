@@ -36,7 +36,7 @@ async def insert_website_data(connection_string, json_data):
                 "image_url": json_data["screenshot_data"],
                 "url": json_data["url"],
                 "thumbnail_url": json_data["screenshot_thumbnail_data"],
-                "category_name": json_data.get("category_name", None),
+                "category_name": "proxy",
                 "tag_name": json.dumps(json_data["tags"]),
 
             }

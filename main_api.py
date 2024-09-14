@@ -1,7 +1,6 @@
 import logging
 import os
 from typing import List, Optional
-import json
 import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, BackgroundTasks, HTTPException
@@ -9,12 +8,11 @@ from pydantic import BaseModel
 from website_crawler import WebsitCrawler
 import json
 from insert_data_async import insert_website_data
-load_dotenv()
 
+load_dotenv()
 
 app = FastAPI()
 website_crawler = WebsitCrawler()
-
 
 system_auth_secret = os.getenv('AUTH_SECRET')
 # supabase数据库连接字符串

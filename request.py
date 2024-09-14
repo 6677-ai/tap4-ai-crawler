@@ -1,7 +1,5 @@
 import requests
-import json
 import csv
-import time
 
 
 # 封装请求的函数
@@ -72,6 +70,6 @@ def handle_request(site_data):
             writer.writerow({'site': item[0], 'tags': item[1], 'flag': item[2]})
 
 
-file_path = './Data/website_data.csv'
-site_data = load_site_data(file_path)
-handle_request(site_data)
+data_path = './Data/website_data.csv'
+all_site_data = load_site_data(data_path)
+handle_request(all_site_data)

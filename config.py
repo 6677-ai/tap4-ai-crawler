@@ -10,6 +10,17 @@ language_map = {
     "Portuguese": "pt",
     "ru": "ru",
 }
+language = {
+    "Chinese (Simplified)": "cn",
+    "Chinese (Traditional)": "tw",
+    "English": "en",
+    "German": "de",
+    "Spanish": "es",
+    "French": "fr",
+    "Japanese": "jp",
+    "Portuguese": "pt",
+    "Russian": "ru",
+}
 # 数据库字段
 fields = [
     "id",
