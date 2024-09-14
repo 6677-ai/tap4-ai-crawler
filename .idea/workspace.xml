@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d09a1a7a-6361-414f-aff7-93f3d858b247" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Log/main_api_log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Log/request_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insert_data_async.py" beforeDir="false" afterPath="$PROJECT_DIR$/insert_data_async.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/oss_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/oss_util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +165,7 @@
       <workItem from="1726135539945" duration="4658000" />
       <workItem from="1726142145672" duration="9997000" />
       <workItem from="1726195517080" duration="36321000" />
-      <workItem from="1726283520697" duration="14746000" />
+      <workItem from="1726283520697" duration="14894000" />
     </task>
     <servers />
   </component>
