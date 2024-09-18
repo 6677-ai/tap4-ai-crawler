@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d09a1a7a-6361-414f-aff7-93f3d858b247" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/logger_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/contrast.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/db/find_duplication.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/res_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/res_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log/main_api_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log/main_api_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log/request_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log/request_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/website_crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/response.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/response.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +196,7 @@
       <workItem from="1726195517080" duration="36321000" />
       <workItem from="1726283520697" duration="25028000" />
       <workItem from="1726623910221" duration="6828000" />
-      <workItem from="1726631336249" duration="3929000" />
+      <workItem from="1726631336249" duration="6516000" />
     </task>
     <servers />
   </component>
