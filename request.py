@@ -1,9 +1,10 @@
 import requests
 import csv
+from datetime import datetime
 
 
 # 封装请求的函数
-def send_proxy_request(site_url, tags):
+def send_proxy_request(site_url, tags, log_file):
     headers = {
         "Content-Type": "application/json",
         "Authorization": "Bearer 4487f197tap4ai8Zh42Ufi6mAHdfdf"
@@ -21,16 +22,18 @@ def send_proxy_request(site_url, tags):
             json=data,
             timeout=300
         )
-        # print(response.json())
         if response.status_code == 200:
             print(f"INFO：{site_url} 请求成功")
+            log_file.write(f"{datetime.now()} - INFO：{site_url} 请求成功\n")
             return True
         else:
             print(f"ERROR：{site_url} 状态码：{response.status_code}")
+            log_file.write(f"{datetime.now()} - ERROR：{site_url} 状态码：{response.status_code}\n")
             return False
 
     except requests.exceptions.RequestException as e:
         print(f"ERROR：{site_url} 请求失败，错误信息: {e}")
+        log_file.write(f"{datetime.now()} - ERROR：{site_url} 请求失败，错误信息: {e}\n")
         return False
 
 
@@ -51,16 +54,19 @@ def load_site_data(file_path):
     return site_data
 
 
-def handle_request(site_data):
+def handle_request(site_data, log_file):
+    total_sites = len(site_data)
     for idx, (site, tags) in enumerate(site_data):
-        print(f"INFO：站点 {site} 请求发送中...")
-        success = send_proxy_request(site, tags)
+        current_count = idx + 1
+        print(f"INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...")
+        log_file.write(f"INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...")
+        success = send_proxy_request(site, tags, log_file)
         if success:
-            print(f"INFO：站点 {site} 请求返回True")
+            log_file.write(f"{datetime.now()} - INFO：站点 {site} 请求返回True\n")
             flag = 1
         else:
             flag = 0
-            print(f"ERROR：站点 {site} 请求返回参数错误")
+            log_file.write(f"{datetime.now()} - ERROR：站点 {site} 请求返回参数错误\n")
         site_data[idx] = (site, tags, flag)
     with open('./Data/website_data_flag.csv', 'w', newline='') as csvfile:
         fieldnames = ['site', 'tags', 'flag']
@@ -72,4 +78,7 @@ def handle_request(site_data):
 
 data_path = './Data/website_data.csv'
 all_site_data = load_site_data(data_path)
-handle_request(all_site_data)
+
+# 打开日志文件，以追加模式写入
+with open('./Log/request_log.txt', 'a') as log_file:
+    handle_request(all_site_data, log_file)

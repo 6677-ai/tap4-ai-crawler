@@ -25,7 +25,15 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# 创建 FileHandler 并将日志写入到文件中
+log_file_path = './Log/main_api_log.txt'
+os.makedirs(os.path.dirname(log_file_path), exist_ok=True)  # 确保目录存在
+file_handler = logging.FileHandler(log_file_path)
+file_handler.setFormatter(
+    logging.Formatter('%(asctime)s - %(filename)s - %(funcName)s - %(lineno)d - %(levelname)s - %(message)s'))
+logger.addHandler(file_handler)
 
+logger.info(f'Logging to file: {log_file_path}')
 class URLRequest(BaseModel):
     url: str
     tags: Optional[List[str]] = None
@@ -66,7 +74,9 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
     with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
         file.write('\n')
+
     print("INFO: Scraping data successfully. Waiting insert data to database.")
+    logger.info("INFO: Scraping data successfully. Waiting insert data to database.")
     await insert_website_data(supabass_url, result)
     return response
 

@@ -9,16 +9,23 @@ from pyppeteer import launch
 from util.common_util import CommonUtil
 from util.llm_util import LLMUtil
 from util.oss_util import OSSUtil
+from logger_config import setup_logger  # 导入日志配置
 
+#设置日志记录
+logger = setup_logger()
 llm = LLMUtil()
 oss = OSSUtil()
 
 # 设置日志记录
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(filename)s - %(funcName)s - %(lineno)d - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+#     handlers=[
+#         logging.FileHandler("./Log/main_api_log.txt"),
+#         logging.StreamHandler()
+#     ]
+# )
+# logger = logging.getLogger(__name__)
 
 global_agent_headers = [
     "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",
@@ -34,6 +41,7 @@ global_agent_headers = [
     "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.04 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
     "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 "
 ]
+
 
 class WebsitCrawler:
     def __init__(self):

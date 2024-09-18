@@ -62,3 +62,5 @@ build/
 ./Data/
 
 ./Data/response.json/
+
+./Data/res_data.json/
