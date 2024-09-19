@@ -77,7 +77,7 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
 
     print("INFO: Scraping data successfully. Waiting insert data to database.")
     logger.info("INFO: Scraping data successfully. Waiting insert data to database.")
-    await insert_website_data(supabass_url, result)
+    await insert_website_data(supabass_url, result, tags)
     return response
 
 

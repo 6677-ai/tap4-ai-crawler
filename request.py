@@ -76,7 +76,8 @@ def handle_request(site_data, log_file):
             writer.writerow({'site': item[0], 'tags': item[1], 'flag': item[2]})
 
 
-data_path = './Data/website_data.csv'
+# data_path = './Data/website_data.csv'
+data_path = './Data/ai_tools.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入

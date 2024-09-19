@@ -12,3 +12,1498 @@
 2024-09-18 13:44:01,276 - logger_config - INFO - https://astroproxy.com站点处理成功
 2024-09-18 13:44:01,282 - logger_config - INFO - 处理https://astroproxy.com用时：66 秒
 2024-09-18 13:44:01,289 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:28:31,875 - main_api.py - <module> - 36 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-18 18:31:46,806 - main_api.py - <module> - 36 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-18 18:31:48,279 - logger_config - INFO - 正在处理：astroproxy.com
+2024-09-18 18:31:50,722 - logger_config - INFO - url:https://astroproxy.com, title:Just a moment...,description:
+2024-09-18 18:31:58,082 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成zh-CN语言
+2024-09-18 18:32:01,409 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成zh-TW语言
+2024-09-18 18:32:02,930 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成en语言
+2024-09-18 18:32:05,293 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成German语言
+2024-09-18 18:32:08,349 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成es语言
+2024-09-18 18:32:11,037 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成fr语言
+2024-09-18 18:32:14,020 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成Japanese语言
+2024-09-18 18:32:16,836 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成Portuguese语言
+2024-09-18 18:32:26,498 - logger_config - INFO - 正在处理https://astroproxy.com站点，生成ru语言
+2024-09-18 18:32:37,301 - logger_config - INFO - https://astroproxy.com站点处理成功
+2024-09-18 18:32:37,301 - logger_config - INFO - 处理https://astroproxy.com用时：49 秒
+2024-09-18 18:32:37,307 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:35:07,485 - logger_config - INFO - 正在处理：https://www.adobe.com/sensei.html
+2024-09-18 18:35:10,840 - logger_config - INFO - url:https://www.adobe.com/sensei.html, title:Experience Cloud AI Services with Adobe Sensei,description:Adobe Sensei powers Experience Cloud artificial intelligence, helping you deliver more personalized, timely experiences. Learn more.
+2024-09-18 18:35:18,179 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-CN语言
+2024-09-18 18:35:21,827 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-TW语言
+2024-09-18 18:35:25,583 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成en语言
+2024-09-18 18:35:29,283 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成German语言
+2024-09-18 18:35:43,288 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成es语言
+2024-09-18 18:35:58,844 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成fr语言
+2024-09-18 18:36:13,590 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Japanese语言
+2024-09-18 18:36:30,446 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Portuguese语言
+2024-09-18 18:36:45,385 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成ru语言
+2024-09-18 18:37:00,196 - logger_config - INFO - https://www.adobe.com/sensei.html站点处理成功
+2024-09-18 18:37:00,196 - logger_config - INFO - 处理https://www.adobe.com/sensei.html用时：113 秒
+2024-09-18 18:37:00,204 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:38:56,828 - main_api.py - <module> - 36 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-18 18:39:36,767 - logger_config - INFO - 正在处理：https://www.adobe.com/sensei.html
+2024-09-18 18:39:38,184 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_SPDY_PROTOCOL_ERROR at https://www.adobe.com/sensei.html
+2024-09-18 18:39:40,547 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_SPDY_PROTOCOL_ERROR at https://www.adobe.com/sensei.html
+2024-09-18 18:39:42,910 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_SPDY_PROTOCOL_ERROR at https://www.adobe.com/sensei.html
+2024-09-18 18:39:42,910 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_SPDY_PROTOCOL_ERROR at https://www.adobe.com/sensei.html
+2024-09-18 18:39:42,910 - logger_config - INFO - 处理https://www.adobe.com/sensei.html用时：6 秒
+2024-09-18 18:39:42,916 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:39:42,932 - logger_config - INFO - 正在处理：https://midjourney.com
+2024-09-18 18:40:02,652 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_CONNECTION_CLOSED at https://midjourney.com
+2024-09-18 18:40:05,309 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:40:07,635 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:40:07,635 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:40:07,635 - logger_config - INFO - 处理https://midjourney.com用时：25 秒
+2024-09-18 18:40:07,639 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:40:08,024 - logger_config - INFO - 正在处理：https://www.adobe.com/sensei.html
+2024-09-18 18:40:10,934 - logger_config - INFO - url:https://www.adobe.com/sensei.html, title:Experience Cloud AI Services with Adobe Sensei,description:Adobe Sensei powers Experience Cloud artificial intelligence, helping you deliver more personalized, timely experiences. Learn more.
+2024-09-18 18:40:18,347 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-CN语言
+2024-09-18 18:40:22,014 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-TW语言
+2024-09-18 18:40:24,361 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成en语言
+2024-09-18 18:40:27,752 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成German语言
+2024-09-18 18:40:41,300 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成es语言
+2024-09-18 18:40:58,567 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成fr语言
+2024-09-18 18:41:14,551 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Japanese语言
+2024-09-18 18:41:31,478 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Portuguese语言
+2024-09-18 18:41:49,093 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成ru语言
+2024-09-18 18:42:05,127 - logger_config - INFO - https://www.adobe.com/sensei.html站点处理成功
+2024-09-18 18:42:05,127 - logger_config - INFO - 处理https://www.adobe.com/sensei.html用时：117 秒
+2024-09-18 18:42:05,136 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:42:25,629 - logger_config - INFO - 正在处理：https://midjourney.com
+2024-09-18 18:42:26,005 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:42:28,335 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:42:30,680 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:42:30,680 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:42:30,680 - logger_config - INFO - 处理https://midjourney.com用时：5 秒
+2024-09-18 18:42:30,686 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:42:30,712 - logger_config - INFO - 正在处理：https://openai.com/blog/openai-codex
+2024-09-18 18:42:34,040 - logger_config - INFO - url:https://openai.com/blog/openai-codex, title:OpenAI Codex | OpenAI,description:We’ve created an improved version of OpenAI Codex, our AI system that translates natural language to code, and we are releasing it through our API in private beta starting today.
+2024-09-18 18:42:41,169 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成zh-CN语言
+2024-09-18 18:42:44,313 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成zh-TW语言
+2024-09-18 18:42:50,943 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成en语言
+2024-09-18 18:43:01,330 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成German语言
+2024-09-18 18:43:12,762 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成es语言
+2024-09-18 18:43:23,386 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成fr语言
+2024-09-18 18:43:35,688 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成Japanese语言
+2024-09-18 18:43:45,725 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成Portuguese语言
+2024-09-18 18:43:54,622 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成ru语言
+2024-09-18 18:44:06,038 - logger_config - INFO - https://openai.com/blog/openai-codex站点处理成功
+2024-09-18 18:44:06,038 - logger_config - INFO - 处理https://openai.com/blog/openai-codex用时：96 秒
+2024-09-18 18:44:06,046 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:45:00,318 - logger_config - INFO - 正在处理：https://midjourney.com
+2024-09-18 18:45:00,729 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:45:03,060 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:45:05,365 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:45:05,366 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 18:45:05,366 - logger_config - INFO - 处理https://midjourney.com用时：5 秒
+2024-09-18 18:45:05,373 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:45:05,388 - logger_config - INFO - 正在处理：https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work
+2024-09-18 18:45:12,030 - logger_config - INFO - url:https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work, title:Introducing Microsoft 365 Copilot – your copilot for work - The Official Microsoft Blog,description:Humans are hard-wired to dream, to create, to innovate. Each of us seeks to do work that gives us purpose — to write a great novel, to make a discovery, to build strong communities, to care for the sick. The urge to connect to the core of our work lives in all of us. But...
+2024-09-18 18:45:19,686 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成zh-CN语言
+2024-09-18 18:45:23,483 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成zh-TW语言
+2024-09-18 18:45:32,802 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成en语言
+2024-09-18 18:45:47,431 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成German语言
+2024-09-18 18:46:00,282 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成es语言
+2024-09-18 18:46:14,414 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成fr语言
+2024-09-18 18:46:29,760 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成Japanese语言
+2024-09-18 18:46:42,292 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成Portuguese语言
+2024-09-18 18:46:53,117 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成ru语言
+2024-09-18 18:47:07,743 - logger_config - INFO - https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点处理成功
+2024-09-18 18:47:07,743 - logger_config - INFO - 处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work用时：122 秒
+2024-09-18 18:47:07,750 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:47:08,767 - logger_config - INFO - 正在处理：https://openai.com/blog/chatgpt
+2024-09-18 18:47:10,507 - logger_config - INFO - url:https://openai.com/blog/chatgpt, title:,description:
+2024-09-18 18:47:27,831 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成zh-CN语言
+2024-09-18 18:47:32,276 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成zh-TW语言
+2024-09-18 18:47:38,715 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成en语言
+2024-09-18 18:47:48,439 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成German语言
+2024-09-18 18:47:56,123 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成es语言
+2024-09-18 18:48:06,051 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成fr语言
+2024-09-18 18:48:16,189 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成Japanese语言
+2024-09-18 18:48:26,155 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成Portuguese语言
+2024-09-18 18:48:35,075 - logger_config - INFO - 正在处理https://openai.com/blog/chatgpt站点，生成ru语言
+2024-09-18 18:48:45,078 - logger_config - INFO - https://openai.com/blog/chatgpt站点处理成功
+2024-09-18 18:48:45,078 - logger_config - INFO - 处理https://openai.com/blog/chatgpt用时：97 秒
+2024-09-18 18:48:45,083 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:48:46,131 - logger_config - INFO - 正在处理：https://github.com/features/copilot
+2024-09-18 18:48:49,219 - logger_config - INFO - url:https://github.com/features/copilot, title:GitHub Copilot · Your AI pair programmer · GitHub,description:GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+2024-09-18 18:49:46,859 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成zh-CN语言
+2024-09-18 18:49:49,642 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成zh-TW语言
+2024-09-18 18:49:55,349 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成en语言
+2024-09-18 18:50:06,457 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成German语言
+2024-09-18 18:50:17,911 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成es语言
+2024-09-18 18:50:29,213 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成fr语言
+2024-09-18 18:50:41,941 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成Japanese语言
+2024-09-18 18:50:53,409 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成Portuguese语言
+2024-09-18 18:51:05,728 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成ru语言
+2024-09-18 18:51:17,395 - logger_config - INFO - https://github.com/features/copilot站点处理成功
+2024-09-18 18:51:17,395 - logger_config - INFO - 处理https://github.com/features/copilot用时：151 秒
+2024-09-18 18:51:17,405 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:51:18,452 - logger_config - INFO - 正在处理：https://www.jasper.ai
+2024-09-18 18:51:24,398 - logger_config - INFO - url:https://www.jasper.ai, title:Jasper | AI copilot for enterprise marketing teams,description:Enterprise-grade AI tools to help marketing teams achieve both speed and performance.
+2024-09-18 18:52:16,519 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成zh-CN语言
+2024-09-18 18:52:28,474 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成zh-TW语言
+2024-09-18 18:52:40,110 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成en语言
+2024-09-18 18:52:51,395 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成German语言
+2024-09-18 18:53:05,146 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成es语言
+2024-09-18 18:53:21,551 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成fr语言
+2024-09-18 18:53:36,963 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成Japanese语言
+2024-09-18 18:53:53,813 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成Portuguese语言
+2024-09-18 18:54:10,300 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成ru语言
+2024-09-18 18:54:26,432 - logger_config - INFO - https://www.jasper.ai站点处理成功
+2024-09-18 18:54:26,432 - logger_config - INFO - 处理https://www.jasper.ai用时：188 秒
+2024-09-18 18:54:26,440 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:54:27,700 - logger_config - INFO - 正在处理：https://www.notion.so
+2024-09-18 18:54:31,517 - logger_config - INFO - url:https://www.notion.so, title:Your connected workspace for wiki, docs & projects | Notion,description:A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.
+2024-09-18 18:54:53,453 - logger_config - INFO - 正在处理https://www.notion.so站点，生成zh-CN语言
+2024-09-18 18:55:02,328 - logger_config - INFO - 正在处理https://www.notion.so站点，生成zh-TW语言
+2024-09-18 18:55:14,991 - logger_config - INFO - 正在处理https://www.notion.so站点，生成en语言
+2024-09-18 18:55:28,332 - logger_config - INFO - 正在处理https://www.notion.so站点，生成German语言
+2024-09-18 18:55:40,181 - logger_config - INFO - 正在处理https://www.notion.so站点，生成es语言
+2024-09-18 18:55:53,247 - logger_config - INFO - 正在处理https://www.notion.so站点，生成fr语言
+2024-09-18 18:56:08,130 - logger_config - INFO - 正在处理https://www.notion.so站点，生成Japanese语言
+2024-09-18 18:56:19,192 - logger_config - INFO - 正在处理https://www.notion.so站点，生成Portuguese语言
+2024-09-18 18:56:29,818 - logger_config - INFO - 正在处理https://www.notion.so站点，生成ru语言
+2024-09-18 18:56:43,446 - logger_config - INFO - https://www.notion.so站点处理成功
+2024-09-18 18:56:43,446 - logger_config - INFO - 处理https://www.notion.so用时：136 秒
+2024-09-18 18:56:43,454 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 18:56:44,656 - logger_config - INFO - 正在处理：https://www.microsoft.com/en-us/ai/ai-lab-sketch2code
+2024-09-18 18:56:48,080 - logger_config - INFO - url:https://www.microsoft.com/en-us/ai/ai-lab-sketch2code, title:Sketch2Code | Microsoft Learn,description:The Need- User Interface Design process involves a lot a creativity that starts on a whiteboard where designers share ideas. Once a design is drawn, it is usually captured within a photograph and manually translated into some working HTML wireframe to play with in a web browser. This takes effort and delays the design process.&nbsp;The Solution- Within Microsoft Cognitive Services we host Computer Vision Service. The model behind this service has been trained with millions of images and enables object detection for a wide range of types of objects. In this case, we need to build a custom model and train it with images of hand-drawn design elements like a textbox, button or combobox. The Custom Vision Service gives us with the capability to train custom models and perform object detection for them. Once we can identify HTML objects we use the text recognition functionality present in the Computer Vision Service to extract hand-written text present in the design. By combining these two pieces of information, we can generate the HTML snippets of the different elements in the design. We then can infer the layout of the design from the position of the identified elements and generate the final HTML code accordingly.&nbsp;Products and Services- Computer Vision (Handwritten OCR models), Custom Vision, Azure Functions, Blob Storage, WebAppCreate a Free Account (Azure)
+2024-09-18 18:57:12,814 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成zh-CN语言
+2024-09-18 18:57:25,779 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成zh-TW语言
+2024-09-18 18:57:43,644 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成en语言
+2024-09-18 18:58:01,608 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成German语言
+2024-09-18 18:58:20,711 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成es语言
+2024-09-18 18:58:41,421 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成fr语言
+2024-09-18 18:59:01,715 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成Japanese语言
+2024-09-18 18:59:21,922 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成Portuguese语言
+2024-09-18 18:59:42,050 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成ru语言
+2024-09-18 19:00:03,632 - logger_config - INFO - https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点处理成功
+2024-09-18 19:00:03,632 - logger_config - INFO - 处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code用时：199 秒
+2024-09-18 19:00:03,640 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:00:05,948 - logger_config - INFO - 正在处理：https://writesonic.com
+2024-09-18 19:00:26,776 - logger_config - INFO - url:https://writesonic.com, title:Writesonic - AI Content Writer, AI SEO Toolkit & AI Chatbots,description:Writesonic is the Generative AI platform for crafting factually-accurate, on-brand content with real-time data, optimizing for SEO, and building custom ChatGPT AI chatbots trained on your data.
+2024-09-18 19:00:45,886 - logger_config - INFO - 正在处理https://writesonic.com站点，生成zh-CN语言
+2024-09-18 19:01:01,094 - logger_config - INFO - 正在处理https://writesonic.com站点，生成zh-TW语言
+2024-09-18 19:01:21,048 - logger_config - INFO - 正在处理https://writesonic.com站点，生成en语言
+2024-09-18 19:01:37,571 - logger_config - INFO - 正在处理https://writesonic.com站点，生成German语言
+2024-09-18 19:02:00,993 - logger_config - INFO - 正在处理https://writesonic.com站点，生成es语言
+2024-09-18 19:02:26,236 - logger_config - INFO - 正在处理https://writesonic.com站点，生成fr语言
+2024-09-18 19:02:52,277 - logger_config - INFO - 正在处理https://writesonic.com站点，生成Japanese语言
+2024-09-18 19:03:18,403 - logger_config - INFO - 正在处理https://writesonic.com站点，生成Portuguese语言
+2024-09-18 19:03:45,208 - logger_config - INFO - 正在处理https://writesonic.com站点，生成ru语言
+2024-09-18 19:04:10,784 - logger_config - INFO - https://writesonic.com站点处理成功
+2024-09-18 19:04:10,784 - logger_config - INFO - 处理https://writesonic.com用时：245 秒
+2024-09-18 19:04:10,791 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:04:11,760 - logger_config - INFO - 正在处理：https://yige.baidu.com
+2024-09-18 19:04:12,788 - logger_config - INFO - url:https://yige.baidu.com, title:文心一格 - AI艺术和创意辅助平台,description:文心一格，AI艺术和创意辅助平台，依托飞桨、文心大模型的技术创新推出的“AI作画”产品，可轻松驾驭多种风格，人人皆可“一语成画”
+2024-09-18 19:04:36,326 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成zh-CN语言
+2024-09-18 19:04:44,485 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成zh-TW语言
+2024-09-18 19:04:56,500 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成en语言
+2024-09-18 19:05:09,241 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成German语言
+2024-09-18 19:05:20,585 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成es语言
+2024-09-18 19:05:35,962 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成fr语言
+2024-09-18 19:05:48,375 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成Japanese语言
+2024-09-18 19:06:02,894 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成Portuguese语言
+2024-09-18 19:06:17,882 - logger_config - INFO - 正在处理https://yige.baidu.com站点，生成ru语言
+2024-09-18 19:06:30,535 - logger_config - INFO - https://yige.baidu.com站点处理成功
+2024-09-18 19:06:30,535 - logger_config - INFO - 处理https://yige.baidu.com用时：139 秒
+2024-09-18 19:06:30,540 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:06:31,737 - logger_config - INFO - 正在处理：https://sheetplus.ai
+2024-09-18 19:07:01,795 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:07:33,818 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:08:05,839 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:08:05,839 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:08:05,839 - logger_config - INFO - 处理https://sheetplus.ai用时：94 秒
+2024-09-18 19:08:05,845 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:08:05,869 - logger_config - INFO - 正在处理：https://www.bing.com/?mkt=zh-CN
+2024-09-18 19:08:17,552 - logger_config - INFO - url:https://www.bing.com/?mkt=zh-CN, title:必应,description:必应可帮助你将理论付诸实践，使得搜索更加方便快捷，从而达到事半功倍的效果。
+2024-09-18 19:08:18,492 - logger_config - INFO - 处理https://www.bing.com/?mkt=zh-CN用时：13 秒
+2024-09-18 19:08:18,495 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:08:18,509 - logger_config - INFO - 正在处理：https://www.ibm.com/watson
+2024-09-18 19:08:27,675 - logger_config - INFO - url:https://www.ibm.com/watson, title:IBM Watson,description:See how IBM Watson has advanced enterprise AI.
+2024-09-18 19:08:35,155 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成zh-CN语言
+2024-09-18 19:08:39,136 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成zh-TW语言
+2024-09-18 19:08:41,338 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成en语言
+2024-09-18 19:08:45,076 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成German语言
+2024-09-18 19:09:00,005 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成es语言
+2024-09-18 19:09:17,070 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成fr语言
+2024-09-18 19:09:34,540 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成Japanese语言
+2024-09-18 19:09:50,434 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成Portuguese语言
+2024-09-18 19:10:02,814 - logger_config - INFO - 正在处理https://www.ibm.com/watson站点，生成ru语言
+2024-09-18 19:10:20,295 - logger_config - INFO - https://www.ibm.com/watson站点处理成功
+2024-09-18 19:10:20,295 - logger_config - INFO - 处理https://www.ibm.com/watson用时：122 秒
+2024-09-18 19:10:20,301 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:10:21,287 - logger_config - INFO - 正在处理：https://landbot.io/ai
+2024-09-18 19:10:34,308 - logger_config - INFO - url:https://landbot.io/ai, title:No-code chatbots meet AI | Landbot,description:Build awesome conversational experienceswith the most intuitive no-code AI builder.
+2024-09-18 19:10:49,091 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成zh-CN语言
+2024-09-18 19:10:55,583 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成zh-TW语言
+2024-09-18 19:11:04,434 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成en语言
+2024-09-18 19:11:12,936 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成German语言
+2024-09-18 19:11:25,153 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成es语言
+2024-09-18 19:11:38,952 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成fr语言
+2024-09-18 19:11:53,455 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成Japanese语言
+2024-09-18 19:12:08,241 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成Portuguese语言
+2024-09-18 19:12:20,907 - logger_config - INFO - 正在处理https://landbot.io/ai站点，生成ru语言
+2024-09-18 19:12:35,389 - logger_config - INFO - https://landbot.io/ai站点处理成功
+2024-09-18 19:12:35,389 - logger_config - INFO - 处理https://landbot.io/ai用时：134 秒
+2024-09-18 19:12:35,396 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:12:36,599 - logger_config - INFO - 正在处理：https://pytorch.org
+2024-09-18 19:12:41,143 - logger_config - INFO - url:https://pytorch.org, title:PyTorch,description:
+2024-09-18 19:13:26,986 - logger_config - INFO - 正在处理https://pytorch.org站点，生成zh-CN语言
+2024-09-18 19:13:41,987 - logger_config - INFO - 正在处理https://pytorch.org站点，生成zh-TW语言
+2024-09-18 19:14:01,538 - logger_config - INFO - 正在处理https://pytorch.org站点，生成en语言
+2024-09-18 19:14:17,249 - logger_config - INFO - 正在处理https://pytorch.org站点，生成German语言
+2024-09-18 19:14:40,963 - logger_config - INFO - 正在处理https://pytorch.org站点，生成es语言
+2024-09-18 19:15:05,762 - logger_config - INFO - 正在处理https://pytorch.org站点，生成fr语言
+2024-09-18 19:15:30,805 - logger_config - INFO - 正在处理https://pytorch.org站点，生成Japanese语言
+2024-09-18 19:15:57,204 - logger_config - INFO - 正在处理https://pytorch.org站点，生成Portuguese语言
+2024-09-18 19:16:24,116 - logger_config - INFO - 正在处理https://pytorch.org站点，生成ru语言
+2024-09-18 19:16:50,904 - logger_config - INFO - https://pytorch.org站点处理成功
+2024-09-18 19:16:50,904 - logger_config - INFO - 处理https://pytorch.org用时：254 秒
+2024-09-18 19:16:50,911 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:17:11,300 - logger_config - INFO - 正在处理：https://www.tensorflow.org/?hl=zh-cn
+2024-09-18 19:17:33,352 - logger_config - INFO - url:https://www.tensorflow.org/?hl=zh-cn, title:关于TensorFlow | TensorFlow中文官网,description:TensorFlow是一个端到端开源机器学习平台。它拥有一个全面而灵活的生态系统,其中包含各种工具、库和社区资源，可助力研究人员推动先进机器学习技术的发展。在 TensorFlow机器学习框架下,开发者能够轻松地构建和部署由机器学习提供支持的应用。
+2024-09-18 19:17:33,623 - logger_config - INFO - 处理https://www.tensorflow.org/?hl=zh-cn用时：22 秒
+2024-09-18 19:17:33,628 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:17:33,630 - logger_config - INFO - 正在处理：https://www.deepl.com/translator-mobile
+2024-09-18 19:17:38,664 - logger_config - INFO - url:https://www.deepl.com/translator-mobile, title:DeepL Translate: The world's most accurate translator,description:Translate texts & full document files instantly. Accurate translations for individuals and Teams. Millions translate with DeepL every day.
+2024-09-18 19:17:45,421 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成zh-CN语言
+2024-09-18 19:17:47,814 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成zh-TW语言
+2024-09-18 19:17:51,153 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成en语言
+2024-09-18 19:17:54,311 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成German语言
+2024-09-18 19:17:57,734 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成es语言
+2024-09-18 19:18:06,178 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成fr语言
+2024-09-18 19:18:16,918 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成Japanese语言
+2024-09-18 19:18:27,249 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成Portuguese语言
+2024-09-18 19:18:38,465 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成ru语言
+2024-09-18 19:18:49,873 - logger_config - INFO - https://www.deepl.com/translator-mobile站点处理成功
+2024-09-18 19:18:49,873 - logger_config - INFO - 处理https://www.deepl.com/translator-mobile用时：76 秒
+2024-09-18 19:18:49,881 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:18:51,074 - logger_config - INFO - 正在处理：https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work
+2024-09-18 19:18:55,282 - logger_config - INFO - url:https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work, title:Introducing Microsoft 365 Copilot – your copilot for work - The Official Microsoft Blog,description:Humans are hard-wired to dream, to create, to innovate. Each of us seeks to do work that gives us purpose — to write a great novel, to make a discovery, to build strong communities, to care for the sick. The urge to connect to the core of our work lives in all of us. But...
+2024-09-18 19:19:43,569 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成zh-CN语言
+2024-09-18 19:19:54,938 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成zh-TW语言
+2024-09-18 19:20:09,002 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成en语言
+2024-09-18 19:20:20,528 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成German语言
+2024-09-18 19:20:36,559 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成es语言
+2024-09-18 19:20:54,336 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成fr语言
+2024-09-18 19:21:11,294 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成Japanese语言
+2024-09-18 19:21:29,041 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成Portuguese语言
+2024-09-18 19:21:45,984 - logger_config - INFO - 正在处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点，生成ru语言
+2024-09-18 19:22:03,417 - logger_config - INFO - https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work站点处理成功
+2024-09-18 19:22:03,417 - logger_config - INFO - 处理https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work用时：192 秒
+2024-09-18 19:22:03,425 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:22:04,715 - logger_config - INFO - 正在处理：https://www.jasper.ai
+2024-09-18 19:22:14,154 - logger_config - INFO - url:https://www.jasper.ai, title:Jasper | AI copilot for enterprise marketing teams,description:Enterprise-grade AI tools to help marketing teams achieve both speed and performance.
+2024-09-18 19:23:02,447 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成zh-CN语言
+2024-09-18 19:23:13,434 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成zh-TW语言
+2024-09-18 19:23:28,228 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成en语言
+2024-09-18 19:23:42,043 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成German语言
+2024-09-18 19:23:56,476 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成es语言
+2024-09-18 19:24:14,483 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成fr语言
+2024-09-18 19:24:29,282 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成Japanese语言
+2024-09-18 19:25:30,848 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成Portuguese语言
+2024-09-18 19:25:48,817 - logger_config - INFO - 正在处理https://www.jasper.ai站点，生成ru语言
+2024-09-18 19:26:05,573 - logger_config - INFO - https://www.jasper.ai站点处理成功
+2024-09-18 19:26:05,573 - logger_config - INFO - 处理https://www.jasper.ai用时：241 秒
+2024-09-18 19:26:05,581 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:26:06,594 - logger_config - INFO - 正在处理：https://sheetplus.ai
+2024-09-18 19:26:36,669 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:27:08,695 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:27:40,724 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:27:40,724 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-18 19:27:40,725 - logger_config - INFO - 处理https://sheetplus.ai用时：94 秒
+2024-09-18 19:27:40,731 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:27:40,745 - logger_config - INFO - 正在处理：https://www.iflyrec.com
+2024-09-18 19:27:42,284 - logger_config - INFO - url:https://www.iflyrec.com, title:讯飞听见,description:
+2024-09-18 19:27:55,056 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成zh-CN语言
+2024-09-18 19:27:57,556 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成zh-TW语言
+2024-09-18 19:28:00,176 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成en语言
+2024-09-18 19:28:02,555 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成German语言
+2024-09-18 19:28:05,544 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成es语言
+2024-09-18 19:28:08,435 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成fr语言
+2024-09-18 19:28:11,463 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成Japanese语言
+2024-09-18 19:28:24,057 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成Portuguese语言
+2024-09-18 19:28:35,370 - logger_config - INFO - 正在处理https://www.iflyrec.com站点，生成ru语言
+2024-09-18 19:28:45,560 - logger_config - INFO - https://www.iflyrec.com站点处理成功
+2024-09-18 19:28:45,560 - logger_config - INFO - 处理https://www.iflyrec.com用时：65 秒
+2024-09-18 19:28:45,568 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:28:46,500 - logger_config - INFO - 正在处理：https://www.feishu.cn/product/minutes
+2024-09-18 19:28:49,045 - logger_config - INFO - url:https://www.feishu.cn/product/minutes, title:飞书妙记-智能会议纪要,快捷语音识别转文字,将会议交流沉淀为知识,一切皆可妙记!,description:飞书妙记是新一代的智能会议工具,在线生成会议纪要,智能语音识别转文字,快捷转录视频音频;会议交流沉淀为知识;让会议更专注,更高效！
+2024-09-18 19:29:19,319 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成zh-CN语言
+2024-09-18 19:29:30,712 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成zh-TW语言
+2024-09-18 19:29:45,956 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成en语言
+2024-09-18 19:30:01,070 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成German语言
+2024-09-18 19:30:18,912 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成es语言
+2024-09-18 19:30:36,055 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成fr语言
+2024-09-18 19:30:54,324 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成Japanese语言
+2024-09-18 19:31:10,499 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成Portuguese语言
+2024-09-18 19:31:24,524 - logger_config - INFO - 正在处理https://www.feishu.cn/product/minutes站点，生成ru语言
+2024-09-18 19:31:43,463 - logger_config - INFO - https://www.feishu.cn/product/minutes站点处理成功
+2024-09-18 19:31:43,463 - logger_config - INFO - 处理https://www.feishu.cn/product/minutes用时：177 秒
+2024-09-18 19:31:43,477 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:31:44,431 - logger_config - INFO - 正在处理：https://www.deepl.com/translator-mobile
+2024-09-18 19:31:46,904 - logger_config - INFO - url:https://www.deepl.com/translator-mobile, title:DeepL Captcha,description:
+2024-09-18 19:32:06,299 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成zh-CN语言
+2024-09-18 19:32:12,410 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成zh-TW语言
+2024-09-18 19:32:20,744 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成en语言
+2024-09-18 19:32:32,971 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成German语言
+2024-09-18 19:32:44,544 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成es语言
+2024-09-18 19:32:58,990 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成fr语言
+2024-09-18 19:33:11,750 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成Japanese语言
+2024-09-18 19:33:24,587 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成Portuguese语言
+2024-09-18 19:33:36,768 - logger_config - INFO - 正在处理https://www.deepl.com/translator-mobile站点，生成ru语言
+2024-09-18 19:33:49,361 - logger_config - INFO - https://www.deepl.com/translator-mobile站点处理成功
+2024-09-18 19:33:49,361 - logger_config - INFO - 处理https://www.deepl.com/translator-mobile用时：125 秒
+2024-09-18 19:33:49,368 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:33:50,343 - logger_config - INFO - 正在处理：https://otter.ai
+2024-09-18 19:34:05,896 - logger_config - INFO - url:https://otter.ai, title:Otter.ai - AI Meeting Note Taker & Real-time AI Transcription,description:Otter.ai uses an AI Meeting Assistant to transcribe meetings in real time, record audio, capture slides, extract action items, and generate an AI meeting summary.
+2024-09-18 19:34:22,372 - logger_config - INFO - 正在处理https://otter.ai站点，生成zh-CN语言
+2024-09-18 19:34:32,202 - logger_config - INFO - 正在处理https://otter.ai站点，生成zh-TW语言
+2024-09-18 19:34:45,417 - logger_config - INFO - 正在处理https://otter.ai站点，生成en语言
+2024-09-18 19:34:58,177 - logger_config - INFO - 正在处理https://otter.ai站点，生成German语言
+2024-09-18 19:35:11,882 - logger_config - INFO - 正在处理https://otter.ai站点，生成es语言
+2024-09-18 19:35:26,452 - logger_config - INFO - 正在处理https://otter.ai站点，生成fr语言
+2024-09-18 19:35:41,599 - logger_config - INFO - 正在处理https://otter.ai站点，生成Japanese语言
+2024-09-18 19:35:56,195 - logger_config - INFO - 正在处理https://otter.ai站点，生成Portuguese语言
+2024-09-18 19:36:10,652 - logger_config - INFO - 正在处理https://otter.ai站点，生成ru语言
+2024-09-18 19:36:25,612 - logger_config - INFO - https://otter.ai站点处理成功
+2024-09-18 19:36:25,612 - logger_config - INFO - 处理https://otter.ai用时：155 秒
+2024-09-18 19:36:25,619 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:36:26,648 - logger_config - INFO - 正在处理：https://fireflies.ai
+2024-09-18 19:36:36,313 - logger_config - INFO - url:https://fireflies.ai, title:Fireflies.ai | AI notetaker to transcribe, summarize, analyze meetings,description:Fireflies uses generative AI to bring ChatGPT to meetings. Generate transcripts and smart summaries for Zoom, Google Meet, Microsoft Teams, Webex and several other platforms.
+2024-09-18 19:37:16,422 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成zh-CN语言
+2024-09-18 19:37:26,296 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成zh-TW语言
+2024-09-18 19:37:44,698 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成en语言
+2024-09-18 19:38:03,870 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成German语言
+2024-09-18 19:38:21,838 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成es语言
+2024-09-18 19:38:43,268 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成fr语言
+2024-09-18 19:39:03,023 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成Japanese语言
+2024-09-18 19:39:21,356 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成Portuguese语言
+2024-09-18 19:39:35,707 - logger_config - INFO - 正在处理https://fireflies.ai站点，生成ru语言
+2024-09-18 19:39:56,499 - logger_config - INFO - https://fireflies.ai站点处理成功
+2024-09-18 19:39:56,499 - logger_config - INFO - 处理https://fireflies.ai用时：210 秒
+2024-09-18 19:39:56,508 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:39:57,585 - logger_config - INFO - 正在处理：https://gitmind.com
+2024-09-18 19:40:15,464 - logger_config - INFO - url:https://gitmind.com, title:GitMind - AI Powered Mind Map, Flowchart, Whiteboard.,description:GitMind is a free AI-powered mind mapping & brainstorming app. Create and collaborate on mind maps online in real-time. The easiest way to make project plan, take notes, flowcharts, org charts, UML diagrams and more.
+2024-09-18 19:40:43,924 - logger_config - INFO - 正在处理https://gitmind.com站点，生成zh-CN语言
+2024-09-18 19:40:55,584 - logger_config - INFO - 正在处理https://gitmind.com站点，生成zh-TW语言
+2024-09-18 19:41:10,890 - logger_config - INFO - 正在处理https://gitmind.com站点，生成en语言
+2024-09-18 19:41:25,747 - logger_config - INFO - 正在处理https://gitmind.com站点，生成German语言
+2024-09-18 19:41:41,770 - logger_config - INFO - 正在处理https://gitmind.com站点，生成es语言
+2024-09-18 19:41:59,624 - logger_config - INFO - 正在处理https://gitmind.com站点，生成fr语言
+2024-09-18 19:42:16,661 - logger_config - INFO - 正在处理https://gitmind.com站点，生成Japanese语言
+2024-09-18 19:42:31,198 - logger_config - INFO - 正在处理https://gitmind.com站点，生成Portuguese语言
+2024-09-18 19:42:44,316 - logger_config - INFO - 正在处理https://gitmind.com站点，生成ru语言
+2024-09-18 19:43:01,928 - logger_config - INFO - https://gitmind.com站点处理成功
+2024-09-18 19:43:01,928 - logger_config - INFO - 处理https://gitmind.com用时：184 秒
+2024-09-18 19:43:01,937 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:43:02,970 - logger_config - INFO - 正在处理：https://www.ayoa.com/ultimate
+2024-09-18 19:43:17,680 - logger_config - INFO - url:https://www.ayoa.com/ultimate, title:Ayoa Ultimate - Because mind mapping is just the beginning,description:Supercharge your ideas with AI, brainstorm with your team, task manage projects, and organize personal to-do lists.
+2024-09-18 19:43:37,448 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成zh-CN语言
+2024-09-18 19:43:51,221 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成zh-TW语言
+2024-09-18 19:44:08,645 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成en语言
+2024-09-18 19:44:22,673 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成German语言
+2024-09-18 19:44:42,778 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成es语言
+2024-09-18 19:45:06,267 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成fr语言
+2024-09-18 19:45:29,441 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成Japanese语言
+2024-09-18 19:45:48,696 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成Portuguese语言
+2024-09-18 19:46:03,201 - logger_config - INFO - 正在处理https://www.ayoa.com/ultimate站点，生成ru语言
+2024-09-18 19:46:25,439 - logger_config - INFO - https://www.ayoa.com/ultimate站点处理成功
+2024-09-18 19:46:25,439 - logger_config - INFO - 处理https://www.ayoa.com/ultimate用时：203 秒
+2024-09-18 19:46:25,445 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:46:26,481 - logger_config - INFO - 正在处理：https://www.taskade.com
+2024-09-18 19:46:54,809 - logger_config - INFO - url:https://www.taskade.com, title:Build Your AI Agent Workforce — AI-Powered Productivity & Workflow Automation | Taskade,description:Meet your AI workforce with Taskade! Build, train, and deploy AI agents that think, learn, and act—ready to plan, research, and complete tasks alongside your team. Unlock agentic workflows where humans and AI collaborate to boost productivity 10X. Automate tasks and turn insights into action—all in one unified workspace.
+2024-09-18 19:47:26,100 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成zh-CN语言
+2024-09-18 19:47:38,107 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成zh-TW语言
+2024-09-18 19:47:54,702 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成en语言
+2024-09-18 19:48:09,712 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成German语言
+2024-09-18 19:48:25,400 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成es语言
+2024-09-18 19:48:42,741 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成fr语言
+2024-09-18 19:49:00,466 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成Japanese语言
+2024-09-18 19:49:16,614 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成Portuguese语言
+2024-09-18 19:49:35,174 - logger_config - INFO - 正在处理https://www.taskade.com站点，生成ru语言
+2024-09-18 19:49:52,479 - logger_config - INFO - https://www.taskade.com站点处理成功
+2024-09-18 19:49:52,479 - logger_config - INFO - 处理https://www.taskade.com用时：206 秒
+2024-09-18 19:49:52,487 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:50:12,984 - logger_config - INFO - 正在处理：https://www.pandagpt.io
+2024-09-18 19:50:15,957 - logger_config - INFO - url:https://www.pandagpt.io, title:404 - Page not found,description:The page you are looking for doesn't exist or has been moved.
+2024-09-18 19:50:24,683 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成zh-CN语言
+2024-09-18 19:50:27,633 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成zh-TW语言
+2024-09-18 19:50:30,746 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成en语言
+2024-09-18 19:50:39,028 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成German语言
+2024-09-18 19:50:49,548 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成es语言
+2024-09-18 19:51:00,724 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成fr语言
+2024-09-18 19:51:12,146 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成Japanese语言
+2024-09-18 19:51:22,130 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成Portuguese语言
+2024-09-18 19:51:29,905 - logger_config - INFO - 正在处理https://www.pandagpt.io站点，生成ru语言
+2024-09-18 19:51:41,224 - logger_config - INFO - https://www.pandagpt.io站点处理成功
+2024-09-18 19:51:41,224 - logger_config - INFO - 处理https://www.pandagpt.io用时：89 秒
+2024-09-18 19:51:41,233 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:51:42,209 - logger_config - INFO - 正在处理：https://www.formx.ai
+2024-09-18 19:52:09,693 - logger_config - INFO - url:https://www.formx.ai, title:FormX.ai - Automate Data Extraction to Empower Your Business,description:FormX.ai brings cutting-edge technology to your business, freeing you from manual work and minimizing human errors. Embrace a world where automation reigns, and efficiency is paramount!
+2024-09-18 19:52:34,653 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成zh-CN语言
+2024-09-18 19:52:44,078 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成zh-TW语言
+2024-09-18 19:53:00,320 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成en语言
+2024-09-18 19:53:15,433 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成German语言
+2024-09-18 19:53:30,077 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成es语言
+2024-09-18 19:53:47,531 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成fr语言
+2024-09-18 19:54:05,025 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成Japanese语言
+2024-09-18 19:54:19,636 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成Portuguese语言
+2024-09-18 19:54:32,797 - logger_config - INFO - 正在处理https://www.formx.ai站点，生成ru语言
+2024-09-18 19:54:49,805 - logger_config - INFO - https://www.formx.ai站点处理成功
+2024-09-18 19:54:49,805 - logger_config - INFO - 处理https://www.formx.ai用时：187 秒
+2024-09-18 19:54:49,813 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:55:28,827 - logger_config - INFO - 正在处理：https://www.decktopus.com
+2024-09-18 19:55:49,446 - logger_config - INFO - url:https://www.decktopus.com, title:Decktopus AI,description:Decktopus is an AI presentation maker, that will create amazing presentations in seconds. You only need to type the presentation title and your presentation is ready.
+2024-09-18 19:55:59,401 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成zh-CN语言
+2024-09-18 19:56:04,185 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成zh-TW语言
+2024-09-18 19:56:08,409 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成en语言
+2024-09-18 19:56:20,300 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成German语言
+2024-09-18 19:56:36,037 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成es语言
+2024-09-18 19:56:53,351 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成fr语言
+2024-09-18 19:57:11,808 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成Japanese语言
+2024-09-18 19:57:26,529 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成Portuguese语言
+2024-09-18 19:57:39,274 - logger_config - INFO - 正在处理https://www.decktopus.com站点，生成ru语言
+2024-09-18 19:57:57,349 - logger_config - INFO - https://www.decktopus.com站点处理成功
+2024-09-18 19:57:57,349 - logger_config - INFO - 处理https://www.decktopus.com用时：149 秒
+2024-09-18 19:57:57,356 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 19:57:58,302 - logger_config - INFO - 正在处理：https://www.excelly-ai.io
+2024-09-18 19:58:15,221 - logger_config - INFO - url:https://www.excelly-ai.io, title:Excelly-AI | Your #1 Text-to-Excel Tool!,description:
+2024-09-18 19:58:25,385 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成zh-CN语言
+2024-09-18 19:58:33,599 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成zh-TW语言
+2024-09-18 19:58:45,913 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成en语言
+2024-09-18 19:58:58,003 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成German语言
+2024-09-18 19:59:09,610 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成es语言
+2024-09-18 19:59:21,699 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成fr语言
+2024-09-18 19:59:35,004 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成Japanese语言
+2024-09-18 19:59:46,618 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成Portuguese语言
+2024-09-18 19:59:56,751 - logger_config - INFO - 正在处理https://www.excelly-ai.io站点，生成ru语言
+2024-09-18 20:00:10,119 - logger_config - INFO - https://www.excelly-ai.io站点处理成功
+2024-09-18 20:00:10,119 - logger_config - INFO - 处理https://www.excelly-ai.io用时：132 秒
+2024-09-18 20:00:10,123 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:00:11,222 - logger_config - INFO - 正在处理：https://amymind.com
+2024-09-18 20:00:15,017 - logger_config - INFO - url:https://amymind.com, title:AmyMind - AI Mind Mapping App,description:AmyMind is a free AI app for effortless creation and sharing of mindmaps.
+2024-09-18 20:00:42,059 - logger_config - INFO - 正在处理https://amymind.com站点，生成zh-CN语言
+2024-09-18 20:00:52,987 - logger_config - INFO - 正在处理https://amymind.com站点，生成zh-TW语言
+2024-09-18 20:01:06,704 - logger_config - INFO - 正在处理https://amymind.com站点，生成en语言
+2024-09-18 20:01:18,163 - logger_config - INFO - 正在处理https://amymind.com站点，生成German语言
+2024-09-18 20:01:35,061 - logger_config - INFO - 正在处理https://amymind.com站点，生成es语言
+2024-09-18 20:01:57,044 - logger_config - INFO - 正在处理https://amymind.com站点，生成fr语言
+2024-09-18 20:02:09,302 - logger_config - INFO - 正在处理https://amymind.com站点，生成Japanese语言
+2024-09-18 20:02:27,161 - logger_config - INFO - 正在处理https://amymind.com站点，生成Portuguese语言
+2024-09-18 20:02:44,219 - logger_config - INFO - 正在处理https://amymind.com站点，生成ru语言
+2024-09-18 20:03:02,391 - logger_config - INFO - https://amymind.com站点处理成功
+2024-09-18 20:03:02,391 - logger_config - INFO - 处理https://amymind.com用时：171 秒
+2024-09-18 20:03:02,400 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:03:22,179 - logger_config - INFO - 正在处理：https://whimsical.com
+2024-09-18 20:03:32,303 - logger_config - INFO - url:https://whimsical.com, title:Whimsical - The iterative workspace for product teams,description:Align on your next build faster with Whimsical docs, flowcharts, wireframes, & mind maps. Generate AI diagrams and access templates from product leaders.
+2024-09-18 20:03:45,347 - logger_config - INFO - 正在处理https://whimsical.com站点，生成zh-CN语言
+2024-09-18 20:03:49,083 - logger_config - INFO - 正在处理https://whimsical.com站点，生成zh-TW语言
+2024-09-18 20:03:57,629 - logger_config - INFO - 正在处理https://whimsical.com站点，生成en语言
+2024-09-18 20:04:09,250 - logger_config - INFO - 正在处理https://whimsical.com站点，生成German语言
+2024-09-18 20:04:24,038 - logger_config - INFO - 正在处理https://whimsical.com站点，生成es语言
+2024-09-18 20:04:38,276 - logger_config - INFO - 正在处理https://whimsical.com站点，生成fr语言
+2024-09-18 20:04:51,850 - logger_config - INFO - 正在处理https://whimsical.com站点，生成Japanese语言
+2024-09-18 20:05:06,800 - logger_config - INFO - 正在处理https://whimsical.com站点，生成Portuguese语言
+2024-09-18 20:05:21,123 - logger_config - INFO - 正在处理https://whimsical.com站点，生成ru语言
+2024-09-18 20:05:36,978 - logger_config - INFO - https://whimsical.com站点处理成功
+2024-09-18 20:05:36,978 - logger_config - INFO - 处理https://whimsical.com用时：134 秒
+2024-09-18 20:05:36,987 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:06:15,897 - logger_config - INFO - 正在处理：https://rows.com
+2024-09-18 20:06:29,163 - logger_config - INFO - url:https://rows.com, title:Rows: The spreadsheet where data comes to life,description:Slick design. Built-in integrations. Revolutionary sharing. Rows reinvented spreadsheets so teams do more, crazy fast.
+2024-09-18 20:06:36,157 - logger_config - INFO - 正在处理https://rows.com站点，生成zh-CN语言
+2024-09-18 20:06:39,896 - logger_config - INFO - 正在处理https://rows.com站点，生成zh-TW语言
+2024-09-18 20:06:46,567 - logger_config - INFO - 正在处理https://rows.com站点，生成en语言
+2024-09-18 20:06:50,234 - logger_config - INFO - 正在处理https://rows.com站点，生成German语言
+2024-09-18 20:06:54,809 - logger_config - INFO - 正在处理https://rows.com站点，生成es语言
+2024-09-18 20:07:04,224 - logger_config - INFO - 正在处理https://rows.com站点，生成fr语言
+2024-09-18 20:07:20,553 - logger_config - INFO - 正在处理https://rows.com站点，生成Japanese语言
+2024-09-18 20:07:42,264 - logger_config - INFO - 正在处理https://rows.com站点，生成Portuguese语言
+2024-09-18 20:07:46,568 - logger_config - INFO - 正在处理https://rows.com站点，生成ru语言
+2024-09-18 20:08:02,755 - logger_config - INFO - https://rows.com站点处理成功
+2024-09-18 20:08:02,755 - logger_config - INFO - 处理https://rows.com用时：107 秒
+2024-09-18 20:08:02,762 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:08:41,719 - logger_config - INFO - 正在处理：https://www.copy.ai
+2024-09-18 20:08:58,135 - logger_config - INFO - url:https://www.copy.ai, title:Future proof your business with GTM AI,description:Introducing the first-ever GTM AI platform. Automate hundreds of tedious, repetitive tasks and empower your team to scale success like never before.
+2024-09-18 20:09:05,510 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成zh-CN语言
+2024-09-18 20:09:09,488 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成zh-TW语言
+2024-09-18 20:09:18,011 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成en语言
+2024-09-18 20:09:33,020 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成German语言
+2024-09-18 20:09:48,767 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成es语言
+2024-09-18 20:10:05,218 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成fr语言
+2024-09-18 20:10:21,506 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成Japanese语言
+2024-09-18 20:10:37,008 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成Portuguese语言
+2024-09-18 20:10:53,940 - logger_config - INFO - 正在处理https://www.copy.ai站点，生成ru语言
+2024-09-18 20:11:09,968 - logger_config - INFO - https://www.copy.ai站点处理成功
+2024-09-18 20:11:09,969 - logger_config - INFO - 处理https://www.copy.ai用时：148 秒
+2024-09-18 20:11:09,976 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:11:11,239 - logger_config - INFO - 正在处理：https://writesonic.com
+2024-09-18 20:11:23,496 - logger_config - INFO - url:https://writesonic.com, title:Writesonic - AI Content Writer, AI SEO Toolkit & AI Chatbots,description:Writesonic is the Generative AI platform for crafting factually-accurate, on-brand content with real-time data, optimizing for SEO, and building custom ChatGPT AI chatbots trained on your data.
+2024-09-18 20:12:28,539 - logger_config - INFO - 处理https://writesonic.com用时：77 秒
+2024-09-18 20:12:28,542 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:12:28,565 - logger_config - INFO - 正在处理：https://chuangyi.taobao.com/pages/aiCopy
+2024-09-18 20:12:30,575 - logger_config - INFO - url:https://chuangyi.taobao.com/pages/aiCopy, title:淘宝网 - 淘！我喜欢,description:淘宝网(Taobao.com)作为专业的购物网站拥有全球时尚前沿的消费者购物集市,100%认证网上商城及超值二手商品区，同时购物安全，产品丰富，应有尽有,任你选购,让你尽享网上在线购物乐趣！
+2024-09-18 20:12:37,999 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成zh-CN语言
+2024-09-18 20:12:41,823 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成zh-TW语言
+2024-09-18 20:12:46,339 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成en语言
+2024-09-18 20:12:49,631 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成German语言
+2024-09-18 20:12:54,641 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成es语言
+2024-09-18 20:13:09,034 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成fr语言
+2024-09-18 20:13:24,618 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成Japanese语言
+2024-09-18 20:13:41,576 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成Portuguese语言
+2024-09-18 20:13:58,231 - logger_config - INFO - 正在处理https://chuangyi.taobao.com/pages/aiCopy站点，生成ru语言
+2024-09-18 20:14:13,129 - logger_config - INFO - https://chuangyi.taobao.com/pages/aiCopy站点处理成功
+2024-09-18 20:14:13,129 - logger_config - INFO - 处理https://chuangyi.taobao.com/pages/aiCopy用时：105 秒
+2024-09-18 20:14:13,136 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:14:15,327 - logger_config - INFO - 正在处理：https://rytr.me
+2024-09-18 20:15:00,159 - logger_config - INFO - url:https://rytr.me, title:Free AI Writer, Content Generator & Writing Assistant | Rytr,description:Discover Rytr, your free AI writing assistant. Craft high-quality content faster than ever before. Start for free and upgrade as you grow!
+2024-09-18 20:15:13,512 - logger_config - INFO - 正在处理https://rytr.me站点，生成zh-CN语言
+2024-09-18 20:15:29,489 - logger_config - INFO - 正在处理https://rytr.me站点，生成zh-TW语言
+2024-09-18 20:15:54,266 - logger_config - INFO - 正在处理https://rytr.me站点，生成en语言
+2024-09-18 20:16:15,428 - logger_config - INFO - 正在处理https://rytr.me站点，生成German语言
+2024-09-18 20:16:43,329 - logger_config - INFO - 正在处理https://rytr.me站点，生成es语言
+2024-09-18 20:17:16,831 - logger_config - INFO - 正在处理https://rytr.me站点，生成fr语言
+2024-09-18 20:17:49,109 - logger_config - INFO - 正在处理https://rytr.me站点，生成Japanese语言
+2024-09-18 20:18:17,056 - logger_config - INFO - 正在处理https://rytr.me站点，生成Portuguese语言
+2024-09-18 20:18:38,320 - logger_config - INFO - 正在处理https://rytr.me站点，生成ru语言
+2024-09-18 20:19:12,867 - logger_config - INFO - https://rytr.me站点处理成功
+2024-09-18 20:19:12,867 - logger_config - INFO - 处理https://rytr.me用时：297 秒
+2024-09-18 20:19:12,876 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:19:13,874 - logger_config - INFO - 正在处理：https://marmof.com
+2024-09-18 20:19:24,029 - logger_config - INFO - url:https://marmof.com, title:Marmof: Generate better content with AI - Marmof,description:Create content quickly and easily with artificial intelligence! This tool can help you create blog posts, social media content, and marketing copy in just a few seconds.
+2024-09-18 20:19:48,204 - logger_config - INFO - 正在处理https://marmof.com站点，生成zh-CN语言
+2024-09-18 20:19:58,848 - logger_config - INFO - 正在处理https://marmof.com站点，生成zh-TW语言
+2024-09-18 20:20:13,494 - logger_config - INFO - 正在处理https://marmof.com站点，生成en语言
+2024-09-18 20:20:29,125 - logger_config - INFO - 正在处理https://marmof.com站点，生成German语言
+2024-09-18 20:20:45,339 - logger_config - INFO - 正在处理https://marmof.com站点，生成es语言
+2024-09-18 20:21:00,711 - logger_config - INFO - 正在处理https://marmof.com站点，生成fr语言
+2024-09-18 20:21:18,699 - logger_config - INFO - 正在处理https://marmof.com站点，生成Japanese语言
+2024-09-18 20:21:33,680 - logger_config - INFO - 正在处理https://marmof.com站点，生成Portuguese语言
+2024-09-18 20:21:49,449 - logger_config - INFO - 正在处理https://marmof.com站点，生成ru语言
+2024-09-18 20:22:07,165 - logger_config - INFO - https://marmof.com站点处理成功
+2024-09-18 20:22:07,165 - logger_config - INFO - 处理https://marmof.com用时：174 秒
+2024-09-18 20:22:07,172 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:22:08,607 - logger_config - INFO - 正在处理：https://anyword.com
+2024-09-18 20:22:25,145 - logger_config - INFO - url:https://anyword.com, title:Anyword | AI That Knows What Works,description:Anyword is an AI writing platform built to help enterprise marketing teams scale on-brand content that drives marketing results.
+2024-09-18 20:22:57,745 - logger_config - INFO - 正在处理https://anyword.com站点，生成zh-CN语言
+2024-09-18 20:23:09,729 - logger_config - INFO - 正在处理https://anyword.com站点，生成zh-TW语言
+2024-09-18 20:23:26,647 - logger_config - INFO - 正在处理https://anyword.com站点，生成en语言
+2024-09-18 20:23:44,034 - logger_config - INFO - 正在处理https://anyword.com站点，生成German语言
+2024-09-18 20:24:02,088 - logger_config - INFO - 正在处理https://anyword.com站点，生成es语言
+2024-09-18 20:24:20,617 - logger_config - INFO - 正在处理https://anyword.com站点，生成fr语言
+2024-09-18 20:24:40,808 - logger_config - INFO - 正在处理https://anyword.com站点，生成Japanese语言
+2024-09-18 20:24:59,668 - logger_config - INFO - 正在处理https://anyword.com站点，生成Portuguese语言
+2024-09-18 20:25:19,348 - logger_config - INFO - 正在处理https://anyword.com站点，生成ru语言
+2024-09-18 20:25:38,444 - logger_config - INFO - https://anyword.com站点处理成功
+2024-09-18 20:25:38,444 - logger_config - INFO - 处理https://anyword.com用时：210 秒
+2024-09-18 20:25:38,452 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:25:39,963 - logger_config - INFO - 正在处理：https://getgetai.com
+2024-09-18 20:25:55,948 - logger_config - INFO - url:https://getgetai.com, title:字语智能_用智能AI创作技术引领智能写作未来,description:字语智能(get智能创作）是隶属于字语未来（深圳）智能科技有限公司旗下品牌，公司专注于智能AI写作，智能创作，AI创作领域。国内较早推出智能写作平台，系统成熟稳定，联系热线：18701871104
+2024-09-18 20:26:28,340 - logger_config - INFO - 正在处理https://getgetai.com站点，生成zh-CN语言
+2024-09-18 20:26:36,313 - logger_config - INFO - 正在处理https://getgetai.com站点，生成zh-TW语言
+2024-09-18 20:26:50,675 - logger_config - INFO - 正在处理https://getgetai.com站点，生成en语言
+2024-09-18 20:27:03,579 - logger_config - INFO - 正在处理https://getgetai.com站点，生成German语言
+2024-09-18 20:27:18,379 - logger_config - INFO - 正在处理https://getgetai.com站点，生成es语言
+2024-09-18 20:27:33,629 - logger_config - INFO - 正在处理https://getgetai.com站点，生成fr语言
+2024-09-18 20:27:48,075 - logger_config - INFO - 正在处理https://getgetai.com站点，生成Japanese语言
+2024-09-18 20:28:03,149 - logger_config - INFO - 正在处理https://getgetai.com站点，生成Portuguese语言
+2024-09-18 20:28:18,133 - logger_config - INFO - 正在处理https://getgetai.com站点，生成ru语言
+2024-09-18 20:28:33,604 - logger_config - INFO - https://getgetai.com站点处理成功
+2024-09-18 20:28:33,604 - logger_config - INFO - 处理https://getgetai.com用时：174 秒
+2024-09-18 20:28:33,613 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:28:34,519 - logger_config - INFO - 正在处理：https://copyai.cn
+2024-09-18 20:28:35,489 - logger_config - INFO - url:https://copyai.cn, title:快文CopyDone_原创文案写作神器_写作机器人_AI一键智能生成,description:快文CopyDone是必优科技旗下AI原创营销文案写作神器,通过强大的自然语言处理能力,通过输入关键词,快速生成原创的软文,可以发布在各个媒体和自媒体平台,大幅提高创作效率
+2024-09-18 20:28:53,545 - logger_config - INFO - 正在处理https://copyai.cn站点，生成zh-CN语言
+2024-09-18 20:29:02,561 - logger_config - INFO - 正在处理https://copyai.cn站点，生成zh-TW语言
+2024-09-18 20:29:15,489 - logger_config - INFO - 正在处理https://copyai.cn站点，生成en语言
+2024-09-18 20:29:27,553 - logger_config - INFO - 正在处理https://copyai.cn站点，生成German语言
+2024-09-18 20:29:38,914 - logger_config - INFO - 正在处理https://copyai.cn站点，生成es语言
+2024-09-18 20:29:54,252 - logger_config - INFO - 正在处理https://copyai.cn站点，生成fr语言
+2024-09-18 20:30:08,153 - logger_config - INFO - 正在处理https://copyai.cn站点，生成Japanese语言
+2024-09-18 20:30:22,053 - logger_config - INFO - 正在处理https://copyai.cn站点，生成Portuguese语言
+2024-09-18 20:30:34,906 - logger_config - INFO - 正在处理https://copyai.cn站点，生成ru语言
+2024-09-18 20:30:49,345 - logger_config - INFO - https://copyai.cn站点处理成功
+2024-09-18 20:30:49,346 - logger_config - INFO - 处理https://copyai.cn用时：135 秒
+2024-09-18 20:30:49,353 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:30:50,274 - logger_config - INFO - 正在处理：https://xiezuocat.com
+2024-09-18 20:30:54,794 - logger_config - INFO - url:https://xiezuocat.com, title:秘塔写作猫,description:写作猫是新一代交互式中英文写作辅助平台，集智能文本纠错、改写润色、自动续写、智能配图为一体。
+2024-09-18 20:31:16,693 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成zh-CN语言
+2024-09-18 20:31:25,277 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成zh-TW语言
+2024-09-18 20:31:35,537 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成en语言
+2024-09-18 20:31:47,147 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成German语言
+2024-09-18 20:31:58,730 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成es语言
+2024-09-18 20:32:11,846 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成fr语言
+2024-09-18 20:32:24,689 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成Japanese语言
+2024-09-18 20:32:37,327 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成Portuguese语言
+2024-09-18 20:32:50,672 - logger_config - INFO - 正在处理https://xiezuocat.com站点，生成ru语言
+2024-09-18 20:33:04,114 - logger_config - INFO - https://xiezuocat.com站点处理成功
+2024-09-18 20:33:04,114 - logger_config - INFO - 处理https://xiezuocat.com用时：134 秒
+2024-09-18 20:33:04,122 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:33:05,184 - logger_config - INFO - 正在处理：https://copymatic.ai
+2024-09-18 20:33:22,839 - logger_config - INFO - url:https://copymatic.ai, title:AI Copywriter & Content Writer - Copymatic,description:Copymatic is a powerful AI-powered copywriter and content writer that lets you write digital ads, website copy or blog content, and more in seconds.
+2024-09-18 20:33:39,244 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成zh-CN语言
+2024-09-18 20:33:48,863 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成zh-TW语言
+2024-09-18 20:34:02,367 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成en语言
+2024-09-18 20:34:15,318 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成German语言
+2024-09-18 20:34:28,437 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成es语言
+2024-09-18 20:34:42,832 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成fr语言
+2024-09-18 20:34:58,470 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成Japanese语言
+2024-09-18 20:35:10,503 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成Portuguese语言
+2024-09-18 20:35:20,503 - logger_config - INFO - 正在处理https://copymatic.ai站点，生成ru语言
+2024-09-18 20:35:36,140 - logger_config - INFO - https://copymatic.ai站点处理成功
+2024-09-18 20:35:36,140 - logger_config - INFO - 处理https://copymatic.ai用时：151 秒
+2024-09-18 20:35:36,147 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:35:37,101 - logger_config - INFO - 正在处理：https://quillbot.com
+2024-09-18 20:35:55,294 - logger_config - INFO - url:https://quillbot.com, title:QuillBot: Your complete writing solution,description:Write effortlessly and efficiently with QuillBot's suite of AI tools. Paraphrase, check grammar, analyze tone, improve fluency, and more. Start doing your best work.
+2024-09-18 20:36:24,398 - logger_config - INFO - 正在处理https://quillbot.com站点，生成zh-CN语言
+2024-09-18 20:36:37,575 - logger_config - INFO - 正在处理https://quillbot.com站点，生成zh-TW语言
+2024-09-18 20:36:58,164 - logger_config - INFO - 正在处理https://quillbot.com站点，生成en语言
+2024-09-18 20:37:18,284 - logger_config - INFO - 正在处理https://quillbot.com站点，生成German语言
+2024-09-18 20:37:38,980 - logger_config - INFO - 正在处理https://quillbot.com站点，生成es语言
+2024-09-18 20:38:01,191 - logger_config - INFO - 正在处理https://quillbot.com站点，生成fr语言
+2024-09-18 20:38:23,237 - logger_config - INFO - 正在处理https://quillbot.com站点，生成Japanese语言
+2024-09-18 20:38:43,172 - logger_config - INFO - 正在处理https://quillbot.com站点，生成Portuguese语言
+2024-09-18 20:38:57,968 - logger_config - INFO - 正在处理https://quillbot.com站点，生成ru语言
+2024-09-18 20:39:21,670 - logger_config - INFO - https://quillbot.com站点处理成功
+2024-09-18 20:39:21,670 - logger_config - INFO - 处理https://quillbot.com用时：224 秒
+2024-09-18 20:39:21,678 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:39:22,961 - logger_config - INFO - 正在处理：https://www.grammarly.com
+2024-09-18 20:39:49,027 - logger_config - INFO - url:https://www.grammarly.com, title:Grammarly: Free AI Writing Assistance,description:Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website.
+2024-09-18 20:39:58,304 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成zh-CN语言
+2024-09-18 20:40:06,649 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成zh-TW语言
+2024-09-18 20:40:18,994 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成en语言
+2024-09-18 20:40:31,054 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成German语言
+2024-09-18 20:40:46,696 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成es语言
+2024-09-18 20:41:03,902 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成fr语言
+2024-09-18 20:41:21,303 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成Japanese语言
+2024-09-18 20:41:39,092 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成Portuguese语言
+2024-09-18 20:41:55,218 - logger_config - INFO - 正在处理https://www.grammarly.com站点，生成ru语言
+2024-09-18 20:42:13,340 - logger_config - INFO - https://www.grammarly.com站点处理成功
+2024-09-18 20:42:13,340 - logger_config - INFO - 处理https://www.grammarly.com用时：171 秒
+2024-09-18 20:42:13,350 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:42:14,615 - logger_config - INFO - 正在处理：https://smodin.io
+2024-09-18 20:42:24,709 - logger_config - INFO - url:https://smodin.io, title:Smodin: Multi-lingual Writing Assistance,description:Everyday applications are used by millions of students, writers, and internet workers across the globe. Our most popular applications include a text rewriter, plagiarism checker, auto citation machine, and a multi-lingual translator. Enhance your writing with Smodin!
+2024-09-18 20:42:48,106 - logger_config - INFO - 正在处理https://smodin.io站点，生成zh-CN语言
+2024-09-18 20:42:59,260 - logger_config - INFO - 正在处理https://smodin.io站点，生成zh-TW语言
+2024-09-18 20:43:11,785 - logger_config - INFO - 正在处理https://smodin.io站点，生成en语言
+2024-09-18 20:43:22,229 - logger_config - INFO - 正在处理https://smodin.io站点，生成German语言
+2024-09-18 20:43:37,312 - logger_config - INFO - 正在处理https://smodin.io站点，生成es语言
+2024-09-18 20:43:54,127 - logger_config - INFO - 正在处理https://smodin.io站点，生成fr语言
+2024-09-18 20:44:10,289 - logger_config - INFO - 正在处理https://smodin.io站点，生成Japanese语言
+2024-09-18 20:44:23,333 - logger_config - INFO - 正在处理https://smodin.io站点，生成Portuguese语言
+2024-09-18 20:44:35,769 - logger_config - INFO - 正在处理https://smodin.io站点，生成ru语言
+2024-09-18 20:44:52,278 - logger_config - INFO - https://smodin.io站点处理成功
+2024-09-18 20:44:52,278 - logger_config - INFO - 处理https://smodin.io用时：158 秒
+2024-09-18 20:44:52,286 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:44:53,440 - logger_config - INFO - 正在处理：https://www.neuraltext.com
+2024-09-18 20:45:06,216 - logger_config - INFO - url:https://www.neuraltext.com, title:NeuralText - AI Writing Assistant and tools for SEO | neuraltext.com,description:Use the world's advanced AI to generate marketing copy and blog posts.  With NeuralText you write SEO content quickly and easily instead of spending hours on it.
+2024-09-18 20:45:37,258 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成zh-CN语言
+2024-09-18 20:45:47,058 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成zh-TW语言
+2024-09-18 20:46:02,791 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成en语言
+2024-09-18 20:46:18,182 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成German语言
+2024-09-18 20:46:32,554 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成es语言
+2024-09-18 20:46:49,424 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成fr语言
+2024-09-18 20:47:06,655 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成Japanese语言
+2024-09-18 20:47:22,061 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成Portuguese语言
+2024-09-18 20:47:32,222 - logger_config - INFO - 正在处理https://www.neuraltext.com站点，生成ru语言
+2024-09-18 20:47:49,957 - logger_config - INFO - https://www.neuraltext.com站点处理成功
+2024-09-18 20:47:49,957 - logger_config - INFO - 处理https://www.neuraltext.com用时：176 秒
+2024-09-18 20:47:49,964 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:48:10,972 - logger_config - INFO - 正在处理：https://unbounce.com/product/smart-copy
+2024-09-18 20:48:27,537 - logger_config - INFO - url:https://unbounce.com/product/smart-copy, title:Smart Copy - AI copywriting and content generator tool | Unbounce,description:No more writer’s block. Create dazzling on-brand copy in minutes using Unbounce’s AI copy generator. Sign up for Smart Copy for free today.
+2024-09-18 20:48:34,946 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成zh-CN语言
+2024-09-18 20:48:41,703 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成zh-TW语言
+2024-09-18 20:48:52,201 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成en语言
+2024-09-18 20:49:04,623 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成German语言
+2024-09-18 20:49:20,547 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成es语言
+2024-09-18 20:49:38,892 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成fr语言
+2024-09-18 20:49:56,489 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成Japanese语言
+2024-09-18 20:50:31,626 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成Portuguese语言
+2024-09-18 20:50:36,500 - logger_config - INFO - 正在处理https://unbounce.com/product/smart-copy站点，生成ru语言
+2024-09-18 20:50:51,322 - logger_config - INFO - https://unbounce.com/product/smart-copy站点处理成功
+2024-09-18 20:50:51,322 - logger_config - INFO - 处理https://unbounce.com/product/smart-copy用时：161 秒
+2024-09-18 20:50:51,331 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:51:30,363 - logger_config - INFO - 正在处理：https://copysmith.ai
+2024-09-18 20:52:14,131 - logger_config - INFO - url:https://copysmith.ai, title:Your AI Tech Stack for Efficient, On-Brand Content,description:Copysmith is a collection of AI-powered products, empowering content teams to easily produce high quality content across multiple communication channels.
+2024-09-18 20:52:22,414 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成zh-CN语言
+2024-09-18 20:52:25,455 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成zh-TW语言
+2024-09-18 20:52:28,766 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成en语言
+2024-09-18 20:52:32,198 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成German语言
+2024-09-18 20:52:35,763 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成es语言
+2024-09-18 20:52:40,395 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成fr语言
+2024-09-18 20:52:46,762 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成Japanese语言
+2024-09-18 20:52:59,509 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成Portuguese语言
+2024-09-18 20:53:12,097 - logger_config - INFO - 正在处理https://copysmith.ai站点，生成ru语言
+2024-09-18 20:53:23,660 - logger_config - INFO - https://copysmith.ai站点处理成功
+2024-09-18 20:53:23,660 - logger_config - INFO - 处理https://copysmith.ai用时：113 秒
+2024-09-18 20:53:23,669 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:53:24,730 - logger_config - INFO - 正在处理：https://effidit.qq.com/en
+2024-09-18 20:53:26,302 - logger_config - INFO - url:https://effidit.qq.com/en, title:Effidit,description:Effidit is a writing assistant developed by Tencent AI Lab for exploring the use of AI technologies to improve writing efficiency and creative experience.
+2024-09-18 20:53:53,872 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成zh-CN语言
+2024-09-18 20:54:03,662 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成zh-TW语言
+2024-09-18 20:54:18,736 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成en语言
+2024-09-18 20:54:31,533 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成German语言
+2024-09-18 20:54:48,239 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成es语言
+2024-09-18 20:55:06,627 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成fr语言
+2024-09-18 20:55:24,611 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成Japanese语言
+2024-09-18 20:55:40,008 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成Portuguese语言
+2024-09-18 20:55:53,788 - logger_config - INFO - 正在处理https://effidit.qq.com/en站点，生成ru语言
+2024-09-18 20:56:11,319 - logger_config - INFO - https://effidit.qq.com/en站点处理成功
+2024-09-18 20:56:11,320 - logger_config - INFO - 处理https://effidit.qq.com/en用时：167 秒
+2024-09-18 20:56:11,327 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:56:12,619 - logger_config - INFO - 正在处理：https://if.caiyunai.com
+2024-09-18 20:56:18,525 - logger_config - INFO - url:https://if.caiyunai.com, title:彩云小梦,description:AI续写 · 平行世界
+2024-09-18 20:56:59,315 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成zh-CN语言
+2024-09-18 20:57:08,939 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成zh-TW语言
+2024-09-18 20:57:24,048 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成en语言
+2024-09-18 20:57:39,075 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成German语言
+2024-09-18 20:57:53,997 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成es语言
+2024-09-18 20:58:11,104 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成fr语言
+2024-09-18 20:58:27,560 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成Japanese语言
+2024-09-18 20:58:44,820 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成Portuguese语言
+2024-09-18 20:59:01,146 - logger_config - INFO - 正在处理https://if.caiyunai.com站点，生成ru语言
+2024-09-18 20:59:17,816 - logger_config - INFO - https://if.caiyunai.com站点处理成功
+2024-09-18 20:59:17,816 - logger_config - INFO - 处理https://if.caiyunai.com用时：185 秒
+2024-09-18 20:59:17,824 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 20:59:38,065 - logger_config - INFO - 正在处理：https://jollytoday.com/cn
+2024-09-18 20:59:43,109 - logger_config - INFO - url:https://jollytoday.com/cn, title:鬼手剪辑官网 - 专业的视频翻译和去字幕软件-GhostCut,description:鬼手剪辑是一款专业的视频创作工具，他能高效实现视频去字幕、视频翻译和视频混剪等，帮助电商客户、MCN机构和影视剪辑人员制作精彩的视频。
+2024-09-18 20:59:59,471 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成zh-CN语言
+2024-09-18 21:00:03,868 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成zh-TW语言
+2024-09-18 21:00:14,765 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成en语言
+2024-09-18 21:00:28,753 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成German语言
+2024-09-18 21:00:43,902 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成es语言
+2024-09-18 21:00:58,607 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成fr语言
+2024-09-18 21:01:14,355 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成Japanese语言
+2024-09-18 21:01:30,038 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成Portuguese语言
+2024-09-18 21:01:44,839 - logger_config - INFO - 正在处理https://jollytoday.com/cn站点，生成ru语言
+2024-09-18 21:02:01,386 - logger_config - INFO - https://jollytoday.com/cn站点处理成功
+2024-09-18 21:02:01,386 - logger_config - INFO - 处理https://jollytoday.com/cn用时：143 秒
+2024-09-18 21:02:01,394 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:02:02,326 - logger_config - INFO - 正在处理：https://b.jimmylv.cn
+2024-09-18 21:02:07,090 - logger_config - INFO - url:https://b.jimmylv.cn, title:音视频内容 AI 一键总结丨BibiGPT 学习助理,description:AI 音视频一键总结与对话，轻松学习哔哩哔哩丨YouTube丨本地视频丨本地音频丨播客丨小红书丨抖音丨会议丨讲座丨网页等任意内容。BibiGPT 致力于成为你的最佳 AI 知行助理，让你的视频看得快、搜得到、用得好！支持免费试用！(原 BiliGPT 省流神器 & AI 课代表)（支持移动端微信助理、iOS 快捷指令）
+2024-09-18 21:02:25,938 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成zh-CN语言
+2024-09-18 21:02:37,601 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成zh-TW语言
+2024-09-18 21:02:53,345 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成en语言
+2024-09-18 21:03:06,397 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成German语言
+2024-09-18 21:03:22,000 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成es语言
+2024-09-18 21:03:38,711 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成fr语言
+2024-09-18 21:03:54,511 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成Japanese语言
+2024-09-18 21:04:09,262 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成Portuguese语言
+2024-09-18 21:04:22,178 - logger_config - INFO - 正在处理https://b.jimmylv.cn站点，生成ru语言
+2024-09-18 21:04:38,312 - logger_config - INFO - https://b.jimmylv.cn站点处理成功
+2024-09-18 21:04:38,312 - logger_config - INFO - 处理https://b.jimmylv.cn用时：156 秒
+2024-09-18 21:04:38,320 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:04:39,764 - logger_config - INFO - 正在处理：https://fliki.ai
+2024-09-18 21:04:55,417 - logger_config - INFO - url:https://fliki.ai, title:Fliki - Turn text into videos with AI voices,description:Transform your ideas to videos effortlessly with the best AI Video Generator. User-friendly Text to Video editor, realistic voiceovers, dynamic AI clips, and more.
+2024-09-18 21:05:20,551 - logger_config - INFO - 正在处理https://fliki.ai站点，生成zh-CN语言
+2024-09-18 21:05:32,468 - logger_config - INFO - 正在处理https://fliki.ai站点，生成zh-TW语言
+2024-09-18 21:05:45,424 - logger_config - INFO - 正在处理https://fliki.ai站点，生成en语言
+2024-09-18 21:05:56,244 - logger_config - INFO - 正在处理https://fliki.ai站点，生成German语言
+2024-09-18 21:06:10,625 - logger_config - INFO - 正在处理https://fliki.ai站点，生成es语言
+2024-09-18 21:06:27,368 - logger_config - INFO - 正在处理https://fliki.ai站点，生成fr语言
+2024-09-18 21:06:43,238 - logger_config - INFO - 正在处理https://fliki.ai站点，生成Japanese语言
+2024-09-18 21:06:59,373 - logger_config - INFO - 正在处理https://fliki.ai站点，生成Portuguese语言
+2024-09-18 21:07:16,753 - logger_config - INFO - 正在处理https://fliki.ai站点，生成ru语言
+2024-09-18 21:07:33,160 - logger_config - INFO - https://fliki.ai站点处理成功
+2024-09-18 21:07:33,160 - logger_config - INFO - 处理https://fliki.ai用时：174 秒
+2024-09-18 21:07:33,168 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:07:34,848 - logger_config - INFO - 正在处理：https://pictory.ai
+2024-09-18 21:07:54,479 - logger_config - INFO - url:https://pictory.ai, title:Pictory - Easy Video Creation For EVERYONE,description:With Pictory you can create and edit professional quality videos using text in minutes, no technical skills required or software to download.
+2024-09-18 21:08:07,776 - logger_config - INFO - 正在处理https://pictory.ai站点，生成zh-CN语言
+2024-09-18 21:08:16,297 - logger_config - INFO - 正在处理https://pictory.ai站点，生成zh-TW语言
+2024-09-18 21:08:25,735 - logger_config - INFO - 正在处理https://pictory.ai站点，生成en语言
+2024-09-18 21:08:33,140 - logger_config - INFO - 正在处理https://pictory.ai站点，生成German语言
+2024-09-18 21:08:44,041 - logger_config - INFO - 正在处理https://pictory.ai站点，生成es语言
+2024-09-18 21:08:56,427 - logger_config - INFO - 正在处理https://pictory.ai站点，生成fr语言
+2024-09-18 21:09:08,800 - logger_config - INFO - 正在处理https://pictory.ai站点，生成Japanese语言
+2024-09-18 21:09:20,094 - logger_config - INFO - 正在处理https://pictory.ai站点，生成Portuguese语言
+2024-09-18 21:09:28,129 - logger_config - INFO - 正在处理https://pictory.ai站点，生成ru语言
+2024-09-18 21:09:40,052 - logger_config - INFO - https://pictory.ai站点处理成功
+2024-09-18 21:09:40,052 - logger_config - INFO - 处理https://pictory.ai用时：126 秒
+2024-09-18 21:09:40,061 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:10:00,249 - logger_config - INFO - 正在处理：https://elai.io
+2024-09-18 21:10:25,054 - logger_config - INFO - url:https://elai.io, title:Elai.io - The Most Advanced and Intuitive AI Video Generator,description:Discover Elai: The leading AI video generation platform. Effortlessly create professional-grade videos with real people in minutes, no editing skills needed.
+2024-09-18 21:10:39,267 - logger_config - INFO - 正在处理https://elai.io站点，生成zh-CN语言
+2024-09-18 21:10:43,686 - logger_config - INFO - 正在处理https://elai.io站点，生成zh-TW语言
+2024-09-18 21:10:56,049 - logger_config - INFO - 正在处理https://elai.io站点，生成en语言
+2024-09-18 21:11:12,508 - logger_config - INFO - 正在处理https://elai.io站点，生成German语言
+2024-09-18 21:11:28,048 - logger_config - INFO - 正在处理https://elai.io站点，生成es语言
+2024-09-18 21:11:46,453 - logger_config - INFO - 正在处理https://elai.io站点，生成fr语言
+2024-09-18 21:12:04,052 - logger_config - INFO - 正在处理https://elai.io站点，生成Japanese语言
+2024-09-18 21:12:21,651 - logger_config - INFO - 正在处理https://elai.io站点，生成Portuguese语言
+2024-09-18 21:12:38,998 - logger_config - INFO - 正在处理https://elai.io站点，生成ru语言
+2024-09-18 21:12:57,195 - logger_config - INFO - https://elai.io站点处理成功
+2024-09-18 21:12:57,195 - logger_config - INFO - 处理https://elai.io用时：177 秒
+2024-09-18 21:12:57,203 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:12:58,209 - logger_config - INFO - 正在处理：https://www.heygen.com/?from=moviola
+2024-09-18 21:13:50,830 - logger_config - INFO - url:https://www.heygen.com/?from=moviola, title:HeyGen - AI Video Generator,description:HeyGen is an innovative video platform that harnesses the power of generative AI to streamline your video creation process.
+2024-09-18 21:13:51,105 - logger_config - INFO - 处理https://www.heygen.com/?from=moviola用时：53 秒
+2024-09-18 21:13:51,511 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:13:51,516 - logger_config - INFO - 正在处理：https://www.colossyan.com
+2024-09-18 21:14:08,456 - logger_config - INFO - url:https://www.colossyan.com, title:Colossyan Creator - AI Video Generator for L&D,description:Colossyan Creator makes video creation simple and stress-free. Discover our AI video generator with real actors. Create AI videos in less than 5 minutes.
+2024-09-18 21:14:21,685 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成zh-CN语言
+2024-09-18 21:14:33,662 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成zh-TW语言
+2024-09-18 21:14:48,274 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成en语言
+2024-09-18 21:15:00,083 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成German语言
+2024-09-18 21:15:17,796 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成es语言
+2024-09-18 21:15:39,104 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成fr语言
+2024-09-18 21:15:56,580 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成Japanese语言
+2024-09-18 21:16:13,590 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成Portuguese语言
+2024-09-18 21:16:27,400 - logger_config - INFO - 正在处理https://www.colossyan.com站点，生成ru语言
+2024-09-18 21:16:46,443 - logger_config - INFO - https://www.colossyan.com站点处理成功
+2024-09-18 21:16:46,443 - logger_config - INFO - 处理https://www.colossyan.com用时：175 秒
+2024-09-18 21:16:46,450 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:16:48,451 - logger_config - INFO - 正在处理：https://www.cutout.pro/zh-CN/remove-video-background
+2024-09-18 21:17:12,611 - logger_config - INFO - url:https://www.cutout.pro/zh-CN/remove-video-background, title:去除视频背景无绿屏，全自动免费 - Cutout.Pro,description:Cutout.Pro - 无需单击即可在线视频背景去除器，自动免费制作无背景视频，无需色度键控、绿屏或后期效果。 从任何地方拍摄的镜头中擦除背景。 与专业的非屏幕工具相比，简单易用，并在删除背景的情况下创建高质量的结果。
+2024-09-18 21:18:17,526 - logger_config - INFO - 处理https://www.cutout.pro/zh-CN/remove-video-background用时：89 秒
+2024-09-18 21:18:17,955 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:18:17,959 - logger_config - INFO - 正在处理：https://colourlab.ai
+2024-09-18 21:18:25,388 - logger_config - INFO - url:https://colourlab.ai, title:Homepage - Colourlab.ai,description:Introduction to Ai Color Grading Register Here London Soho Event SEPTEMBER 11th, 2024 Register Here Express yourself in the language of color like never before Colourlab AI Creator 3 CWorld’s #1 Ai Color Grading App Discover More Colourlab Ai 3 Pro CComing September 13 Learn More ColourPro CUltimate toolset for pro colorists Learn More Look […]
+2024-09-18 21:18:37,074 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成zh-CN语言
+2024-09-18 21:18:40,676 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成zh-TW语言
+2024-09-18 21:18:45,140 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成en语言
+2024-09-18 21:18:49,740 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成German语言
+2024-09-18 21:19:02,587 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成es语言
+2024-09-18 21:19:18,068 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成fr语言
+2024-09-18 21:19:31,658 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成Japanese语言
+2024-09-18 21:19:46,621 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成Portuguese语言
+2024-09-18 21:20:01,303 - logger_config - INFO - 正在处理https://colourlab.ai站点，生成ru语言
+2024-09-18 21:20:15,960 - logger_config - INFO - https://colourlab.ai站点处理成功
+2024-09-18 21:20:15,960 - logger_config - INFO - 处理https://colourlab.ai用时：118 秒
+2024-09-18 21:20:15,967 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:20:16,950 - logger_config - INFO - 正在处理：https://bgrem.ai/zh/remove-video-bg
+2024-09-18 21:20:38,749 - logger_config - INFO - url:https://bgrem.ai/zh/remove-video-bg, title:自动在线去除视频背景 — BgRem,description:自动在线去除视频背景！ 人工智能去除 mp4、mov、mkv、webm 格式的背景。让背景变透明/更换背景！
+2024-09-18 21:21:01,068 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成zh-CN语言
+2024-09-18 21:21:08,923 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成zh-TW语言
+2024-09-18 21:21:21,357 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成en语言
+2024-09-18 21:21:34,267 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成German语言
+2024-09-18 21:21:49,783 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成es语言
+2024-09-18 21:22:04,258 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成fr语言
+2024-09-18 21:22:20,427 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成Japanese语言
+2024-09-18 21:22:36,305 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成Portuguese语言
+2024-09-18 21:22:52,464 - logger_config - INFO - 正在处理https://bgrem.ai/zh/remove-video-bg站点，生成ru语言
+2024-09-18 21:23:08,828 - logger_config - INFO - https://bgrem.ai/zh/remove-video-bg站点处理成功
+2024-09-18 21:23:08,828 - logger_config - INFO - 处理https://bgrem.ai/zh/remove-video-bg用时：172 秒
+2024-09-18 21:23:08,834 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:23:15,305 - logger_config - INFO - 正在处理：https://hourone.ai
+2024-09-18 21:23:41,250 - logger_config - INFO - url:https://hourone.ai, title:Gen-AI Video: Human-Centric Storytelling, Brand Videos at Scale - Hour One,description:Create consistent, branded videos effortlessly. Our Gen-AI video technology allows you to produce multilingual content at scale.
+2024-09-18 21:23:53,375 - logger_config - INFO - 正在处理https://hourone.ai站点，生成zh-CN语言
+2024-09-18 21:24:02,648 - logger_config - INFO - 正在处理https://hourone.ai站点，生成zh-TW语言
+2024-09-18 21:24:15,204 - logger_config - INFO - 正在处理https://hourone.ai站点，生成en语言
+2024-09-18 21:24:27,880 - logger_config - INFO - 正在处理https://hourone.ai站点，生成German语言
+2024-09-18 21:24:40,628 - logger_config - INFO - 正在处理https://hourone.ai站点，生成es语言
+2024-09-18 21:24:54,885 - logger_config - INFO - 正在处理https://hourone.ai站点，生成fr语言
+2024-09-18 21:25:09,732 - logger_config - INFO - 正在处理https://hourone.ai站点，生成Japanese语言
+2024-09-18 21:25:24,034 - logger_config - INFO - 正在处理https://hourone.ai站点，生成Portuguese语言
+2024-09-18 21:25:39,376 - logger_config - INFO - 正在处理https://hourone.ai站点，生成ru语言
+2024-09-18 21:25:54,007 - logger_config - INFO - https://hourone.ai站点处理成功
+2024-09-18 21:25:54,007 - logger_config - INFO - 处理https://hourone.ai用时：159 秒
+2024-09-18 21:25:54,017 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:25:55,119 - logger_config - INFO - 正在处理：https://www.veed.io/zh-CN/tools/video-background-remover
+2024-09-18 21:26:14,266 - logger_config - INFO - url:https://www.veed.io/zh-CN/tools/video-background-remover, title:自动从视频中删除背景 - VEED,description:使用 VEED 的自动背景去除器或绿屏编辑器一键从视频中去除背景。用您喜欢的图像替换背景，编辑您的视频等等！
+2024-09-18 21:26:43,059 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成zh-CN语言
+2024-09-18 21:26:52,643 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成zh-TW语言
+2024-09-18 21:27:08,361 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成en语言
+2024-09-18 21:27:23,602 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成German语言
+2024-09-18 21:27:40,076 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成es语言
+2024-09-18 21:27:55,785 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成fr语言
+2024-09-18 21:28:12,317 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成Japanese语言
+2024-09-18 21:28:31,632 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成Portuguese语言
+2024-09-18 21:28:47,548 - logger_config - INFO - 正在处理https://www.veed.io/zh-CN/tools/video-background-remover站点，生成ru语言
+2024-09-18 21:29:05,033 - logger_config - INFO - https://www.veed.io/zh-CN/tools/video-background-remover站点处理成功
+2024-09-18 21:29:05,033 - logger_config - INFO - 处理https://www.veed.io/zh-CN/tools/video-background-remover用时：190 秒
+2024-09-18 21:29:05,040 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:29:17,693 - logger_config - INFO - 正在处理：https://synthesys.io
+2024-09-18 21:29:38,093 - logger_config - INFO - url:https://synthesys.io, title:Unlock Generative AI Content At Scale | Synthesys.io,description:Discover the power of AI with Synthesys.io's voice, video, and image generators. Elevate your content creation and try our tools for free today!
+2024-09-18 21:29:46,826 - logger_config - INFO - 正在处理https://synthesys.io站点，生成zh-CN语言
+2024-09-18 21:29:55,925 - logger_config - INFO - 正在处理https://synthesys.io站点，生成zh-TW语言
+2024-09-18 21:30:11,407 - logger_config - INFO - 正在处理https://synthesys.io站点，生成en语言
+2024-09-18 21:30:24,727 - logger_config - INFO - 正在处理https://synthesys.io站点，生成German语言
+2024-09-18 21:30:39,331 - logger_config - INFO - 正在处理https://synthesys.io站点，生成es语言
+2024-09-18 21:30:54,972 - logger_config - INFO - 正在处理https://synthesys.io站点，生成fr语言
+2024-09-18 21:31:10,491 - logger_config - INFO - 正在处理https://synthesys.io站点，生成Japanese语言
+2024-09-18 21:31:25,637 - logger_config - INFO - 正在处理https://synthesys.io站点，生成Portuguese语言
+2024-09-18 21:31:41,716 - logger_config - INFO - 正在处理https://synthesys.io站点，生成ru语言
+2024-09-18 21:31:56,849 - logger_config - INFO - https://synthesys.io站点处理成功
+2024-09-18 21:31:56,849 - logger_config - INFO - 处理https://synthesys.io用时：159 秒
+2024-09-18 21:31:56,858 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:31:58,344 - logger_config - INFO - 正在处理：http://rephrase.ai
+2024-09-18 21:32:15,128 - logger_config - INFO - url:http://rephrase.ai, title:Rephrase.ai: Convert Text into Engaging AI Videos in Minutes,description:Discover Rephrase.ai, the leading AI-powered platform for creating realistic videos with digital avatars. Transform your text into engaging video content in minutes, save on production costs, and reach your audience like never before. Start your free trial today!
+2024-09-18 21:32:24,296 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成zh-CN语言
+2024-09-18 21:32:29,040 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成zh-TW语言
+2024-09-18 21:32:38,055 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成en语言
+2024-09-18 21:32:50,107 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成German语言
+2024-09-18 21:33:02,601 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成es语言
+2024-09-18 21:33:16,307 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成fr语言
+2024-09-18 21:33:27,112 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成Japanese语言
+2024-09-18 21:33:40,973 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成Portuguese语言
+2024-09-18 21:33:54,962 - logger_config - INFO - 正在处理http://rephrase.ai站点，生成ru语言
+2024-09-18 21:34:08,925 - logger_config - INFO - http://rephrase.ai站点处理成功
+2024-09-18 21:34:08,928 - logger_config - INFO - 处理http://rephrase.ai用时：130 秒
+2024-09-18 21:34:08,933 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:34:09,915 - logger_config - INFO - 正在处理：https://www.synthesia.io
+2024-09-18 21:34:32,902 - logger_config - INFO - url:https://www.synthesia.io, title:Best AI Video Generator - Start Creating FREE AI Videos Now,description:Create AI videos from text with AI video generator. Get the most advanced AI avatars and voiceovers in 140+ languages. Try the free AI video generator today!
+2024-09-18 21:34:57,084 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成zh-CN语言
+2024-09-18 21:35:08,366 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成zh-TW语言
+2024-09-18 21:35:19,601 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成en语言
+2024-09-18 21:35:30,980 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成German语言
+2024-09-18 21:35:47,436 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成es语言
+2024-09-18 21:36:05,631 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成fr语言
+2024-09-18 21:36:24,245 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成Japanese语言
+2024-09-18 21:36:41,894 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成Portuguese语言
+2024-09-18 21:37:01,119 - logger_config - INFO - 正在处理https://www.synthesia.io站点，生成ru语言
+2024-09-18 21:37:19,465 - logger_config - INFO - https://www.synthesia.io站点处理成功
+2024-09-18 21:37:19,465 - logger_config - INFO - 处理https://www.synthesia.io用时：190 秒
+2024-09-18 21:37:19,474 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:37:20,904 - logger_config - INFO - 正在处理：https://dreamfaceapp.com
+2024-09-18 21:37:47,842 - logger_config - INFO - url:https://dreamfaceapp.com, title:DreamFace - Powerful Photo Animating App | AI Face Editor,description:
+2024-09-18 21:37:58,217 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成zh-CN语言
+2024-09-18 21:38:00,935 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成zh-TW语言
+2024-09-18 21:38:03,856 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成en语言
+2024-09-18 21:38:12,236 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成German语言
+2024-09-18 21:38:22,476 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成es语言
+2024-09-18 21:38:35,368 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成fr语言
+2024-09-18 21:38:47,940 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成Japanese语言
+2024-09-18 21:38:57,705 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成Portuguese语言
+2024-09-18 21:39:05,106 - logger_config - INFO - 正在处理https://dreamfaceapp.com站点，生成ru语言
+2024-09-18 21:39:17,588 - logger_config - INFO - https://dreamfaceapp.com站点处理成功
+2024-09-18 21:39:17,588 - logger_config - INFO - 处理https://dreamfaceapp.com用时：117 秒
+2024-09-18 21:39:17,595 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:39:56,611 - logger_config - INFO - 正在处理：https://www.deepbrain.io
+2024-09-18 21:40:25,404 - logger_config - INFO - url:https://www.deepbrain.io, title:Best AI Video Generator | DeepBrain AI,description:Create AI-generated videos quickly using simple text. Amazing Multi-Language supported AI movie generator.
+2024-09-18 21:40:34,654 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成zh-CN语言
+2024-09-18 21:40:38,894 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成zh-TW语言
+2024-09-18 21:40:53,944 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成en语言
+2024-09-18 21:41:09,248 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成German语言
+2024-09-18 21:41:25,742 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成es语言
+2024-09-18 21:41:43,890 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成fr语言
+2024-09-18 21:42:00,724 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成Japanese语言
+2024-09-18 21:42:15,335 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成Portuguese语言
+2024-09-18 21:42:26,362 - logger_config - INFO - 正在处理https://www.deepbrain.io站点，生成ru语言
+2024-09-18 21:42:45,146 - logger_config - INFO - https://www.deepbrain.io站点处理成功
+2024-09-18 21:42:45,146 - logger_config - INFO - 处理https://www.deepbrain.io用时：169 秒
+2024-09-18 21:42:45,155 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:42:46,779 - logger_config - INFO - 正在处理：https://www.unscreen.com
+2024-09-18 21:43:13,031 - logger_config - INFO - url:https://www.unscreen.com, title:Remove Video Background – Unscreen,description:Remove the background of any video - 100% automatically, online & free! Goodbye Greenscreen. Hello Unscreen.
+2024-09-18 21:43:21,304 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成zh-CN语言
+2024-09-18 21:43:24,141 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成zh-TW语言
+2024-09-18 21:43:31,697 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成en语言
+2024-09-18 21:43:42,323 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成German语言
+2024-09-18 21:43:52,516 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成es语言
+2024-09-18 21:44:03,508 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成fr语言
+2024-09-18 21:44:14,565 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成Japanese语言
+2024-09-18 21:44:22,480 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成Portuguese语言
+2024-09-18 21:44:31,520 - logger_config - INFO - 正在处理https://www.unscreen.com站点，生成ru语言
+2024-09-18 21:44:40,828 - logger_config - INFO - https://www.unscreen.com站点处理成功
+2024-09-18 21:44:40,828 - logger_config - INFO - 处理https://www.unscreen.com用时：114 秒
+2024-09-18 21:44:40,835 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:44:41,838 - logger_config - INFO - 正在处理：https://www.adobe.com/sensei.html
+2024-09-18 21:44:49,450 - logger_config - INFO - url:https://www.adobe.com/sensei.html, title:Experience Cloud AI Services with Adobe Sensei,description:Adobe Sensei powers Experience Cloud artificial intelligence, helping you deliver more personalized, timely experiences. Learn more.
+2024-09-18 21:45:21,249 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-CN语言
+2024-09-18 21:45:30,602 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-TW语言
+2024-09-18 21:45:43,580 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成en语言
+2024-09-18 21:45:54,851 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成German语言
+2024-09-18 21:46:10,561 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成es语言
+2024-09-18 21:46:27,288 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成fr语言
+2024-09-18 21:46:44,384 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Japanese语言
+2024-09-18 21:47:01,542 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Portuguese语言
+2024-09-18 21:47:18,788 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成ru语言
+2024-09-18 21:47:36,169 - logger_config - INFO - https://www.adobe.com/sensei.html站点处理成功
+2024-09-18 21:47:36,169 - logger_config - INFO - 处理https://www.adobe.com/sensei.html用时：175 秒
+2024-09-18 21:47:36,177 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:47:37,385 - logger_config - INFO - 正在处理：https://midjourney.com
+2024-09-18 21:47:37,777 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 21:47:40,129 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 21:47:42,483 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 21:47:42,484 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-18 21:47:42,484 - logger_config - INFO - 处理https://midjourney.com用时：5 秒
+2024-09-18 21:47:42,490 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:47:42,504 - logger_config - INFO - 正在处理：https://picsart.com/ai-image-generator
+2024-09-18 21:47:48,057 - logger_config - INFO - url:https://picsart.com/ai-image-generator, title:Picsart,description:Picsart website
+2024-09-18 21:47:57,746 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成zh-CN语言
+2024-09-18 21:48:06,944 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成zh-TW语言
+2024-09-18 21:48:20,619 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成en语言
+2024-09-18 21:48:37,871 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成German语言
+2024-09-18 21:48:51,040 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成es语言
+2024-09-18 21:49:05,703 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成fr语言
+2024-09-18 21:49:21,263 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成Japanese语言
+2024-09-18 21:49:33,593 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成Portuguese语言
+2024-09-18 21:49:43,823 - logger_config - INFO - 正在处理https://picsart.com/ai-image-generator站点，生成ru语言
+2024-09-18 21:49:58,918 - logger_config - INFO - https://picsart.com/ai-image-generator站点处理成功
+2024-09-18 21:49:58,919 - logger_config - INFO - 处理https://picsart.com/ai-image-generator用时：136 秒
+2024-09-18 21:49:58,926 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:49:59,878 - logger_config - INFO - 正在处理：https://stablediffusionweb.com
+2024-09-18 21:50:09,955 - logger_config - INFO - url:https://stablediffusionweb.com, title:Stable Diffusion Online,description:Stable Diffusion is a deep learning model that generates images from text descriptions. Use Stable Diffusion online for free.
+2024-09-18 21:50:43,730 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成zh-CN语言
+2024-09-18 21:50:58,386 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成zh-TW语言
+2024-09-18 21:51:18,285 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成en语言
+2024-09-18 21:51:39,008 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成German语言
+2024-09-18 21:51:59,721 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成es语言
+2024-09-18 21:52:21,856 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成fr语言
+2024-09-18 21:52:44,637 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成Japanese语言
+2024-09-18 21:53:03,665 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成Portuguese语言
+2024-09-18 21:53:19,822 - logger_config - INFO - 正在处理https://stablediffusionweb.com站点，生成ru语言
+2024-09-18 21:53:41,531 - logger_config - INFO - https://stablediffusionweb.com站点处理成功
+2024-09-18 21:53:41,531 - logger_config - INFO - 处理https://stablediffusionweb.com用时：222 秒
+2024-09-18 21:53:41,540 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:53:42,831 - logger_config - INFO - 正在处理：https://www.microsoft.com/en-us/ai/ai-lab-sketch2code
+2024-09-18 21:53:51,582 - logger_config - INFO - url:https://www.microsoft.com/en-us/ai/ai-lab-sketch2code, title:Sketch2Code | Microsoft Learn,description:The Need- User Interface Design process involves a lot a creativity that starts on a whiteboard where designers share ideas. Once a design is drawn, it is usually captured within a photograph and manually translated into some working HTML wireframe to play with in a web browser. This takes effort and delays the design process.&nbsp;The Solution- Within Microsoft Cognitive Services we host Computer Vision Service. The model behind this service has been trained with millions of images and enables object detection for a wide range of types of objects. In this case, we need to build a custom model and train it with images of hand-drawn design elements like a textbox, button or combobox. The Custom Vision Service gives us with the capability to train custom models and perform object detection for them. Once we can identify HTML objects we use the text recognition functionality present in the Computer Vision Service to extract hand-written text present in the design. By combining these two pieces of information, we can generate the HTML snippets of the different elements in the design. We then can infer the layout of the design from the position of the identified elements and generate the final HTML code accordingly.&nbsp;Products and Services- Computer Vision (Handwritten OCR models), Custom Vision, Azure Functions, Blob Storage, WebAppCreate a Free Account (Azure)
+2024-09-18 21:54:10,247 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成zh-CN语言
+2024-09-18 21:54:21,645 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成zh-TW语言
+2024-09-18 21:54:35,180 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成en语言
+2024-09-18 21:54:49,874 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成German语言
+2024-09-18 21:55:05,453 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成es语言
+2024-09-18 21:55:23,357 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成fr语言
+2024-09-18 21:55:42,798 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成Japanese语言
+2024-09-18 21:56:01,166 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成Portuguese语言
+2024-09-18 21:56:19,104 - logger_config - INFO - 正在处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点，生成ru语言
+2024-09-18 21:56:38,201 - logger_config - INFO - https://www.microsoft.com/en-us/ai/ai-lab-sketch2code站点处理成功
+2024-09-18 21:56:38,206 - logger_config - INFO - 处理https://www.microsoft.com/en-us/ai/ai-lab-sketch2code用时：176 秒
+2024-09-18 21:56:38,214 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:56:58,519 - logger_config - INFO - 正在处理：https://postnitro.ai/zh/app/carousel-maker
+2024-09-18 21:57:15,881 - logger_config - INFO - url:https://postnitro.ai/zh/app/carousel-maker, title:PostNitro: Free AI Carousel Generator,description:PostNitro is an AI-powered carousel maker that creates visually captivating carousels for Instagram, LinkedIn, and more to drive social engagement and growth.
+2024-09-18 21:57:23,016 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成zh-CN语言
+2024-09-18 21:57:26,475 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成zh-TW语言
+2024-09-18 21:57:30,135 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成en语言
+2024-09-18 21:57:33,561 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成German语言
+2024-09-18 21:57:41,979 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成es语言
+2024-09-18 21:57:56,372 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成fr语言
+2024-09-18 21:58:10,671 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成Japanese语言
+2024-09-18 21:58:22,671 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成Portuguese语言
+2024-09-18 21:58:38,424 - logger_config - INFO - 正在处理https://postnitro.ai/zh/app/carousel-maker站点，生成ru语言
+2024-09-18 21:58:50,222 - logger_config - INFO - https://postnitro.ai/zh/app/carousel-maker站点处理成功
+2024-09-18 21:58:50,222 - logger_config - INFO - 处理https://postnitro.ai/zh/app/carousel-maker用时：112 秒
+2024-09-18 21:58:50,229 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 21:59:12,304 - logger_config - INFO - 正在处理：https://img.logosc.cn
+2024-09-18 21:59:13,593 - logger_config - INFO - url:https://img.logosc.cn, title:在线修改图片大小尺寸；免费抠图照片处理工具 - AI改图神器,description:万能图片在线编辑器；AI,EPS,PSD,SVG全格式支持。一键修改照片颜色大小尺寸，自定义尺寸图片裁剪，智能抠图添加水印文字...
+2024-09-18 21:59:25,089 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成zh-CN语言
+2024-09-18 21:59:29,038 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成zh-TW语言
+2024-09-18 21:59:40,361 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成en语言
+2024-09-18 21:59:53,238 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成German语言
+2024-09-18 22:00:08,520 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成es语言
+2024-09-18 22:00:22,411 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成fr语言
+2024-09-18 22:00:36,157 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成Japanese语言
+2024-09-18 22:00:49,938 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成Portuguese语言
+2024-09-18 22:01:05,776 - logger_config - INFO - 正在处理https://img.logosc.cn站点，生成ru语言
+2024-09-18 22:01:19,734 - logger_config - INFO - https://img.logosc.cn站点处理成功
+2024-09-18 22:01:19,734 - logger_config - INFO - 处理https://img.logosc.cn用时：127 秒
+2024-09-18 22:01:19,742 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:01:20,692 - logger_config - INFO - 正在处理：https://beta.dreamstudio.ai
+2024-09-18 22:01:33,422 - logger_config - INFO - url:https://beta.dreamstudio.ai, title:DreamStudio,description:
+2024-09-18 22:01:40,655 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成zh-CN语言
+2024-09-18 22:01:45,878 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成zh-TW语言
+2024-09-18 22:01:55,589 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成en语言
+2024-09-18 22:02:06,364 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成German语言
+2024-09-18 22:02:15,552 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成es语言
+2024-09-18 22:02:27,545 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成fr语言
+2024-09-18 22:02:36,871 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成Japanese语言
+2024-09-18 22:02:48,209 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成Portuguese语言
+2024-09-18 22:02:59,194 - logger_config - INFO - 正在处理https://beta.dreamstudio.ai站点，生成ru语言
+2024-09-18 22:03:10,110 - logger_config - INFO - https://beta.dreamstudio.ai站点处理成功
+2024-09-18 22:03:10,110 - logger_config - INFO - 处理https://beta.dreamstudio.ai用时：110 秒
+2024-09-18 22:03:10,117 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:03:14,259 - logger_config - INFO - 正在处理：https://www.ponzu.gg
+2024-09-18 22:03:26,877 - logger_config - INFO - url:https://www.ponzu.gg, title:Ponzu,description:AI generated PBR texture maps for any idea, within seconds.
+2024-09-18 22:03:34,639 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成zh-CN语言
+2024-09-18 22:03:43,284 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成zh-TW语言
+2024-09-18 22:04:00,488 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成en语言
+2024-09-18 22:04:15,709 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成German语言
+2024-09-18 22:04:31,501 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成es语言
+2024-09-18 22:04:48,353 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成fr语言
+2024-09-18 22:05:05,093 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成Japanese语言
+2024-09-18 22:05:20,400 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成Portuguese语言
+2024-09-18 22:05:31,901 - logger_config - INFO - 正在处理https://www.ponzu.gg站点，生成ru语言
+2024-09-18 22:05:49,628 - logger_config - INFO - https://www.ponzu.gg站点处理成功
+2024-09-18 22:05:49,628 - logger_config - INFO - 处理https://www.ponzu.gg用时：155 秒
+2024-09-18 22:05:49,634 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:05:50,853 - logger_config - INFO - 正在处理：https://palette.fm
+2024-09-18 22:06:16,468 - logger_config - INFO - url:https://palette.fm, title:Colorize Photo | Try Free | Realistic Colors,description:Colorize your black and white images within seconds. Try our online AI colorize tool for free, no sign-up needed.
+2024-09-18 22:06:48,346 - logger_config - INFO - 正在处理https://palette.fm站点，生成zh-CN语言
+2024-09-18 22:06:50,953 - logger_config - INFO - 正在处理https://palette.fm站点，生成zh-TW语言
+2024-09-18 22:06:54,935 - logger_config - INFO - 正在处理https://palette.fm站点，生成en语言
+2024-09-18 22:07:02,350 - logger_config - INFO - 正在处理https://palette.fm站点，生成German语言
+2024-09-18 22:07:17,376 - logger_config - INFO - 正在处理https://palette.fm站点，生成es语言
+2024-09-18 22:07:33,136 - logger_config - INFO - 正在处理https://palette.fm站点，生成fr语言
+2024-09-18 22:07:48,868 - logger_config - INFO - 正在处理https://palette.fm站点，生成Japanese语言
+2024-09-18 22:08:03,722 - logger_config - INFO - 正在处理https://palette.fm站点，生成Portuguese语言
+2024-09-18 22:08:19,730 - logger_config - INFO - 正在处理https://palette.fm站点，生成ru语言
+2024-09-18 22:08:35,343 - logger_config - INFO - https://palette.fm站点处理成功
+2024-09-18 22:08:35,343 - logger_config - INFO - 处理https://palette.fm用时：165 秒
+2024-09-18 22:08:35,351 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:08:36,425 - logger_config - INFO - 正在处理：https://huemint.com
+2024-09-18 22:08:44,283 - logger_config - INFO - url:https://huemint.com, title:Huemint - AI color palette generator,description:
+2024-09-18 22:08:55,715 - logger_config - INFO - 正在处理https://huemint.com站点，生成zh-CN语言
+2024-09-18 22:09:02,898 - logger_config - INFO - 正在处理https://huemint.com站点，生成zh-TW语言
+2024-09-18 22:09:13,504 - logger_config - INFO - 正在处理https://huemint.com站点，生成en语言
+2024-09-18 22:09:24,203 - logger_config - INFO - 正在处理https://huemint.com站点，生成German语言
+2024-09-18 22:09:34,827 - logger_config - INFO - 正在处理https://huemint.com站点，生成es语言
+2024-09-18 22:09:47,309 - logger_config - INFO - 正在处理https://huemint.com站点，生成fr语言
+2024-09-18 22:09:59,532 - logger_config - INFO - 正在处理https://huemint.com站点，生成Japanese语言
+2024-09-18 22:10:11,175 - logger_config - INFO - 正在处理https://huemint.com站点，生成Portuguese语言
+2024-09-18 22:10:22,631 - logger_config - INFO - 正在处理https://huemint.com站点，生成ru语言
+2024-09-18 22:10:35,115 - logger_config - INFO - https://huemint.com站点处理成功
+2024-09-18 22:10:35,115 - logger_config - INFO - 处理https://huemint.com用时：119 秒
+2024-09-18 22:10:35,123 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:10:36,325 - logger_config - INFO - 正在处理：https://stockimg.ai
+2024-09-18 22:11:21,779 - logger_config - INFO - url:https://stockimg.ai, title:Stockimg AI,description:Stockimg is an all in one design and content creation tool powered by AI. You can easily generate logo, illustration, wallpaper, poster and more.
+2024-09-18 22:11:28,874 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成zh-CN语言
+2024-09-18 22:11:32,300 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成zh-TW语言
+2024-09-18 22:11:36,024 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成en语言
+2024-09-18 22:11:39,193 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成German语言
+2024-09-18 22:11:43,517 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成es语言
+2024-09-18 22:11:51,558 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成fr语言
+2024-09-18 22:12:03,279 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成Japanese语言
+2024-09-18 22:12:13,845 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成Portuguese语言
+2024-09-18 22:12:23,373 - logger_config - INFO - 正在处理https://stockimg.ai站点，生成ru语言
+2024-09-18 22:12:34,762 - logger_config - INFO - https://stockimg.ai站点处理成功
+2024-09-18 22:12:34,762 - logger_config - INFO - 处理https://stockimg.ai用时：118 秒
+2024-09-18 22:12:34,771 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:12:55,332 - logger_config - INFO - 正在处理：https://alpha.genmo.ai
+2024-09-18 22:13:40,850 - logger_config - INFO - url:https://alpha.genmo.ai, title:Genmo. Create videos and images with AI.,description:Make videos, 3D models, images, art and more with Genmo AI, your creative copilot.
+2024-09-18 22:13:51,512 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成zh-CN语言
+2024-09-18 22:13:55,496 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成zh-TW语言
+2024-09-18 22:13:59,476 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成en语言
+2024-09-18 22:14:02,893 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成German语言
+2024-09-18 22:14:07,260 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成es语言
+2024-09-18 22:14:12,670 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成fr语言
+2024-09-18 22:14:26,547 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成Japanese语言
+2024-09-18 22:14:40,848 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成Portuguese语言
+2024-09-18 22:14:49,339 - logger_config - INFO - 正在处理https://alpha.genmo.ai站点，生成ru语言
+2024-09-18 22:15:03,940 - logger_config - INFO - https://alpha.genmo.ai站点处理成功
+2024-09-18 22:15:03,940 - logger_config - INFO - 处理https://alpha.genmo.ai用时：128 秒
+2024-09-18 22:15:03,945 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:15:05,488 - logger_config - INFO - 正在处理：https://runwayml.com
+2024-09-18 22:15:41,052 - logger_config - INFO - url:https://runwayml.com, title:Runway | Tools for human imagination.,description:Runway is an applied AI research company shaping the next era of art, entertainment and human creativity.
+2024-09-18 22:15:54,099 - logger_config - INFO - 正在处理https://runwayml.com站点，生成zh-CN语言
+2024-09-18 22:15:57,763 - logger_config - INFO - 正在处理https://runwayml.com站点，生成zh-TW语言
+2024-09-18 22:15:59,705 - logger_config - INFO - 正在处理https://runwayml.com站点，生成en语言
+2024-09-18 22:16:03,742 - logger_config - INFO - 正在处理https://runwayml.com站点，生成German语言
+2024-09-18 22:16:07,922 - logger_config - INFO - 正在处理https://runwayml.com站点，生成es语言
+2024-09-18 22:16:17,378 - logger_config - INFO - 正在处理https://runwayml.com站点，生成fr语言
+2024-09-18 22:16:29,140 - logger_config - INFO - 正在处理https://runwayml.com站点，生成Japanese语言
+2024-09-18 22:16:41,913 - logger_config - INFO - 正在处理https://runwayml.com站点，生成Portuguese语言
+2024-09-18 22:16:49,198 - logger_config - INFO - 正在处理https://runwayml.com站点，生成ru语言
+2024-09-18 22:17:01,898 - logger_config - INFO - https://runwayml.com站点处理成功
+2024-09-18 22:17:01,899 - logger_config - INFO - 处理https://runwayml.com用时：116 秒
+2024-09-18 22:17:01,906 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:17:04,275 - logger_config - INFO - 正在处理：https://cleanup.pictures
+2024-09-18 22:17:23,850 - logger_config - INFO - url:https://cleanup.pictures, title:Cleanup.pictures - Remove objects, people, text and defects from any picture for free,description:Remove unwanted objects from photos, people, text, and defects from any picture for free. It's extremely easy in just a few clicks with our creative editing tool.
+2024-09-18 22:17:48,145 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成zh-CN语言
+2024-09-18 22:18:02,386 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成zh-TW语言
+2024-09-18 22:18:25,431 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成en语言
+2024-09-18 22:18:50,126 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成German语言
+2024-09-18 22:19:10,993 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成es语言
+2024-09-18 22:19:36,806 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成fr语言
+2024-09-18 22:20:02,608 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成Japanese语言
+2024-09-18 22:20:30,070 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成Portuguese语言
+2024-09-18 22:20:54,430 - logger_config - INFO - 正在处理https://cleanup.pictures站点，生成ru语言
+2024-09-18 22:21:19,764 - logger_config - INFO - https://cleanup.pictures站点处理成功
+2024-09-18 22:21:19,764 - logger_config - INFO - 处理https://cleanup.pictures用时：255 秒
+2024-09-18 22:21:19,774 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:21:20,892 - logger_config - INFO - 正在处理：https://animegan.js.org
+2024-09-18 22:21:31,835 - logger_config - INFO - url:https://animegan.js.org, title:AnimeGAN.js,description:AnimeGAN.js online
+2024-09-18 22:21:44,580 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成zh-CN语言
+2024-09-18 22:21:53,750 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成zh-TW语言
+2024-09-18 22:22:03,049 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成en语言
+2024-09-18 22:22:14,572 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成German语言
+2024-09-18 22:22:27,019 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成es语言
+2024-09-18 22:22:38,770 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成fr语言
+2024-09-18 22:22:52,787 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成Japanese语言
+2024-09-18 22:23:02,085 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成Portuguese语言
+2024-09-18 22:23:11,447 - logger_config - INFO - 正在处理https://animegan.js.org站点，生成ru语言
+2024-09-18 22:23:24,364 - logger_config - INFO - https://animegan.js.org站点处理成功
+2024-09-18 22:23:24,364 - logger_config - INFO - 处理https://animegan.js.org用时：124 秒
+2024-09-18 22:23:24,371 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:24:03,290 - logger_config - INFO - 正在处理：https://www.artssy.co
+2024-09-18 22:24:33,348 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-18 22:25:05,361 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-18 22:25:37,375 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-18 22:25:37,375 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-18 22:25:37,375 - logger_config - INFO - 处理https://www.artssy.co用时：94 秒
+2024-09-18 22:25:37,381 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:25:37,403 - logger_config - INFO - 正在处理：https://flagstudio.baai.ac.cn
+2024-09-18 22:25:37,500 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-18 22:25:39,519 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-18 22:25:41,545 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-18 22:25:41,545 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-18 22:25:41,545 - logger_config - INFO - 处理https://flagstudio.baai.ac.cn用时：4 秒
+2024-09-18 22:25:41,551 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:25:41,570 - logger_config - INFO - 正在处理：https://openai.com/blog/openai-codex
+2024-09-18 22:26:00,381 - logger_config - INFO - url:https://openai.com/blog/openai-codex, title:OpenAI Codex | OpenAI,description:We’ve created an improved version of OpenAI Codex, our AI system that translates natural language to code, and we are releasing it through our API in private beta starting today.
+2024-09-18 22:26:09,732 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成zh-CN语言
+2024-09-18 22:26:12,720 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成zh-TW语言
+2024-09-18 22:26:17,000 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成en语言
+2024-09-18 22:26:20,337 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成German语言
+2024-09-18 22:26:24,306 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成es语言
+2024-09-18 22:26:28,038 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成fr语言
+2024-09-18 22:26:36,210 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成Japanese语言
+2024-09-18 22:26:47,095 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成Portuguese语言
+2024-09-18 22:27:01,742 - logger_config - INFO - 正在处理https://openai.com/blog/openai-codex站点，生成ru语言
+2024-09-18 22:27:11,524 - logger_config - INFO - https://openai.com/blog/openai-codex站点处理成功
+2024-09-18 22:27:11,524 - logger_config - INFO - 处理https://openai.com/blog/openai-codex用时：90 秒
+2024-09-18 22:27:11,531 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:27:12,917 - logger_config - INFO - 正在处理：https://github.com/features/copilot
+2024-09-18 22:27:33,794 - logger_config - INFO - url:https://github.com/features/copilot, title:GitHub Copilot · Your AI pair programmer · GitHub,description:GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+2024-09-18 22:28:13,920 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成zh-CN语言
+2024-09-18 22:28:17,105 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成zh-TW语言
+2024-09-18 22:28:25,948 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成en语言
+2024-09-18 22:28:36,717 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成German语言
+2024-09-18 22:28:48,220 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成es语言
+2024-09-18 22:29:00,442 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成fr语言
+2024-09-18 22:29:12,196 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成Japanese语言
+2024-09-18 22:29:24,848 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成Portuguese语言
+2024-09-18 22:29:37,712 - logger_config - INFO - 正在处理https://github.com/features/copilot站点，生成ru语言
+2024-09-18 22:29:49,876 - logger_config - INFO - https://github.com/features/copilot站点处理成功
+2024-09-18 22:29:49,876 - logger_config - INFO - 处理https://github.com/features/copilot用时：157 秒
+2024-09-18 22:29:49,889 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:30:28,969 - logger_config - INFO - 正在处理：https://www.cursor.so
+2024-09-18 22:30:57,914 - logger_config - INFO - url:https://www.cursor.so, title:Cursor,description:The AI Code Editor
+2024-09-18 22:31:49,380 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成zh-CN语言
+2024-09-18 22:31:52,621 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成zh-TW语言
+2024-09-18 22:31:57,698 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成en语言
+2024-09-18 22:32:01,652 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成German语言
+2024-09-18 22:32:06,460 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成es语言
+2024-09-18 22:32:10,026 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成fr语言
+2024-09-18 22:32:18,399 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成Japanese语言
+2024-09-18 22:32:29,106 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成Portuguese语言
+2024-09-18 22:32:38,440 - logger_config - INFO - 正在处理https://www.cursor.so站点，生成ru语言
+2024-09-18 22:32:50,716 - logger_config - INFO - https://www.cursor.so站点处理成功
+2024-09-18 22:32:50,716 - logger_config - INFO - 处理https://www.cursor.so用时：142 秒
+2024-09-18 22:32:50,723 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:33:11,247 - logger_config - INFO - 正在处理：https://replit.com/ai
+2024-09-18 22:33:22,189 - logger_config - INFO - url:https://replit.com/ai, title:AI - Replit,description:Automate the repetitive parts of coding, so you can stay focused on taking your idea to software.
+2024-09-18 22:33:30,528 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成zh-CN语言
+2024-09-18 22:33:35,356 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成zh-TW语言
+2024-09-18 22:33:39,040 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成en语言
+2024-09-18 22:33:55,945 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成German语言
+2024-09-18 22:34:10,509 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成es语言
+2024-09-18 22:34:24,913 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成fr语言
+2024-09-18 22:34:39,610 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成Japanese语言
+2024-09-18 22:34:51,824 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成Portuguese语言
+2024-09-18 22:35:02,721 - logger_config - INFO - 正在处理https://replit.com/ai站点，生成ru语言
+2024-09-18 22:35:16,538 - logger_config - INFO - https://replit.com/ai站点处理成功
+2024-09-18 22:35:16,538 - logger_config - INFO - 处理https://replit.com/ai用时：125 秒
+2024-09-18 22:35:16,547 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:35:17,823 - logger_config - INFO - 正在处理：https://www.tabnine.com
+2024-09-18 22:35:37,104 - logger_config - INFO - url:https://www.tabnine.com, title:Tabnine AI code assistant | Private, personalized, protected,description:Tabnine is the AI code assistant that accelerates and simplifies software development while keeping your code private, secure, and compliant.
+2024-09-18 22:36:10,814 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成zh-CN语言
+2024-09-18 22:36:22,475 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成zh-TW语言
+2024-09-18 22:36:36,827 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成en语言
+2024-09-18 22:36:51,075 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成German语言
+2024-09-18 22:37:06,675 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成es语言
+2024-09-18 22:37:24,823 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成fr语言
+2024-09-18 22:37:40,065 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成Japanese语言
+2024-09-18 22:37:56,913 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成Portuguese语言
+2024-09-18 22:38:14,142 - logger_config - INFO - 正在处理https://www.tabnine.com站点，生成ru语言
+2024-09-18 22:38:30,030 - logger_config - INFO - https://www.tabnine.com站点处理成功
+2024-09-18 22:38:30,030 - logger_config - INFO - 处理https://www.tabnine.com用时：193 秒
+2024-09-18 22:38:30,037 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:38:31,354 - logger_config - INFO - 正在处理：https://sourceai.dev
+2024-09-18 22:38:43,023 - logger_config - INFO - url:https://sourceai.dev, title:SourceAI | AI-Powered Code Generator,description:SourceAI is an AI-powered tool that can generate code in any programming language from any human language description. It can also simplify, find errors and fix them and debug your code.
+2024-09-18 22:38:51,426 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成zh-CN语言
+2024-09-18 22:38:58,957 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成zh-TW语言
+2024-09-18 22:39:09,201 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成en语言
+2024-09-18 22:39:19,103 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成German语言
+2024-09-18 22:39:30,093 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成es语言
+2024-09-18 22:39:40,793 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成fr语言
+2024-09-18 22:39:51,967 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成Japanese语言
+2024-09-18 22:40:04,017 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成Portuguese语言
+2024-09-18 22:40:15,624 - logger_config - INFO - 正在处理https://sourceai.dev站点，生成ru语言
+2024-09-18 22:40:25,949 - logger_config - INFO - https://sourceai.dev站点处理成功
+2024-09-18 22:40:25,950 - logger_config - INFO - 处理https://sourceai.dev用时：114 秒
+2024-09-18 22:40:25,954 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:41:04,844 - logger_config - INFO - 正在处理：https://codeocean.com
+2024-09-18 22:41:07,455 - logger_config - INFO - url:https://codeocean.com, title:Actions blocked,description:
+2024-09-18 22:41:15,775 - logger_config - INFO - 正在处理https://codeocean.com站点，生成zh-CN语言
+2024-09-18 22:41:17,578 - logger_config - INFO - 正在处理https://codeocean.com站点，生成zh-TW语言
+2024-09-18 22:41:21,080 - logger_config - INFO - 正在处理https://codeocean.com站点，生成en语言
+2024-09-18 22:41:23,637 - logger_config - INFO - 正在处理https://codeocean.com站点，生成German语言
+2024-09-18 22:41:26,506 - logger_config - INFO - 正在处理https://codeocean.com站点，生成es语言
+2024-09-18 22:41:29,332 - logger_config - INFO - 正在处理https://codeocean.com站点，生成fr语言
+2024-09-18 22:41:37,287 - logger_config - INFO - 正在处理https://codeocean.com站点，生成Japanese语言
+2024-09-18 22:41:47,171 - logger_config - INFO - 正在处理https://codeocean.com站点，生成Portuguese语言
+2024-09-18 22:41:57,941 - logger_config - INFO - 正在处理https://codeocean.com站点，生成ru语言
+2024-09-18 22:42:08,196 - logger_config - INFO - https://codeocean.com站点处理成功
+2024-09-18 22:42:08,196 - logger_config - INFO - 处理https://codeocean.com用时：64 秒
+2024-09-18 22:42:08,203 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:42:09,141 - logger_config - INFO - 正在处理：https://visualstudio.microsoft.com/services/intellicode
+2024-09-18 22:42:18,150 - logger_config - INFO - url:https://visualstudio.microsoft.com/services/intellicode, title:Visual Studio IntelliCode | Visual Studio - Visual Studio,description:Visual Studio IntelliCode is an experimental set of AI-assisted development capabilities for next-generation developer productivity.
+2024-09-18 22:43:25,557 - logger_config - INFO - 处理https://visualstudio.microsoft.com/services/intellicode用时：76 秒
+2024-09-18 22:43:25,984 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:43:25,989 - logger_config - INFO - 正在处理：https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript
+2024-09-18 22:43:36,811 - logger_config - INFO - url:https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript, title:Codota AI Autocomplete for Java and JavaScript - IntelliJ IDEs Plugin | Marketplace,description:&lt;Important! Codota is no longer supported and is now part of Tabnine! Please go ahead and install Tabnine instead, and enjoy our next-generation AI models which...
+2024-09-18 22:43:44,810 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成zh-CN语言
+2024-09-18 22:43:48,947 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成zh-TW语言
+2024-09-18 22:43:52,798 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成en语言
+2024-09-18 22:43:57,168 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成German语言
+2024-09-18 22:44:01,531 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成es语言
+2024-09-18 22:44:06,149 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成fr语言
+2024-09-18 22:44:18,298 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成Japanese语言
+2024-09-18 22:44:29,938 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成Portuguese语言
+2024-09-18 22:44:40,146 - logger_config - INFO - 正在处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点，生成ru语言
+2024-09-18 22:44:54,943 - logger_config - INFO - https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript站点处理成功
+2024-09-18 22:44:54,943 - logger_config - INFO - 处理https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript用时：89 秒
+2024-09-18 22:44:54,951 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:44:56,359 - logger_config - INFO - 正在处理：https://www.deepcode.ai
+2024-09-18 22:45:09,167 - logger_config - INFO - url:https://www.deepcode.ai, title:Snyk Powered by DeepCode AI | Snyk,description:Learn how Snyk leverages the DeepCode AI hybrid model to empower developers with efficient and accurate AppSec solutions.
+2024-09-18 22:45:29,256 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成zh-CN语言
+2024-09-18 22:45:37,737 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成zh-TW语言
+2024-09-18 22:45:50,507 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成en语言
+2024-09-18 22:46:00,689 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成German语言
+2024-09-18 22:46:16,415 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成es语言
+2024-09-18 22:46:30,705 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成fr语言
+2024-09-18 22:46:45,980 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成Japanese语言
+2024-09-18 22:47:00,247 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成Portuguese语言
+2024-09-18 22:47:17,507 - logger_config - INFO - 正在处理https://www.deepcode.ai站点，生成ru语言
+2024-09-18 22:47:32,657 - logger_config - INFO - https://www.deepcode.ai站点处理成功
+2024-09-18 22:47:32,657 - logger_config - INFO - 处理https://www.deepcode.ai用时：156 秒
+2024-09-18 22:47:32,666 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:47:34,383 - logger_config - INFO - 正在处理：https://www.kite.com/blog/product/kite-is-saying-farewell
+2024-09-18 22:47:50,424 - logger_config - INFO - url:https://www.kite.com/blog/product/kite-is-saying-farewell, title:Kite is saying farewell - Code Faster with Kite,description:From 2014 to 2021, Kite was a startup using AI to help developers write code. We have stopped working on Kite, and are no longer supporting the Kite software.Thank you to everyone who used our product, and thank you to our team members and investors who made this journey possible.
+2024-09-18 22:48:07,225 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成zh-CN语言
+2024-09-18 22:48:16,303 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成zh-TW语言
+2024-09-18 22:48:29,632 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成en语言
+2024-09-18 22:48:42,307 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成German语言
+2024-09-18 22:48:55,212 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成es语言
+2024-09-18 22:49:08,597 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成fr语言
+2024-09-18 22:49:24,003 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成Japanese语言
+2024-09-18 22:49:36,950 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成Portuguese语言
+2024-09-18 22:49:51,379 - logger_config - INFO - 正在处理https://www.kite.com/blog/product/kite-is-saying-farewell站点，生成ru语言
+2024-09-18 22:50:05,754 - logger_config - INFO - https://www.kite.com/blog/product/kite-is-saying-farewell站点处理成功
+2024-09-18 22:50:05,754 - logger_config - INFO - 处理https://www.kite.com/blog/product/kite-is-saying-farewell用时：151 秒
+2024-09-18 22:50:05,762 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:50:12,079 - logger_config - INFO - 正在处理：https://mxnet.apache.org
+2024-09-18 22:50:28,759 - logger_config - INFO - url:https://mxnet.apache.org, title:Apache MXNet | A flexible and efficient library for deep learning.,description:A flexible and efficient library for deep learning.
+2024-09-18 22:50:48,442 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成zh-CN语言
+2024-09-18 22:50:52,276 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成zh-TW语言
+2024-09-18 22:50:58,001 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成en语言
+2024-09-18 22:51:08,849 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成German语言
+2024-09-18 22:51:22,907 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成es语言
+2024-09-18 22:51:38,482 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成fr语言
+2024-09-18 22:51:53,239 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成Japanese语言
+2024-09-18 22:52:06,397 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成Portuguese语言
+2024-09-18 22:52:16,883 - logger_config - INFO - 正在处理https://mxnet.apache.org站点，生成ru语言
+2024-09-18 22:52:31,558 - logger_config - INFO - https://mxnet.apache.org站点处理成功
+2024-09-18 22:52:31,558 - logger_config - INFO - 处理https://mxnet.apache.org用时：139 秒
+2024-09-18 22:52:31,566 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:53:10,734 - logger_config - INFO - 正在处理：https://opencv.org
+2024-09-18 22:53:42,456 - logger_config - INFO - url:https://opencv.org, title:OpenCV - Open Computer Vision Library,description:OpenCV provides a real-time optimized Computer Vision library, tools, and hardware. It also supports model execution for Machine Learning (ML) and Artificial Intelligence (AI).
+2024-09-18 22:53:56,633 - logger_config - INFO - 正在处理https://opencv.org站点，生成zh-CN语言
+2024-09-18 22:53:59,872 - logger_config - INFO - 正在处理https://opencv.org站点，生成zh-TW语言
+2024-09-18 22:54:03,010 - logger_config - INFO - 正在处理https://opencv.org站点，生成en语言
+2024-09-18 22:54:06,568 - logger_config - INFO - 正在处理https://opencv.org站点，生成German语言
+2024-09-18 22:54:11,200 - logger_config - INFO - 正在处理https://opencv.org站点，生成es语言
+2024-09-18 22:54:23,457 - logger_config - INFO - 正在处理https://opencv.org站点，生成fr语言
+2024-09-18 22:54:36,913 - logger_config - INFO - 正在处理https://opencv.org站点，生成Japanese语言
+2024-09-18 22:54:53,589 - logger_config - INFO - 正在处理https://opencv.org站点，生成Portuguese语言
+2024-09-18 22:55:06,498 - logger_config - INFO - 正在处理https://opencv.org站点，生成ru语言
+2024-09-18 22:55:21,705 - logger_config - INFO - https://opencv.org站点处理成功
+2024-09-18 22:55:21,705 - logger_config - INFO - 处理https://opencv.org用时：131 秒
+2024-09-18 22:55:21,711 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:55:23,081 - logger_config - INFO - 正在处理：https://pytorch.org
+2024-09-18 22:55:37,731 - logger_config - INFO - url:https://pytorch.org, title:PyTorch,description:
+2024-09-18 22:55:59,778 - logger_config - INFO - 正在处理https://pytorch.org站点，生成zh-CN语言
+2024-09-18 22:56:05,634 - logger_config - INFO - 正在处理https://pytorch.org站点，生成zh-TW语言
+2024-09-18 22:56:33,673 - logger_config - INFO - 正在处理https://pytorch.org站点，生成en语言
+2024-09-18 22:56:36,074 - logger_config - INFO - 正在处理https://pytorch.org站点，生成German语言
+2024-09-18 22:56:39,593 - logger_config - INFO - 正在处理https://pytorch.org站点，生成es语言
+2024-09-18 22:56:54,252 - logger_config - INFO - 正在处理https://pytorch.org站点，生成fr语言
+2024-09-18 22:57:15,378 - logger_config - INFO - 正在处理https://pytorch.org站点，生成Japanese语言
+2024-09-18 22:57:19,246 - logger_config - INFO - 正在处理https://pytorch.org站点，生成Portuguese语言
+2024-09-18 22:57:22,435 - logger_config - INFO - 正在处理https://pytorch.org站点，生成ru语言
+2024-09-18 22:57:35,330 - logger_config - INFO - https://pytorch.org站点处理成功
+2024-09-18 22:57:35,330 - logger_config - INFO - 处理https://pytorch.org用时：132 秒
+2024-09-18 22:57:35,338 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:57:36,317 - logger_config - INFO - 正在处理：https://www.tensorflow.org/?hl=zh-cn
+2024-09-18 22:58:13,546 - logger_config - INFO - url:https://www.tensorflow.org/?hl=zh-cn, title:关于TensorFlow | TensorFlow中文官网,description:TensorFlow是一个端到端开源机器学习平台。它拥有一个全面而灵活的生态系统,其中包含各种工具、库和社区资源，可助力研究人员推动先进机器学习技术的发展。在 TensorFlow机器学习框架下,开发者能够轻松地构建和部署由机器学习提供支持的应用。
+2024-09-18 22:58:13,829 - logger_config - INFO - 处理https://www.tensorflow.org/?hl=zh-cn用时：37 秒
+2024-09-18 22:58:13,835 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:58:13,858 - logger_config - INFO - 正在处理：https://www.askcodi.com
+2024-09-18 22:58:19,051 - logger_config - INFO - url:https://www.askcodi.com, title:,description:
+2024-09-18 22:58:57,930 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成zh-CN语言
+2024-09-18 22:58:57,931 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成zh-TW语言
+2024-09-18 22:58:57,931 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成en语言
+2024-09-18 22:58:57,931 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成German语言
+2024-09-18 22:58:57,934 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成es语言
+2024-09-18 22:58:57,934 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成fr语言
+2024-09-18 22:58:57,934 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成Japanese语言
+2024-09-18 22:58:57,934 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成Portuguese语言
+2024-09-18 22:58:57,936 - logger_config - INFO - 正在处理https://www.askcodi.com站点，生成ru语言
+2024-09-18 22:58:57,936 - logger_config - INFO - https://www.askcodi.com站点处理成功
+2024-09-18 22:58:57,936 - logger_config - INFO - 处理https://www.askcodi.com用时：44 秒
+2024-09-18 22:58:57,937 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 22:58:59,129 - logger_config - INFO - 正在处理：https://codegeex.cn
+2024-09-18 22:59:01,525 - logger_config - INFO - url:https://codegeex.cn, title:CodeGeeX - A Multilingual Code Generation Tool - CodeGeeX,description:CodeGeeX is an AI-based coding assistant, which can suggest code in the current or following lines. It is powered by a large-scale multilingual code generation model with 13 billion parameters, pretrained on a large code corpus of more than 20 programming languages. CodeGeeX是一个基于AI大模型的编程辅助工具，可以实现自动代码生成、代码翻译、自动编写注释等功能，支持20多种编程语言。
+2024-09-18 22:59:08,520 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成zh-CN语言
+2024-09-18 22:59:12,582 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成zh-TW语言
+2024-09-18 22:59:16,934 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成en语言
+2024-09-18 22:59:20,655 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成German语言
+2024-09-18 22:59:33,974 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成es语言
+2024-09-18 22:59:50,596 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成fr语言
+2024-09-18 23:00:07,845 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成Japanese语言
+2024-09-18 23:00:24,548 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成Portuguese语言
+2024-09-18 23:00:40,425 - logger_config - INFO - 正在处理https://codegeex.cn站点，生成ru语言
+2024-09-18 23:00:57,966 - logger_config - INFO - https://codegeex.cn站点处理成功
+2024-09-18 23:00:57,966 - logger_config - INFO - 处理https://codegeex.cn用时：118 秒
+2024-09-18 23:00:57,974 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-18 23:00:59,263 - logger_config - INFO - 正在处理：https://ai-code-reviewer.com
+2024-09-18 23:01:09,337 - logger_config - INFO - url:https://ai-code-reviewer.com, title:AI Code Reviewer,description:Automatic code review by AI
+2024-09-18 23:01:18,094 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成zh-CN语言
+2024-09-18 23:01:23,744 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成zh-TW语言
+2024-09-18 23:01:34,951 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成en语言
+2024-09-18 23:01:51,323 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成German语言
+2024-09-18 23:02:01,941 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成es语言
+2024-09-18 23:02:14,580 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成fr语言
+2024-09-18 23:02:25,186 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成Japanese语言
+2024-09-18 23:02:37,701 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成Portuguese语言
+2024-09-18 23:02:49,333 - logger_config - INFO - 正在处理https://ai-code-reviewer.com站点，生成ru语言
+2024-09-18 23:03:02,114 - logger_config - INFO - https://ai-code-reviewer.com站点处理成功
+2024-09-18 23:03:02,114 - logger_config - INFO - 处理https://ai-code-reviewer.com用时：123 秒
+2024-09-18 23:03:02,121 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-19 09:20:21,907 - main_api.py - <module> - 36 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-19 09:20:26,876 - logger_config - INFO - 正在处理：https://www.adobe.com/sensei.html
+2024-09-19 09:20:30,439 - logger_config - INFO - url:https://www.adobe.com/sensei.html, title:Experience Cloud AI Services with Adobe Sensei,description:Adobe Sensei powers Experience Cloud artificial intelligence, helping you deliver more personalized, timely experiences. Learn more.
+2024-09-19 09:20:38,216 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-CN语言
+2024-09-19 09:20:41,726 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成zh-TW语言
+2024-09-19 09:20:45,426 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成en语言
+2024-09-19 09:20:48,641 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成German语言
+2024-09-19 09:21:02,417 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成es语言
+2024-09-19 09:21:18,138 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成fr语言
+2024-09-19 09:21:32,080 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Japanese语言
+2024-09-19 09:21:46,166 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成Portuguese语言
+2024-09-19 09:21:55,639 - logger_config - INFO - 正在处理https://www.adobe.com/sensei.html站点，生成ru语言
+2024-09-19 09:22:10,304 - logger_config - INFO - https://www.adobe.com/sensei.html站点处理成功
+2024-09-19 09:22:10,305 - logger_config - INFO - 处理https://www.adobe.com/sensei.html用时：104 秒
+2024-09-19 09:22:10,313 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-19 09:22:11,458 - logger_config - INFO - 正在处理：https://midjourney.com
+2024-09-19 09:22:11,915 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-19 09:22:15,304 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-19 09:22:17,639 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-19 09:22:17,639 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://midjourney.com
+2024-09-19 09:22:17,639 - logger_config - INFO - 处理https://midjourney.com用时：6 秒
+2024-09-19 09:22:17,643 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-19 09:22:17,658 - logger_config - INFO - 正在处理：https://sheetplus.ai
+2024-09-19 09:22:47,753 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-19 09:23:19,771 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-19 09:23:51,796 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-19 09:23:51,796 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_TIMED_OUT at https://sheetplus.ai
+2024-09-19 09:23:51,796 - logger_config - INFO - 处理https://sheetplus.ai用时：94 秒
+2024-09-19 09:23:51,802 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-19 09:23:51,825 - logger_config - INFO - 正在处理：https://www.artssy.co
+2024-09-19 09:24:21,895 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-19 09:24:53,909 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-19 09:25:25,939 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-19 09:25:25,939 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_TIMED_OUT at https://www.artssy.co
+2024-09-19 09:25:25,939 - logger_config - INFO - 处理https://www.artssy.co用时：94 秒
+2024-09-19 09:25:25,945 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-19 09:25:25,968 - logger_config - INFO - 正在处理：https://flagstudio.baai.ac.cn
+2024-09-19 09:25:26,063 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 1/3): net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-19 09:25:28,083 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 2/3): net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-19 09:25:30,107 - logger_config - INFO - 页面加载超时, 尝试重新加载 (尝试次数: 3/3): net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-19 09:25:30,107 - logger_config - ERROR - 页面加载超时, 达到最大重试次数: net::ERR_CONNECTION_RESET at https://flagstudio.baai.ac.cn
+2024-09-19 09:25:30,107 - logger_config - INFO - 处理https://flagstudio.baai.ac.cn用时：5 秒
+2024-09-19 09:25:30,111 - main_api.py - scrape - 79 - INFO - INFO: Scraping data successfully. Waiting insert data to database.

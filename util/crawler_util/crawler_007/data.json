@@ -1,7 +1,6 @@
 {
-    "ä¸€çº§æ ‡ç­¾": "AIå·¥å…·",
-    "äºŒçº§æ ‡ç­¾": {
-        "AIå¸¸ç”¨å·¥å…·": [
+    "AI¹¤¾ß": {
+        "AI³£ÓÃ¹¤¾ß": [
             {
                 "url": "https://www.adobe.com/sensei.html",
                 "name": "Adobe Sensei"
@@ -44,7 +43,7 @@
             },
             {
                 "url": "https://yige.baidu.com",
-                "name": "æ–‡å¿ƒä¸€æ ¼"
+                "name": "ÎÄĞÄÒ»¸ñ"
             },
             {
                 "url": "https://sheetplus.ai",
@@ -52,7 +51,7 @@
             },
             {
                 "url": "https://www.bing.com/?mkt=zh-CN",
-                "name": "Bingæ–°å¿…åº”"
+                "name": "BingĞÂ±ØÓ¦"
             },
             {
                 "url": "https://www.ibm.com/watson",
@@ -75,7 +74,7 @@
                 "name": "DeepL"
             }
         ],
-        "AIåŠå…¬å·¥å…·": [
+        "AI°ì¹«¹¤¾ß": [
             {
                 "url": "https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work",
                 "name": "Microsoft 365 Copilot"
@@ -90,11 +89,11 @@
             },
             {
                 "url": "https://www.iflyrec.com",
-                "name": "è®¯é£å¬è§"
+                "name": "Ñ¶·ÉÌı¼û"
             },
             {
                 "url": "https://www.feishu.cn/product/minutes",
-                "name": "é£ä¹¦å¦™è®°"
+                "name": "·ÉÊéÃî¼Ç"
             },
             {
                 "url": "https://www.deepl.com/translator-mobile",
@@ -149,7 +148,7 @@
                 "name": "Rows"
             }
         ],
-        "AIå†™ä½œå·¥å…·": [
+        "AIĞ´×÷¹¤¾ß": [
             {
                 "url": "https://www.copy.ai",
                 "name": "Copy.Ai"
@@ -160,7 +159,7 @@
             },
             {
                 "url": "https://chuangyi.taobao.com/pages/aiCopy",
-                "name": "æ‚‰è¯­"
+                "name": "Ï¤Óï"
             },
             {
                 "url": "https://rytr.me",
@@ -176,7 +175,7 @@
             },
             {
                 "url": "https://getgetai.com",
-                "name": "å­—è¯­æ™ºèƒ½"
+                "name": "×ÖÓïÖÇÄÜ"
             },
             {
                 "url": "https://copyai.cn",
@@ -184,7 +183,7 @@
             },
             {
                 "url": "https://xiezuocat.com",
-                "name": "ç§˜å¡”å†™ä½œçŒ«"
+                "name": "ÃØËşĞ´×÷Ã¨"
             },
             {
                 "url": "https://copymatic.ai",
@@ -220,13 +219,13 @@
             },
             {
                 "url": "https://if.caiyunai.com",
-                "name": "å½©äº‘å°æ¢¦"
+                "name": "²ÊÔÆĞ¡ÃÎ"
             }
         ],
-        "AIè§†é¢‘å·¥å…·": [
+        "AIÊÓÆµ¹¤¾ß": [
             {
                 "url": "https://jollytoday.com/cn",
-                "name": "GhostCuté¬¼æ‰‹å‰ªè¾‘"
+                "name": "GhostCut¹íÊÖ¼ô¼­"
             },
             {
                 "url": "https://b.jimmylv.cn",
@@ -297,7 +296,7 @@
                 "name": "Unscreen"
             }
         ],
-        "AIè®¾è®¡å·¥å…·": [
+        "AIÉè¼Æ¹¤¾ß": [
             {
                 "url": "https://www.adobe.com/sensei.html",
                 "name": "Adobe Sensei"
@@ -324,7 +323,7 @@
             },
             {
                 "url": "https://img.logosc.cn",
-                "name": "Aiæ”¹å›¾ç¥å™¨"
+                "name": "Ai¸ÄÍ¼ÉñÆ÷"
             },
             {
                 "url": "https://beta.dreamstudio.ai",
@@ -371,7 +370,7 @@
                 "name": "FlagStudio"
             }
         ],
-        "AIç¼–ç¨‹å·¥å…·": [
+        "AI±à³Ì¹¤¾ß": [
             {
                 "url": "https://openai.com/blog/openai-codex",
                 "name": "OpenAI Codex"
