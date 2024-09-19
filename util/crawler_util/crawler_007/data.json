@@ -1,0 +1,448 @@
+{
+    "AI工具": {
+        "AI常用工具": [
+            {
+                "url": "https://www.adobe.com/sensei.html",
+                "name": "Adobe Sensei"
+            },
+            {
+                "url": "https://midjourney.com",
+                "name": "Midjourney"
+            },
+            {
+                "url": "https://openai.com/blog/openai-codex",
+                "name": "OpenAI Codex"
+            },
+            {
+                "url": "https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work",
+                "name": "Microsoft 365 Copilot"
+            },
+            {
+                "url": "https://openai.com/blog/chatgpt",
+                "name": "ChatGPT"
+            },
+            {
+                "url": "https://github.com/features/copilot",
+                "name": "GitHub Copilot"
+            },
+            {
+                "url": "https://www.jasper.ai",
+                "name": "Jasper"
+            },
+            {
+                "url": "https://www.notion.so",
+                "name": "Notion"
+            },
+            {
+                "url": "https://www.microsoft.com/en-us/ai/ai-lab-sketch2code",
+                "name": "Sketch2Code"
+            },
+            {
+                "url": "https://writesonic.com",
+                "name": "Writesonic"
+            },
+            {
+                "url": "https://yige.baidu.com",
+                "name": "文心一格"
+            },
+            {
+                "url": "https://sheetplus.ai",
+                "name": "Sheet+"
+            },
+            {
+                "url": "https://www.bing.com/?mkt=zh-CN",
+                "name": "Bing新必应"
+            },
+            {
+                "url": "https://www.ibm.com/watson",
+                "name": "IBM Watson"
+            },
+            {
+                "url": "https://landbot.io/ai",
+                "name": "Landbot AI"
+            },
+            {
+                "url": "https://pytorch.org",
+                "name": "PyTorch"
+            },
+            {
+                "url": "https://www.tensorflow.org/?hl=zh-cn",
+                "name": "TensorFlow"
+            },
+            {
+                "url": "https://www.deepl.com/translator-mobile",
+                "name": "DeepL"
+            }
+        ],
+        "AI办公工具": [
+            {
+                "url": "https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work",
+                "name": "Microsoft 365 Copilot"
+            },
+            {
+                "url": "https://www.jasper.ai",
+                "name": "Jasper"
+            },
+            {
+                "url": "https://sheetplus.ai",
+                "name": "Sheet+"
+            },
+            {
+                "url": "https://www.iflyrec.com",
+                "name": "讯飞听见"
+            },
+            {
+                "url": "https://www.feishu.cn/product/minutes",
+                "name": "飞书妙记"
+            },
+            {
+                "url": "https://www.deepl.com/translator-mobile",
+                "name": "DeepL"
+            },
+            {
+                "url": "https://otter.ai",
+                "name": "Otter.ai"
+            },
+            {
+                "url": "https://fireflies.ai",
+                "name": "Fireflies.ai"
+            },
+            {
+                "url": "https://gitmind.com",
+                "name": "GitMind"
+            },
+            {
+                "url": "https://www.ayoa.com/ultimate",
+                "name": "Ayoa Ultimate"
+            },
+            {
+                "url": "https://www.taskade.com",
+                "name": "Taskade"
+            },
+            {
+                "url": "https://www.pandagpt.io",
+                "name": "PandaGPT"
+            },
+            {
+                "url": "https://www.formx.ai",
+                "name": "FormX.ai"
+            },
+            {
+                "url": "https://www.decktopus.com",
+                "name": "Decktopus AI"
+            },
+            {
+                "url": "https://www.excelly-ai.io",
+                "name": "Excelly-AI"
+            },
+            {
+                "url": "https://amymind.com",
+                "name": "AmyMind"
+            },
+            {
+                "url": "https://whimsical.com",
+                "name": "Whimsical"
+            },
+            {
+                "url": "https://rows.com",
+                "name": "Rows"
+            }
+        ],
+        "AI写作工具": [
+            {
+                "url": "https://www.copy.ai",
+                "name": "Copy.Ai"
+            },
+            {
+                "url": "https://writesonic.com",
+                "name": "Writesonic"
+            },
+            {
+                "url": "https://chuangyi.taobao.com/pages/aiCopy",
+                "name": "悉语"
+            },
+            {
+                "url": "https://rytr.me",
+                "name": "Rytr"
+            },
+            {
+                "url": "https://marmof.com",
+                "name": "Marmof"
+            },
+            {
+                "url": "https://anyword.com",
+                "name": "Anyword"
+            },
+            {
+                "url": "https://getgetai.com",
+                "name": "字语智能"
+            },
+            {
+                "url": "https://copyai.cn",
+                "name": "Copydone AI"
+            },
+            {
+                "url": "https://xiezuocat.com",
+                "name": "秘塔写作猫"
+            },
+            {
+                "url": "https://copymatic.ai",
+                "name": "Copymatic AI"
+            },
+            {
+                "url": "https://quillbot.com",
+                "name": "Quillbot"
+            },
+            {
+                "url": "https://www.grammarly.com",
+                "name": "Grammarly"
+            },
+            {
+                "url": "https://smodin.io",
+                "name": "Smodin"
+            },
+            {
+                "url": "https://www.neuraltext.com",
+                "name": "NeuralText"
+            },
+            {
+                "url": "https://unbounce.com/product/smart-copy",
+                "name": "Smart Copy"
+            },
+            {
+                "url": "https://copysmith.ai",
+                "name": "Copysmith"
+            },
+            {
+                "url": "https://effidit.qq.com/en",
+                "name": "Effidit"
+            },
+            {
+                "url": "https://if.caiyunai.com",
+                "name": "彩云小梦"
+            }
+        ],
+        "AI视频工具": [
+            {
+                "url": "https://jollytoday.com/cn",
+                "name": "GhostCut鬼手剪辑"
+            },
+            {
+                "url": "https://b.jimmylv.cn",
+                "name": "BibiGPT"
+            },
+            {
+                "url": "https://fliki.ai",
+                "name": "Fliki"
+            },
+            {
+                "url": "https://pictory.ai",
+                "name": "Pictory.ai"
+            },
+            {
+                "url": "https://elai.io",
+                "name": "Elai.io"
+            },
+            {
+                "url": "https://www.heygen.com/?from=moviola",
+                "name": "HeyGen"
+            },
+            {
+                "url": "https://www.colossyan.com",
+                "name": "Colossyan"
+            },
+            {
+                "url": "https://www.cutout.pro/zh-CN/remove-video-background",
+                "name": "Cutout.Pro"
+            },
+            {
+                "url": "https://colourlab.ai",
+                "name": "Colourlab.ai"
+            },
+            {
+                "url": "https://bgrem.ai/zh/remove-video-bg",
+                "name": "BgRem"
+            },
+            {
+                "url": "https://hourone.ai",
+                "name": "Hourone.ai"
+            },
+            {
+                "url": "https://www.veed.io/zh-CN/tools/video-background-remover",
+                "name": "VEED.IO"
+            },
+            {
+                "url": "https://synthesys.io",
+                "name": "Synthesys"
+            },
+            {
+                "url": "http://rephrase.ai",
+                "name": "Rephrase.ai"
+            },
+            {
+                "url": "https://www.synthesia.io",
+                "name": "Synthesia"
+            },
+            {
+                "url": "https://dreamfaceapp.com",
+                "name": "DreamFace"
+            },
+            {
+                "url": "https://www.deepbrain.io",
+                "name": "DeepBrain AI"
+            },
+            {
+                "url": "https://www.unscreen.com",
+                "name": "Unscreen"
+            }
+        ],
+        "AI设计工具": [
+            {
+                "url": "https://www.adobe.com/sensei.html",
+                "name": "Adobe Sensei"
+            },
+            {
+                "url": "https://midjourney.com",
+                "name": "Midjourney"
+            },
+            {
+                "url": "https://picsart.com/ai-image-generator",
+                "name": "Picsart AI"
+            },
+            {
+                "url": "https://stablediffusionweb.com",
+                "name": "Stable Diffusion"
+            },
+            {
+                "url": "https://www.microsoft.com/en-us/ai/ai-lab-sketch2code",
+                "name": "Sketch2Code"
+            },
+            {
+                "url": "https://postnitro.ai/zh/app/carousel-maker",
+                "name": "PostNitro"
+            },
+            {
+                "url": "https://img.logosc.cn",
+                "name": "Ai改图神器"
+            },
+            {
+                "url": "https://beta.dreamstudio.ai",
+                "name": "Dream Studio"
+            },
+            {
+                "url": "https://www.ponzu.gg",
+                "name": "Ponzu"
+            },
+            {
+                "url": "https://palette.fm",
+                "name": "Palette.fm"
+            },
+            {
+                "url": "https://huemint.com",
+                "name": "Huemint"
+            },
+            {
+                "url": "https://stockimg.ai",
+                "name": "Stockimg AI"
+            },
+            {
+                "url": "https://alpha.genmo.ai",
+                "name": "Genmo"
+            },
+            {
+                "url": "https://runwayml.com",
+                "name": "Runway"
+            },
+            {
+                "url": "https://cleanup.pictures",
+                "name": "Cleanup Pictures"
+            },
+            {
+                "url": "https://animegan.js.org",
+                "name": "AnimeGAN"
+            },
+            {
+                "url": "https://www.artssy.co",
+                "name": "Artssy AI"
+            },
+            {
+                "url": "https://flagstudio.baai.ac.cn",
+                "name": "FlagStudio"
+            }
+        ],
+        "AI编程工具": [
+            {
+                "url": "https://openai.com/blog/openai-codex",
+                "name": "OpenAI Codex"
+            },
+            {
+                "url": "https://github.com/features/copilot",
+                "name": "GitHub Copilot"
+            },
+            {
+                "url": "https://www.cursor.so",
+                "name": "Cursor"
+            },
+            {
+                "url": "https://replit.com/ai",
+                "name": "Replit Ghostwriter"
+            },
+            {
+                "url": "https://www.tabnine.com",
+                "name": "TabNine"
+            },
+            {
+                "url": "https://sourceai.dev",
+                "name": "SourceAI"
+            },
+            {
+                "url": "https://codeocean.com",
+                "name": "CodeOcean"
+            },
+            {
+                "url": "https://visualstudio.microsoft.com/services/intellicode",
+                "name": "IntelliCode"
+            },
+            {
+                "url": "https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript",
+                "name": "Codota"
+            },
+            {
+                "url": "https://www.deepcode.ai",
+                "name": "DeepCode"
+            },
+            {
+                "url": "https://www.kite.com/blog/product/kite-is-saying-farewell",
+                "name": "Kite"
+            },
+            {
+                "url": "https://mxnet.apache.org",
+                "name": "Apache MXNet"
+            },
+            {
+                "url": "https://opencv.org",
+                "name": "OpenCV"
+            },
+            {
+                "url": "https://pytorch.org",
+                "name": "PyTorch"
+            },
+            {
+                "url": "https://www.tensorflow.org/?hl=zh-cn",
+                "name": "TensorFlow"
+            },
+            {
+                "url": "https://www.askcodi.com",
+                "name": "AskCodi"
+            },
+            {
+                "url": "https://codegeex.cn",
+                "name": "CodeGeeX"
+            },
+            {
+                "url": "https://ai-code-reviewer.com",
+                "name": "AI Code Reviewer"
+            }
+        ]
+    }
+}

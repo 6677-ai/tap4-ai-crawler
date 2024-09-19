@@ -1,75 +1,121 @@
+# -*- coding: utf-8 -*-
 import requests
 from bs4 import BeautifulSoup
 import json
+import time
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0',
+    'Accept': 'text/html, */*; q=0.01',
+    'Accept-Language': 'zh-CN,zh;q=0.9',
+    'Referer': 'https://007tg.com/',
+    'X-Requested-With': 'XMLHttpRequest',
+    'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Microsoft Edge";v="128"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'Sec-Fetch-Dest': 'empty',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Site': 'same-origin',
+}
 
 
-# base_url = "https://007tg.com"
-# # Ä£ÄâÓÃ»§
-# headers = {
-#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-# }
-#
-# def fetch_html(url):
-#     response = requests.get(url, headers=headers)
-#     if response.status_code == 200:
-#         return response.text
-#     else:
-#         print(f"ÇëÇóÊ§°Ü£¬×´Ì¬Âë: {response.status_code}")
-#         return None
+def fetch_content(url, params=None):
+    try:
+        print(f"æ­£åœ¨è¯·æ±‚: {url}")
+        print(f"å‚æ•°: {params}")
+        response = requests.get(url, headers=headers, params=params)
+        response.raise_for_status()
+        print(f"è¯·æ±‚æˆåŠŸï¼ŒçŠ¶æ€ç : {response.status_code}")
+        return response.text
+    except requests.RequestException as e:
+        print(f"è¯·æ±‚å¤±è´¥: {e}")
+        return None
+
 
 def parse_html(html_content):
+    print("å¼€å§‹è§£æHTMLå†…å®¹")
     soup = BeautifulSoup(html_content, 'html.parser')
     all_headers = soup.find_all('h4', class_='text-gray text-lg')
-    output_data = {}
+    data = []
+
     for header in all_headers:
-        if 'AI¹¤¾ß' in header.get_text(strip=True):
-            specific_header = header
-            break
-    if specific_header:
-        tab_name = specific_header.text.strip()
-        print(f"Ò»¼¶±êÇ©: {tab_name}")
-        output_data['Ò»¼¶±êÇ©'] = tab_name
-        output_data['¶ş¼¶±êÇ©'] = {}
-        # ²éÕÒºóĞø¶ş¼¶±êÇ©µÄÄÚÈİ
-        next_div = specific_header.find_next_sibling('div', class_='d-flex flex-fill flex-tab')
+        first_level_label = header.text.strip()
+        print(f"ä¸€çº§æ ‡ç­¾: {first_level_label}")
+
+        first_level_data = {
+            'name': first_level_label,
+            'children': []
+        }
+
+        next_div = header.find_next_sibling('div', class_='d-flex flex-fill flex-tab')
         if next_div:
             links = next_div.find_all('a', class_='nav-link')
             for link in links:
-                tab_link = link['data-link']
-                tab_href = link['href']
-                link_text = link.text.strip()
-                print(f" ¶ş¼¶±êÇ©£º{link_text}: {tab_link}: {tab_href}")
-                tab_id = link['href'].replace('#', '')
+                second_level_label = link.text.strip()
+                second_level_href = link['href']
+                print(f"  äºŒçº§æ ‡ç­¾: {second_level_label}, href: {second_level_href}")
 
-                # Ä£Äâµã»÷¶ş¼¶±êÇ©£¬»ñÈ¡ÆäÄÚÈİ
-                tab_content_div = soup.find('div', id=tab_id)
-                if tab_content_div:
-                    url_cards = tab_content_div.find_all('div', class_='url-body')
-                    sub_tab_data = []
-                    for url_card in url_cards:
-                        a_tag = url_card.find('a')
-                        if a_tag and 'data-url' in a_tag.attrs:
-                            data_url = a_tag['data-url']
-                            title = a_tag.find('strong').get_text(strip=True)
-                            print(f"    name: {title}, url: {data_url}")
-                            sub_tab_data.append({
-                                'url': data_url,
-                                'name': title
-                            })
-                    output_data['¶ş¼¶±êÇ©'][link_text] = sub_tab_data
-                else:
-                    print(f"  Ã»ÓĞÕÒµ½ {link_text} µÄ¹¤¾ßÄÚÈİ")
-    return output_data
+                second_level_data = {
+                    'name': second_level_label,
+                    'href': second_level_href,
+                    'children': []
+                }
+
+                # æ¨¡æ‹ŸAJAXè¯·æ±‚è·å–tabå†…å®¹
+                tab_id = second_level_href.lstrip('#').split('-')[-1]
+                ajax_url = "https://007tg.com/wp-admin/admin-ajax.php"
+                params = {
+                    'action': 'load_home_tab',
+                    'taxonomy': 'favorites',
+                    'id': tab_id,
+                    'post_id': '0'
+                }
+                print(f"      æ­£åœ¨è·å–tabå†…å®¹ï¼ŒID: {tab_id}")
+                tab_content = fetch_content(ajax_url, params)
+                time.sleep(1)  # æ·»åŠ å»¶è¿Ÿä»¥é¿å…è¯·æ±‚è¿‡äºé¢‘ç¹
+
+                if tab_content:
+                    tab_soup = BeautifulSoup(tab_content, 'html.parser')
+                    url_cards = tab_soup.find_all('div', class_='url-card')
+                    print(f"      æ‰¾åˆ° {len(url_cards)} ä¸ªä¸‰çº§æ ‡ç­¾")
+                    for card_index, card in enumerate(url_cards, 1):
+                        a_tag = card.find('a')
+                        if a_tag:
+                            href = a_tag.get('data-url', '')
+                            strong_tag = a_tag.find('strong')
+                            if strong_tag:
+                                name = strong_tag.text.strip()
+                                print(f"        ä¸‰çº§æ ‡ç­¾ {card_index}: {name}")
+                                second_level_data['children'].append({
+                                    'name': name,
+                                    'url': href
+                                })
+
+                first_level_data['children'].append(second_level_data)
+
+        data.append(first_level_data)
+
+    print("HTMLè§£æå®Œæˆ")
+    return data
 
 
-# »ñÈ¡Ö÷Ò³ÄÚÈİ
-# main_html = fetch_html(base_url)
-# if main_html:
-with open('response.html', 'r', encoding='utf-8') as file:
-    html_content = file.read()
-    output_data = parse_html(html_content)
+if __name__ == "__main__":
+    url = "https://007tg.com/"
+    print(f"å¼€å§‹è·å–ç½‘é¡µå†…å®¹: {url}")
+    html_content = fetch_content(url)
 
-    # ½«Êı¾İ±£´æÎª JSON ÎÄ¼ş
-with open('data.json', 'w', encoding='utf-8') as json_file:
-    json.dump(output_data, json_file, ensure_ascii=False, indent=4)
-    print("Êı¾İÒÑ±£´æµ½ data.json")
+    if html_content:
+        print("ç½‘é¡µå†…å®¹è·å–æˆåŠŸï¼Œå¼€å§‹è§£æ")
+        output_data = parse_html(html_content)
+
+        if output_data:
+            print("æ­£åœ¨å°†æ•°æ®ä¿å­˜åˆ° data_007.json")
+            with open('data_007.json', 'w', encoding='utf-8') as json_file:
+                json.dump(output_data, json_file, ensure_ascii=False, indent=4)
+            print("æ•°æ®å·²æˆåŠŸä¿å­˜åˆ° data_007.json")
+        else:
+            print("è§£æ HTML å¤±è´¥ï¼Œæœªç”Ÿæˆæ•°æ®")
+    else:
+        print("è·å–ç½‘é¡µå†…å®¹å¤±è´¥")
+
+    print("ç¨‹åºæ‰§è¡Œå®Œæ¯•")
