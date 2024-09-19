@@ -21,7 +21,6 @@ def switch_csv(json_file, csv_file):
                 for item in child['children']:
                     site = item['url']
                     name = item['name']
-                    # 直接将 tags 列表转换为字符串
                     tags_str = str(tags)
                     writer.writerow([category_name, tags_str, site, name])
 

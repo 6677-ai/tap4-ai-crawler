@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 # 封装请求的函数
-def send_proxy_request(site_url, tags, log_file):
+def send_proxy_request(site_url, tags, category, log_file):
     headers = {
         "Content-Type": "application/json",
         "Authorization": "Bearer 4487f197tap4ai8Zh42Ufi6mAHdfdf"
@@ -13,8 +13,10 @@ def send_proxy_request(site_url, tags, log_file):
         "url": site_url,
         "tags": tags,
         "languages": ["zh-CN", "zh-TW", "en", "German", "es", "fr", "Japanese", "Portuguese", "ru"],
+        "category": category
     }
 
+    print(f'Post data: {data}')
     try:
         response = requests.post(
             url="http://127.0.0.1:8040/site/crawl",
@@ -43,24 +45,25 @@ def load_site_data(file_path):
     :param file_path: CSV 文件路径
     :return: 网站数据列表
     """
-    with open(file_path, 'r') as csvfile:
+    with open(file_path, 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         site_data = []
         for row in reader:
             site = row['site']
+            categoty = row['category_name']
             tags = row['tags'].strip('][').split('", "')
-            site_data.append((site, tags))
+            site_data.append((site, tags, categoty))
 
     return site_data
 
 
 def handle_request(site_data, log_file):
     total_sites = len(site_data)
-    for idx, (site, tags) in enumerate(site_data):
+    for idx, (site, tags, category) in enumerate(site_data):
         current_count = idx + 1
         print(f"INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...")
         log_file.write(f"INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...")
-        success = send_proxy_request(site, tags, log_file)
+        success = send_proxy_request(site, tags, category, log_file)
         if success:
             log_file.write(f"{datetime.now()} - INFO：站点 {site} 请求返回True\n")
             flag = 1
@@ -77,7 +80,7 @@ def handle_request(site_data, log_file):
 
 
 # data_path = './Data/website_data.csv'
-data_path = './Data/ai_tools.csv'
+data_path = './Data/website_data.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入

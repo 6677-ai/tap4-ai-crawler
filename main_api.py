@@ -14,7 +14,9 @@ load_dotenv()
 app = FastAPI()
 website_crawler = WebsitCrawler()
 
-system_auth_secret = os.getenv('AUTH_SECRET')
+system_auth_secret = os.getenv('AUTH_SECRET')\
+
+
 # supabase数据库连接字符串
 supabass_url = os.getenv('CONNECTION_SUPABASE_URL')
 
@@ -38,6 +40,7 @@ class URLRequest(BaseModel):
     url: str
     tags: Optional[List[str]] = None
     languages: Optional[List[str]] = None
+    category: str
 
 
 class AsyncURLRequest(URLRequest):
@@ -47,10 +50,11 @@ class AsyncURLRequest(URLRequest):
 
 @app.post('/site/crawl')
 async def scrape(request: URLRequest, authorization: Optional[str] = Header(None)):
+    print(f'Received request: {request}')
     url = request.url
     tags = request.tags  # tag数组
     languages = request.languages  # 需要翻译的多语言列表
-
+    category = request.category
     if system_auth_secret:
         # 配置了非空的auth_secret，才验证
         validate_authorization(authorization)
@@ -77,7 +81,7 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
 
     print("INFO: Scraping data successfully. Waiting insert data to database.")
     logger.info("INFO: Scraping data successfully. Waiting insert data to database.")
-    await insert_website_data(supabass_url, result, tags)
+    await insert_website_data(supabass_url, result, tags, category)
     return response
 
 

@@ -13,14 +13,14 @@ load_dotenv()
 # url = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
 
 
-async def insert_website_data(connection_string, json_data, tag):
+async def insert_website_data(connection_string, json_data, tag, category):
     if json_data is None:
         print("ERROR: 获取数据失败，json_data 为 None")
         return
     conn = None
     table_name = "web_navigation"
 
-    category_name="AI工具"
+    category_name=category
     # print('database_string:', connection_string)
     try:
         conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
@@ -38,7 +38,7 @@ async def insert_website_data(connection_string, json_data, tag):
                 "url": json_data["url"],
                 "thumbnail_url": json_data["screenshot_thumbnail_data"],
                 "category_name": json.dumps([category_name]),
-                "tag_name": json.dumps([tag]),
+                "tag_name": json.dumps(tag),
 
             }
             # 添加多语言字段
