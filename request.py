@@ -23,7 +23,7 @@ def send_proxy_request(site_url, tags, category, log_file):
             url="http://127.0.0.1:8040/site/crawl",
             headers=headers,
             json=data,
-            timeout=500
+            timeout=700
         )
         if response.status_code == 200:
             print(f"INFO：{site_url} 请求成功")

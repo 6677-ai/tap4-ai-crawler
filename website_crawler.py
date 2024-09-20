@@ -66,14 +66,19 @@ class WebsitCrawler:
             retry_delay = 2  # 每次重试之间的等待时间（秒）
             for attempt in range(max_retries):
                 try:
-                    await page.goto(url, {'timeout': 60000, 'waitUntil': ['load', 'networkidle2']})
-                    break  # 成功加载页面，跳出循环
+                    response =  await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle2']})
+                    # break  # 成功加载页面，跳出循环
+                    if response is None:
+                        # logger.error("页面加载失败，无响应")
+                        return {'error': '页面加载失败，无响应'}
                 except Exception as e:
                     logger.info(f'页面加载超时, 尝试重新加载 (尝试次数: {attempt + 1}/{max_retries}): {e}')
                     if attempt == max_retries - 1:
                         logger.error(f'页面加载超时, 达到最大重试次数: {e}')
-                        return None
+                        return {'error': '页面加载超时, 达到最大重试次数: {e}'}
                     await asyncio.sleep(retry_delay)  # 等待一段时间后重试
+            
+            self.handle_response(response)
 
             # 获取网页内容
             origin_content = await page.content()
@@ -135,11 +140,6 @@ class WebsitCrawler:
             features = llm.process_features(content)
             await page.close()
 
-            # 如果tags为非空数组，则使用llm工具处理tags
-            # processed_tags = None
-            # if tags and detail:
-            #     processed_tags = llm.process_tags('tag_list is:' + ','.join(tags) + '. content is: ' + detail)
-            
 
             # 循环languages数组， 使用llm工具生成各种语言
             processed_languages = []
@@ -180,10 +180,9 @@ class WebsitCrawler:
             logger.info("处理" + url + "用时：" + str(execution_time) + " 秒")
 
     # 处理响应
-    async def handle_response(self, response, page, url, languages):
+    async def handle_response(self, response):
         status = response.status
         logger.info(f'HTTP响应状态码: {status}')
-
         if status == 404:
             return {'error': '页面无法找到，状态码: 404'}
         elif status == 403:
@@ -192,12 +191,9 @@ class WebsitCrawler:
             return {'error': '服务器错误，状态码: 500'}
         elif status >= 400 and status < 600:
             return {'error': f'服务器返回错误状态码: {status}'}
-        elif status == 200:
-            # 处理正常响应的页面内容
-            return await self.process_page_content(page, url, languages)
         elif status == 429:
             return {'error': '请求被限流，状态码: 429'}
         elif status == 503:
             return {'error': '服务不可用，状态码: 503'}
         else:
-            return {'error': f'未知状态码: {status}'}
+            return

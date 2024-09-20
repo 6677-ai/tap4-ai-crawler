@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
 
 util = CommonUtil()
 
-
 class LLMUtil:
     def __init__(self):
         load_dotenv()
