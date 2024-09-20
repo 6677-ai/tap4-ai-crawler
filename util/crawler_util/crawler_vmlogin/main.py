@@ -97,7 +97,7 @@ def parse_html(html_content):
                         for card_index, card in enumerate(url_cards, 1):
                             a_tag = card.find('a')
                             if a_tag:
-                                href = a_tag.get('href', '')
+                                href = a_tag.get('data-url', '')
                                 strong_tag = a_tag.find('strong')
                                 if strong_tag:
                                     name = strong_tag.text.strip()
@@ -115,20 +115,23 @@ def parse_html(html_content):
     return data
 
 if __name__ == "__main__":
-    print("开始读取 res.html 文件")
-    with open('res.html', 'r', encoding='utf-8') as file:
-        html_content = file.read()
-    print("文件读取完成")
+    print("开始从网络获取HTML内容")
+    url = "https://www.vmlogin.cc/dh/"  # 替换为实际的URL
+    html_content = fetch_content(url)
+    
+    if html_content:
+        print("HTML内容获取成功")
+        print("开始解析HTML内容")
+        output_data = parse_html(html_content)
 
-    print("开始解析HTML内容")
-    output_data = parse_html(html_content)
-
-    if output_data:
-        print("正在将数据保存到 data.json")
-        with open('data.json', 'w', encoding='utf-8') as json_file:
-            json.dump(output_data, json_file, ensure_ascii=False, indent=4)
-        print("数据已成功保存到 data.json")
+        if output_data:
+            print("正在将数据保存到 data.json")
+            with open('data.json', 'w', encoding='utf-8') as json_file:
+                json.dump(output_data, json_file, ensure_ascii=False, indent=4)
+            print("数据已成功保存到 data.json")
+        else:
+            print("解析 HTML 失败，未生成数据")
     else:
-        print("解析 HTML 失败，未生成数据")
+        print("获取 HTML 内容失败")
 
     print("程序执行完毕")

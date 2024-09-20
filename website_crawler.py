@@ -86,7 +86,9 @@ class WebsitCrawler:
 
             # 通过标签名提取内容
             title = soup.title.string.strip() if soup.title else ''
-
+            # 无title时
+            if not title:
+                title = llm.process_title(url)
             # 根据url提取域名生成name
             name = CommonUtil.get_name_by_url(url)
 

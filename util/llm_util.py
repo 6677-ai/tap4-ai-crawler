@@ -38,6 +38,7 @@ class LLMUtil:
         self.feature_sys_prompt = os.getenv('FEATURE_SYS_PROMPT')
         self.format_sys_prompt = os.getenv('FORMAT_SYS_PROMPT')
         self.language_sys_prompt = os.getenv('LANGUAGE_SYS_PROMPT')
+        self.title_sys_prompt = os.getenv('TITLE_SYS_PROMPT')
     def init_groq_config(self):
         logger.info("init_groq_config")
         groq_api_keys = os.getenv('GROQ_API_KEY')
@@ -175,7 +176,13 @@ class LLMUtil:
         logger.info(f"正在处理features...")
         return self.process_prompt(self.feature_sys_prompt, user_prompt, variable_map, llm_type)
 
-
+    def process_title(self, user_prompt, variable_map=None, llm_type='openai'):
+        logger.info("正在处理title...")
+        result = self.process_prompt(self.title_sys_prompt, user_prompt, variable_map, llm_type)
+        if result:
+            result = result.replace('"', '')
+        return result
+    
     def process_language(self, language, user_prompt):
         logger.info(f"正在处理多语言:{language}, user_prompt:{user_prompt}")
         # 如果language 包含 English字符，则直接返回

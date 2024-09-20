@@ -28,4 +28,4 @@ def switch_csv(json_file, csv_file):
 
 
 if __name__ == '__main__':
-    switch_csv("./crawler_util/crawler_vmlogin/data.json", "../Data/website_data1.csv")
+    switch_csv("../crawler_util/crawler_vmlogin/data.json", ".website_data1.csv")

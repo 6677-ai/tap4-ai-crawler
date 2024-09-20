@@ -1,0 +1,6 @@
+2024-09-20 19:33:18,174 - logger_config - INFO - 正在处理：soax.com
+2024-09-20 19:33:31,155 - logger_config - INFO - url:https://soax.com, title:Intelligent Data Extraction Platform,description:SOAX is a data extraction platform used by leading companies to collect and leverage public data.
+2024-09-20 19:33:59,288 - logger_config - INFO - 正在处理https://soax.com站点，生成zh-CN语言
+2024-09-20 19:34:43,938 - logger_config - INFO - 正在处理https://soax.com站点，生成zh-TW语言
+2024-09-20 19:35:25,162 - logger_config - INFO - 正在处理https://soax.com站点，生成en语言
+2024-09-20 19:35:58,052 - logger_config - INFO - 正在处理https://soax.com站点，生成German语言

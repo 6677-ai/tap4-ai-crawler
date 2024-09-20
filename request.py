@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 # 封装请求的函数
-def send_proxy_request(site_url, tags, category, log_file):
+def send_proxy_request(site_url, tags, category, log_file_path):
     headers = {
         "Content-Type": "application/json",
         "Authorization": "Bearer 4487f197tap4ai8Zh42Ufi6mAHdfdf"
@@ -18,7 +18,6 @@ def send_proxy_request(site_url, tags, category, log_file):
 
     print(f'Post data: {data}')
     try:
-        # 增加timeout超时
         response = requests.post(
             url="http://127.0.0.1:8040/site/crawl",
             headers=headers,
@@ -26,17 +25,23 @@ def send_proxy_request(site_url, tags, category, log_file):
             timeout=700
         )
         if response.status_code == 200:
-            print(f"INFO：{site_url} 请求成功")
-            log_file.write(f"{datetime.now()} - INFO：{site_url} 请求成功\n")
+            log_message = f"{datetime.now()} - INFO：{site_url} 请求成功\n"
+            print(log_message.strip())
+            with open(log_file_path, 'a') as log_file:
+                log_file.write(log_message)
             return True
         else:
-            print(f"ERROR：{site_url} 状态码：{response.status_code}")
-            log_file.write(f"{datetime.now()} - ERROR：{site_url} 状态码：{response.status_code}\n")
+            log_message = f"{datetime.now()} - ERROR：{site_url} 状态码：{response.status_code}\n"
+            print(log_message.strip())
+            with open(log_file_path, 'a') as log_file:
+                log_file.write(log_message)
             return False
 
     except requests.exceptions.RequestException as e:
-        print(f"ERROR：{site_url} 请求失败，错误信息: {e}")
-        log_file.write(f"{datetime.now()} - ERROR：{site_url} 请求失败，错误信息: {e}\n")
+        log_message = f"{datetime.now()} - ERROR：{site_url} 请求失败，错误信息: {e}\n"
+        print(log_message.strip())
+        with open(log_file_path, 'a') as log_file:
+            log_file.write(log_message)
         return False
 
 
@@ -53,37 +58,51 @@ def load_site_data(file_path):
             site = row['site']
             categoty = row['category_name']
             tags = row['tags'].strip('][').split('", "')
+            tags = [tag.strip().strip("'\"") for tag in tags]
             site_data.append((site, tags, categoty))
 
     return site_data
 
 
-def handle_request(site_data, log_file):
+def handle_request(site_data, log_file_path):
     total_sites = len(site_data)
-    for idx, (site, tags, category) in enumerate(site_data):
-        current_count = idx + 1
-        print(f"INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...")
-        log_file.write(f"INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...")
-        success = send_proxy_request(site, tags, category, log_file)
-        if success:
-            log_file.write(f"{datetime.now()} - INFO：站点 {site} 请求返回True\n")
-            flag = 1
-        else:
-            flag = 0
-            log_file.write(f"{datetime.now()} - ERROR：站点 {site} 请求返回参数错误\n")
-        site_data[idx] = (site, tags, flag)
+    
+    # 打开CSV文件，准备逐行写入
     with open('./Data/website_data_flag.csv', 'w', newline='') as csvfile:
         fieldnames = ['site', 'tags', 'flag']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        for item in site_data:
-            writer.writerow({'site': item[0], 'tags': item[1], 'flag': item[2]})
+
+        for idx, (site, tags, category) in enumerate(site_data):
+            current_count = idx + 1
+            log_message = f"{datetime.now()} - INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...\n"
+            
+            print(log_message.strip())
+            with open(log_file_path, 'a') as log_file:
+                log_file.write(log_message)
+
+            success = send_proxy_request(site, tags, category, log_file_path)
+            if success:
+                flag = 1
+                log_message = f"{datetime.now()} - INFO：站点 {site} 请求返回True\n"
+            else:
+                flag = 0
+                log_message = f"{datetime.now()} - ERROR：站点 {site} 请求返回参数错误\n"
+            
+            print(log_message.strip())
+            with open(log_file_path, 'a') as log_file:
+                log_file.write(log_message)
+
+            writer.writerow({'site': site, 'tags': tags, 'flag': flag})
+            csvfile.flush()  # 确保数据立即写入文件
 
 
 # data_path = './Data/website_data.csv'
-data_path = './Data/website_data1.csv'
+data_path = './Data/website_data_deduplicated.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入
-with open('./Log/request_log.txt', 'a') as log_file:
-    handle_request(all_site_data, log_file)
+log_file_path = './Log/request_log.txt'
+handle_request(all_site_data, log_file_path)
+
+# 如上，在文件信息输出的时候，上面log写入好像是等全部的输出输出完成之后才写入文件，如果输出很多的话可能会造成缓存不足错误，请你改正并且把它变成有一条输出一条,同理，website_data_flag里面的数据也要有一条插入一条
