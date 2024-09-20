@@ -94,7 +94,9 @@ class WebsitCrawler:
             if not description:
                 meta_description = soup.find('meta', attrs={'property': 'og:description'})
                 description = meta_description['content'].strip() if meta_description else ''
-
+            # 使用llm工具生成description
+            if not description:
+                description = llm.process_description(url)
             logger.info(f"url:{url}, title:{title},description:{description}")
 
             # 生成网站截图
@@ -126,12 +128,18 @@ class WebsitCrawler:
 
             # 使用llm工具处理content
             detail = llm.process_detail(content)
+
+              # 使用llm工具处理introduction
+            introduction = llm.process_introduction(content)
+
+            features = llm.process_features(content)
             await page.close()
 
             # 如果tags为非空数组，则使用llm工具处理tags
-            processed_tags = None
-            if tags and detail:
-                processed_tags = llm.process_tags('tag_list is:' + ','.join(tags) + '. content is: ' + detail)
+            # processed_tags = None
+            # if tags and detail:
+            #     processed_tags = llm.process_tags('tag_list is:' + ','.join(tags) + '. content is: ' + detail)
+            
 
             # 循环languages数组， 使用llm工具生成各种语言
             processed_languages = []
@@ -141,8 +149,11 @@ class WebsitCrawler:
                     processed_title = llm.process_language(language, title)
                     processed_description = llm.process_language(language, description)
                     processed_detail = llm.process_language(language, detail)
+                    processed_introduction = llm.process_language(language, introduction)
+                    processed_features = llm.process_language(language, features)
                     processed_languages.append({'language': language, 'title': processed_title,
-                                                'description': processed_description, 'detail': processed_detail})
+                                                'description': processed_description, 'detail': processed_detail,
+                                                'introduction': processed_introduction, 'features': processed_features})
 
             logger.info(url + "站点处理成功")
             return {
@@ -150,11 +161,13 @@ class WebsitCrawler:
                 'url': url,
                 'title': title,
                 'description': description,
+                'features': features,
                 'detail': detail,
+                'introduction': introduction,
                 'screenshot_data': screenshot_key,
                 'screenshot_thumbnail_data': thumnbail_key,
-                'tags': processed_tags,
                 'languages': processed_languages,
+
             }
         except Exception as e:
             logger.error("处理" + url + "站点异常，错误信息:", e)
@@ -165,3 +178,26 @@ class WebsitCrawler:
 
             # 输出程序执行时间
             logger.info("处理" + url + "用时：" + str(execution_time) + " 秒")
+
+    # 处理响应
+    async def handle_response(self, response, page, url, languages):
+        status = response.status
+        logger.info(f'HTTP响应状态码: {status}')
+
+        if status == 404:
+            return {'error': '页面无法找到，状态码: 404'}
+        elif status == 403:
+            return {'error': '访问被禁止，状态码: 403'}
+        elif status == 500:
+            return {'error': '服务器错误，状态码: 500'}
+        elif status >= 400 and status < 600:
+            return {'error': f'服务器返回错误状态码: {status}'}
+        elif status == 200:
+            # 处理正常响应的页面内容
+            return await self.process_page_content(page, url, languages)
+        elif status == 429:
+            return {'error': '请求被限流，状态码: 429'}
+        elif status == 503:
+            return {'error': '服务不可用，状态码: 503'}
+        else:
+            return {'error': f'未知状态码: {status}'}

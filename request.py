@@ -18,11 +18,12 @@ def send_proxy_request(site_url, tags, category, log_file):
 
     print(f'Post data: {data}')
     try:
+        # 增加timeout超时
         response = requests.post(
             url="http://127.0.0.1:8040/site/crawl",
             headers=headers,
             json=data,
-            timeout=300
+            timeout=500
         )
         if response.status_code == 200:
             print(f"INFO：{site_url} 请求成功")
@@ -80,7 +81,7 @@ def handle_request(site_data, log_file):
 
 
 # data_path = './Data/website_data.csv'
-data_path = './Data/website_data.csv'
+data_path = './Data/website_data1.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入

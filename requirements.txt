@@ -11,3 +11,5 @@ Pillow
 sentencepiece
 transformers
 asyncpg
+OpenAI
+tiktoken

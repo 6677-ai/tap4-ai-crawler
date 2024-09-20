@@ -86,4 +86,7 @@ INFO£º´¦ÀíµÚ 43/997 ÌõÊı¾İ - Õ¾µã https://business.facebook.com ÇëÇó·¢ËÍÖĞ...202
 2024-09-19 17:12:37.232173 - INFO£ºÕ¾µã https://business.facebook.com ÇëÇó·µ»ØTrue
 INFO£º´¦ÀíµÚ 44/997 ÌõÊı¾İ - Õ¾µã https://www.facebook.com ÇëÇó·¢ËÍÖĞ...2024-09-19 17:14:33.824472 - INFO£ºhttps://www.facebook.com ÇëÇó³É¹¦
 2024-09-19 17:14:33.825469 - INFO£ºÕ¾µã https://www.facebook.com ÇëÇó·µ»ØTrue
-INFO£º´¦ÀíµÚ 45/997 ÌõÊı¾İ - Õ¾µã https://www.instagram.com ÇëÇó·¢ËÍÖĞ...
+INFO£º´¦ÀíµÚ 45/997 ÌõÊı¾İ - Õ¾µã https://www.instagram.com ÇëÇó·¢ËÍÖĞ...INFOï¼šå¤„ç†ç¬¬ 1/1 æ¡æ•°æ® - ç«™ç‚¹ https://www.vmlogin.cc/dh/sites/2364.html è¯·æ±‚å‘é€ä¸­...2024-09-20 10:37:51.228116 - INFOï¼šhttps://www.vmlogin.cc/dh/sites/2364.html è¯·æ±‚æˆåŠŸ
+2024-09-20 10:37:51.228116 - INFOï¼šç«™ç‚¹ https://www.vmlogin.cc/dh/sites/2364.html è¯·æ±‚è¿”å›True
+INFOï¼šå¤„ç†ç¬¬ 1/1 æ¡æ•°æ® - ç«™ç‚¹ https://www.vmlogin.cc/dh/sites/2364.html è¯·æ±‚å‘é€ä¸­...2024-09-20 10:46:54.347045 - ERRORï¼šhttps://www.vmlogin.cc/dh/sites/2364.html è¯·æ±‚å¤±è´¥ï¼Œé”™è¯¯ä¿¡æ¯: HTTPConnectionPool(host='127.0.0.1', port=8040): Read timed out. (read timeout=300)
+2024-09-20 10:46:54.347045 - ERRORï¼šç«™ç‚¹ https://www.vmlogin.cc/dh/sites/2364.html è¯·æ±‚è¿”å›å‚æ•°é”™è¯¯

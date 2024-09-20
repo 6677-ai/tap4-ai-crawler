@@ -50,7 +50,7 @@ async def insert_website_data(connection_string, json_data, tag, category):
                     data[f"content_{lang_suffix}"] = lang_data.get("description")
                     data[f"detail_{lang_suffix}"] = lang_data.get("detail")
                     data[f"introduction_{lang_suffix}"] = lang_data.get("introduction")
-                    data[f"website_data_{lang_suffix}"] = lang_data.get("website_data")
+                    data[f"website_data_{lang_suffix}"] = lang_data.get("features")
             for field in fields:
                 if field not in data:
                     data[field] = None

@@ -611,3 +611,24 @@
 2024-09-19 17:16:28,572 - logger_config - INFO - https://www.instagram.comվ�㴦���ɹ�
 2024-09-19 17:16:28,572 - logger_config - INFO - ����https://www.instagram.com��ʱ��115 ��
 2024-09-19 17:16:28,573 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-20 10:35:12,957 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-20 10:36:56,065 - logger_config - INFO - 正在处理：https://www.vmlogin.cc/dh/sites/2364.html
+2024-09-20 10:37:09,405 - logger_config - INFO - url:https://www.vmlogin.cc/dh/sites/2364.html, title:快代理-出海工具箱,description:10年专注企业代理IP云服务
+2024-09-20 10:37:51,193 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成zh-CN语言
+2024-09-20 10:37:51,225 - logger_config - INFO - 处理https://www.vmlogin.cc/dh/sites/2364.html用时：55 秒
+2024-09-20 10:37:51,226 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-20 10:41:50,547 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-20 10:41:54,345 - logger_config - INFO - 正在处理：https://www.vmlogin.cc/dh/sites/2364.html
+2024-09-20 10:42:22,553 - logger_config - INFO - url:https://www.vmlogin.cc/dh/sites/2364.html, title:快代理-出海工具箱,description:10年专注企业代理IP云服务
+2024-09-20 10:43:02,160 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成zh-CN语言
+2024-09-20 10:43:38,240 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成zh-TW语言
+2024-09-20 10:44:16,055 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成en语言
+2024-09-20 10:44:44,875 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成German语言
+2024-09-20 10:45:36,205 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成es语言
+2024-09-20 10:46:17,457 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成fr语言
+2024-09-20 10:46:52,748 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成Japanese语言
+2024-09-20 10:47:47,950 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成Portuguese语言
+2024-09-20 10:48:20,406 - logger_config - INFO - 正在处理https://www.vmlogin.cc/dh/sites/2364.html站点，生成ru语言
+2024-09-20 10:49:04,610 - logger_config - INFO - https://www.vmlogin.cc/dh/sites/2364.html站点处理成功
+2024-09-20 10:49:04,610 - logger_config - INFO - 处理https://www.vmlogin.cc/dh/sites/2364.html用时：430 秒
+2024-09-20 10:49:04,612 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
