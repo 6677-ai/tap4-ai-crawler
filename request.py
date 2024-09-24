@@ -98,11 +98,10 @@ def handle_request(site_data, log_file_path):
 
 
 # data_path = './Data/website_data.csv'
-data_path = './Data/website_data_deduplicated.csv'
+# data_path = './Data/website_data_deduplicated.csv'
+data_path = './Data/data21.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入
 log_file_path = './Log/request_log.txt'
 handle_request(all_site_data, log_file_path)
-
-# 如上，在文件信息输出的时候，上面log写入好像是等全部的输出输出完成之后才写入文件，如果输出很多的话可能会造成缓存不足错误，请你改正并且把它变成有一条输出一条,同理，website_data_flag里面的数据也要有一条插入一条

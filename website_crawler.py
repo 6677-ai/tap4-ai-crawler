@@ -132,14 +132,24 @@ class WebsitCrawler:
 
             # 抓取整个网页内容
             content = soup.get_text()
-
+            
             # 使用llm工具处理content
             detail = llm.process_detail(content)
+            if not detail:
+                logger.info(url + "站点处理detail为空，正在重试")
+                detail = llm.process_detail(content)
 
               # 使用llm工具处理introduction
             introduction = llm.process_introduction(content)
+            if not introduction:
+                logger.info(url + "站点处理introduction为空，正在重试")
+                introduction = llm.process_introduction(content)
 
             features = llm.process_features(content)
+            if not features:
+                logger.info(url + "站点处理features为空，正在重试")
+                features = llm.process_features(content)
+                
             await page.close()
 
 

@@ -164,7 +164,7 @@ class LLMUtil:
 
     def process_detail(self, user_prompt, variable_map=None, llm_type='openai'):
         logger.info("正在处理Detail...")
-        # print(f"Detail的user_prompt: {user_prompt}")
+        print(f"Detail的user_prompt: {user_prompt}")
         return self.process_prompt(self.detail_sys_prompt, user_prompt, variable_map, llm_type)
 
     def process_introduction(self, user_prompt, variable_map=None, llm_type='openai'):
