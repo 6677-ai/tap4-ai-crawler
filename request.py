@@ -1,6 +1,9 @@
 import requests
 import csv
 from datetime import datetime
+from insert_data_async import check_existing_data
+# import asyncio
+
 
 
 # 封装请求的函数
@@ -15,11 +18,14 @@ def send_proxy_request(site_url, tags, category, log_file_path):
         "languages": ["zh-CN", "zh-TW", "en", "German", "es", "fr", "Japanese", "Portuguese", "ru"],
         "category": category
     }
-
+    
+    post_url = "http://127.0.0.1:8040/site/website_data"
+    # post_url = "http://127.0.0.1:8040/site/introduction"
+    # post_url = "http://127.0.0.1:8040/site/crawl"
     print(f'Post data: {data}')
     try:
         response = requests.post(
-            url="http://127.0.0.1:8040/site/crawl",
+            url=post_url,
             headers=headers,
             json=data,
             timeout=700
@@ -66,40 +72,29 @@ def load_site_data(file_path):
 
 def handle_request(site_data, log_file_path):
     total_sites = len(site_data)
-    
-    # 打开CSV文件，准备逐行写入
-    with open('./Data/website_data_flag.csv', 'w', newline='') as csvfile:
-        fieldnames = ['site', 'tags', 'flag']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
 
-        for idx, (site, tags, category) in enumerate(site_data):
-            current_count = idx + 1
-            log_message = f"{datetime.now()} - INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...\n"
-            
-            print(log_message.strip())
-            with open(log_file_path, 'a') as log_file:
-                log_file.write(log_message)
+    for idx, (site, tags, category) in enumerate(site_data):
+        current_count = idx + 1
+        log_message = f"{datetime.now()} - INFO：处理第 {current_count}/{total_sites} 条数据 - 站点 {site} 请求发送中...\n"
+        
+        print(log_message.strip())
+        with open(log_file_path, 'a') as log_file:
+            log_file.write(log_message)
 
-            success = send_proxy_request(site, tags, category, log_file_path)
-            if success:
-                flag = 1
-                log_message = f"{datetime.now()} - INFO：站点 {site} 请求返回True\n"
-            else:
-                flag = 0
-                log_message = f"{datetime.now()} - ERROR：站点 {site} 请求返回参数错误\n"
-            
-            print(log_message.strip())
-            with open(log_file_path, 'a') as log_file:
-                log_file.write(log_message)
-
-            writer.writerow({'site': site, 'tags': tags, 'flag': flag})
-            csvfile.flush()  # 确保数据立即写入文件
-
+        success = send_proxy_request(site, tags, category, log_file_path)
+        if success:
+            log_message = f"{datetime.now()} - INFO：站点 {site} 请求返回True\n"
+        else:
+            log_message = f"{datetime.now()} - ERROR：站点 {site} 请求返回参数错误\n"
+        
+        print(log_message.strip())
+        with open(log_file_path, 'a') as log_file:
+            log_file.write(log_message)
 
 # data_path = './Data/website_data.csv'
-# data_path = './Data/website_data_deduplicated.csv'
-data_path = './Data/data21.csv'
+data_path = './Data/feature.csv'
+# data_path = './Data/website_data_test.csv'
+# data_path = './Data/website_data_detail.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入

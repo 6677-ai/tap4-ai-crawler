@@ -155,6 +155,17 @@ class WebsitCrawler:
 
             # 循环languages数组， 使用llm工具生成各种语言
             processed_languages = []
+
+            # 翻译为多语言之前进行数据检查
+
+
+            if not all([title, description, detail, introduction, features]):
+                logger.warning(f"URL: {url} - 一个或多个字段为空，跳过多语言处理")
+                return {'error': '有数据不全，返回错误'}
+            if detail.startswith("### What is {product_name}") in detail:
+                logger.warning(f"URL: {url} - detail处理为原模板，生成错误")
+                return {'error': '有数据不全，返回错误'}
+
             if languages:
                 for language in languages:
                     logger.info("正在处理" + url + "站点，生成" + language + "语言")
@@ -179,7 +190,6 @@ class WebsitCrawler:
                 'screenshot_data': screenshot_key,
                 'screenshot_thumbnail_data': thumnbail_key,
                 'languages': processed_languages,
-
             }
         except Exception as e:
             logger.error("处理" + url + "站点异常，错误信息:", e)
@@ -190,6 +200,197 @@ class WebsitCrawler:
 
             # 输出程序执行时间
             logger.info("处理" + url + "用时：" + str(execution_time) + " 秒")
+
+
+    async def scrape_website_detail(self, url, languages):
+        try:
+            start_time = int(time.time())
+            logger.info("正在处理详情：" + url)
+            
+            if not url.startswith('http://') and not url.startswith('https://'):
+                url = 'https://' + url
+
+            if self.browser is None:
+                self.browser = await launch(headless=True,
+                                            ignoreDefaultArgs=["--enable-automation"],
+                                            ignoreHTTPSErrors=True,
+                                            args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu',
+                                                  '--disable-software-rasterizer', '--disable-setuid-sandbox'],
+                                            handleSIGINT=False, handleSIGTERM=False, handleSIGHUP=False)
+
+            page = await self.browser.newPage()
+            await page.setUserAgent(random.choice(global_agent_headers))
+
+            await page.setViewport({'width': 1920, 'height': 1080})
+            
+            response = await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle2']})
+            
+            if response is None:
+                return {'error': '页面加载失败，无响应'}
+
+            await self.handle_response(response)
+
+            origin_content = await page.content()
+            soup = BeautifulSoup(origin_content, 'html.parser')
+
+            content = soup.get_text()
+            
+            detail = llm.process_detail(content)
+            if not detail:
+                logger.info(url + "站点处理detail为空，正在重试")
+                detail = llm.process_detail(content)
+
+
+            await page.close()
+            
+            processed_languages = []
+            if languages:
+                for language in languages:
+                    logger.info(f"正在处理{url}站点，生成{language}语言的detail")
+                    processed_detail = llm.process_language(language, detail)
+                    processed_languages.append({'language': language, 'detail': processed_detail})
+            logger.info(url + "站点详情处理成功")
+            return {
+                'url': url,
+                'detail': detail,
+                'languages': processed_languages
+            }
+        except Exception as e:
+            logger.error("处理" + url + "站点详情异常，错误信息:", e)
+            return None
+        finally:
+            execution_time = int(time.time()) - start_time
+            logger.info("处理" + url + "详情用时：" + str(execution_time) + " 秒")
+
+
+    async def scrape_website_introduction(self, url, languages=None):
+        try:
+            start_time = int(time.time())
+            logger.info("正在处理简介：" + url)
+            
+            if not url.startswith('http://') and not url.startswith('https://'):
+                url = 'https://' + url
+
+            if self.browser is None:
+                self.browser = await launch(headless=True,
+                                            ignoreDefaultArgs=["--enable-automation"],
+                                            ignoreHTTPSErrors=True,
+                                            args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu',
+                                                  '--disable-software-rasterizer', '--disable-setuid-sandbox'],
+                                            handleSIGINT=False, handleSIGTERM=False, handleSIGHUP=False)
+
+            page = await self.browser.newPage()
+            await page.setUserAgent(random.choice(global_agent_headers))
+
+            await page.setViewport({'width': 1920, 'height': 1080})
+            
+            response = await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle2']})
+            
+            if response is None:
+                return {'error': '页面加载失败，无响应'}
+
+            await self.handle_response(response)
+
+            origin_content = await page.content()
+            soup = BeautifulSoup(origin_content, 'html.parser')
+
+            content = soup.get_text()
+            
+            introduction = llm.process_introduction(content)
+            if not introduction:
+                logger.info(url + "站点处理introduction为空，正在重试")
+                introduction = llm.process_introduction(content)
+
+            await page.close()
+
+            if not introduction:
+                logger.warning(f"URL: {url} - introduction处理失败")
+                return {'error': 'introduction处理失败'}
+
+            processed_languages = []
+            if languages:
+                for language in languages:
+                    logger.info(f"正在处理{url}站点，生成{language}语言的introduction")
+                    processed_introduction = llm.process_language(language, introduction)
+                    processed_languages.append({'language': language, 'introduction': processed_introduction})
+
+            logger.info(url + "站点简介处理成功")
+            return {
+                'url': url,
+                'introduction': introduction,
+                'languages': processed_languages
+            }
+        except Exception as e:
+            logger.error("处理" + url + "站点简介异常，错误信息:", e)
+            return None
+        finally:
+            execution_time = int(time.time()) - start_time
+            logger.info("处理" + url + "简介用时：" + str(execution_time) + " 秒")
+    
+    
+    async def scrape_feature(self, url, languages=None):
+        try:
+            start_time = int(time.time())
+            logger.info("正在处理网站特性：" + url)
+            
+            if not url.startswith('http://') and not url.startswith('https://'):
+                url = 'https://' + url
+
+            if self.browser is None:
+                self.browser = await launch(headless=True,
+                                            ignoreDefaultArgs=["--enable-automation"],
+                                            ignoreHTTPSErrors=True,
+                                            args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu',
+                                                  '--disable-software-rasterizer', '--disable-setuid-sandbox'],
+                                            handleSIGINT=False, handleSIGTERM=False, handleSIGHUP=False)
+
+            page = await self.browser.newPage()
+            await page.setUserAgent(random.choice(global_agent_headers))
+
+            await page.setViewport({'width': 1920, 'height': 1080})
+            
+            response = await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle2']})
+            
+            if response is None:
+                return {'error': '页面加载失败，无响应'}
+
+            await self.handle_response(response)
+
+            origin_content = await page.content()
+            soup = BeautifulSoup(origin_content, 'html.parser')
+
+            content = soup.get_text()
+            
+            features = llm.process_features(content)
+            if not features:
+                logger.info(url + "站点处理features为空，正在重试")
+                features = llm.process_features(content)
+
+            await page.close()
+
+            if not features:
+                logger.warning(f"URL: {url} - features处理失败")
+                return {'error': 'features处理失败'}
+
+            processed_languages = []
+            if languages:
+                for language in languages:
+                    logger.info(f"正在处理{url}站点，生成{language}语言的features")
+                    processed_introduction = llm.process_language(language, features)
+                    processed_languages.append({'language': language, 'features': processed_introduction})
+
+            logger.info(url + "站点简介处理成功")
+            return {
+                'url': url,
+                'features': features,
+                'languages': processed_languages
+            }
+        except Exception as e:
+            logger.error("处理" + url + "站点简介异常，错误信息:", e)
+            return None
+        finally:
+            execution_time = int(time.time()) - start_time
+            logger.info("处理" + url + "特性用时：" + str(execution_time) + " 秒")
 
     # 处理响应
     async def handle_response(self, response):

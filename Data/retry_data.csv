@@ -1,5 +1,4 @@
 category_name,tags,site,name
-需要重新爬取的数据
 实用工具,['常用工具'],https://www.similarweb.com/zh,Similarweb
 实用工具,['常用网址'],https://www.ebay.com,eBay
 实用工具,['常用网址'],https://www.instagram.com,Instagram
@@ -82,75 +81,4 @@ TikTok,['内容素材'],https://mixkit.co,Mixkit
 TikTok,['视频剪辑'],https://www.fiverr.com,Fiverr
 TikTok,['视频剪辑'],https://www.upwork.com,Upwork
 跨境金融,['虚拟信用卡'],https://wallet.advcash.com,Advcash
-只是detail问题
-实用工具,['常用网址'],https://www.facebook.com,Facebook
-实用工具,['常用网址'],https://www.yelp.com,Yelp
-实用工具,['常用网址'],http://www.yahoo.com,YaHoo!
-实用工具,['效率工具'],http://www.atoolbox.net,在线工具箱
-实用工具,['效率工具'],https://fanyi.taobao.com,阿里翻译
-实用工具,['效率工具'],https://www.rjsos.com,软件SOS
-实用工具,['效率工具'],https://u.tools,Utools工具合集
-实用工具,['效率工具'],https://getpocket.com/zh-cn,Pocket
-实用工具,['短链生成工具'],https://cutt.ly,Cuttly
-实用工具,['短链生成工具'],https://replug.io,Replug
-AI工具,['AI写作工具'],https://copysmith.ai,Copysmith
-Google,['关键词工具'],https://neilpatel.com/ubersuggest,Ubersuggest
-跨境资讯,['全球论坛'],https://backlinko.com,Backlinko
-跨境资讯,['全球论坛'],https://charlesngo.com,Charlesngo
-跨境资讯,['国外论坛'],https://johnchow.com,Johnchow
-海外推广,['社交媒体'],https://www.facebook.com,Facebook
-跨境推广,['社交媒体'],https://www.pinterest.com,Pinterest
-跨境推广,['社交媒体'],https://www.youtube.com,YouTube
-跨境推广,['社交媒体'],https://www.linkedin.com,Linkedin
-跨境推广,['社交媒体'],https://myspace.com,Myspace
-海外推广,['社交媒体'],https://www.reddit.com,Reddit
-社媒资源,['账号购买'],http://accsbuy.com,AccsBuy
-全球网络,['全球VPS'],https://manage.hostdare.com,HostDare
-全球接码,['虚拟邮箱'],http://24mail.chacuo.net,24小时邮箱
-全球网络,['域名注册'],https://www.bt.cn,BT宝塔
-全球接码,['虚拟邮箱'],https://mail.cuiqiu.com,脆球邮箱
-全球接码,['虚拟邮箱'],https://inboxkitten.com,Inboxkitten
-数字货币,['区块链媒体'],https://cryptobriefing.com,Crypto Briefing
-数字货币,['区块链媒体'],https://coinspectator.com,CoinSpectator
-数字货币,['区块链媒体'],https://themerkle.com,The Merkle
-数字货币,['区块链媒体'],https://nulltx.com,Null Tx
-数字货币,['区块链媒体'],https://www.todayonchain.com,TodayOnChain
-数字货币,['区块链媒体'],https://blockonomi.com,Blockonomi
-数字货币,['区块链媒体'],https://coinpost.jp,Coinpost
-数字货币,['财经新闻'],https://www.google.com/finance/quote/BTC-ILS,货币趋势
-数字货币,['区块链媒体'],https://messari.io,Messari
-数字货币,['财经新闻'],https://bitcointalk.org,BitcoinTalk
-数字货币,['市场数据'],https://defipulse.com,DeFi Pulse
-数字货币,['市场数据'],https://dune.com/browse/dashboards,Dune Analytics
-数字货币,['NFT工具'],https://web3dun.com,比特神盾
-数字货币,['NFT工具'],https://bloxy.info,Bloxy.info
-数字货币,['钱包'],https://trustwallet.com,Trust Wallet
-Facebook,['FB常用工具'],https://www.facebook.com/adsmanager,FB广告管理工具
-Facebook,['FB常用工具'],https://www.facebook.com/ads/library,FB广告资料库
-Facebook,['FB常用工具'],https://business.facebook.com/ads/customer_feedback,FB主页评分查询
-Facebook,['FB申诉链接'],https://zh-cn.facebook.com/help/147926301947841,FB安全验证无法登录
-Facebook,['FB广告工具'],https://www.qwaya.com,Qwaya
-Google,['Google常用'],https://analytics.google.com/analytics,谷歌分析
-Google,['Google常用'],https://trends.google.com,谷歌趋势
-Google,['Google常用'],https://www.google.com/webmasters/support,谷歌站长
-Google,['Google常用'],https://developers.google.com/speed/pagespeed/insights,谷歌测速
-Google,['Google常用'],https://www.google.com/maps,Google Maps
-Google,['Google常用'],https://www.google.com/search,Google Search
-Google,['Google常用'],https://drive.google.com/drive/my-drive,Google Drive
-Google,['谷歌插件'],https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf,Fatkun图片批量下载
-Google,['SEO工具'],https://curatedseotools.com,Curated SEO Tools
-广告工具,['广告监测'],https://moat.com,Moat
-广告工具,['广告监测'],https://analytics.google.com/analytics/web,Google Analytics
-广告工具,['广告监测'],https://ttads.net,头条广告情报
-广告工具,['追踪系统'],https://ga-dev-tools.web.app/campaign-url-builder,广告追踪网址生成
-广告工具,['检测优化'],http://tool.chinaz.com,站长工具
-内容制作,['文案工具'],https://draftjs.org,Draft
-内容制作,['素材编辑'],https://www.canva.com,Canva
-内容制作,['素材编辑'],https://font.chinaz.com,站长字体
-内容制作,['图库网站'],https://unsplash.com,Unsplash
-内容制作,['图库网站'],https://www.flickr.com,Flickr
-
-
-需要人机验证的数据
-实用工具,['短链生成工具'],https://is.gd,is.gd
-
+内容制作,['视频下载'],https://www.y2mate.com/en376,Youtube视频下载

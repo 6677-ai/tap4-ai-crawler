@@ -9,13 +9,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-# url = "postgresql://postgres.olagznauomwldwnluuek:hyz040506sadasdads@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?gssencmode=disable"
-
-
+# 插入数据
 async def insert_website_data(connection_string, json_data, tag, category):
     if json_data is None:
         print("ERROR: 获取数据失败，json_data 为 None")
+        return
+    if json_data.get("error"):
+        print(f"INFO: 检测到错误信息 '{json_data.get('error')}'，停止插入数据。")
+        return
+    if json_data.get("title") in ["Just a moment...", "404"]:
+        print(f"INFO: 检测到无效标题 '{json_data.get('title')}'，停止插入数据。")
+        return
+    if json_data.get("detail").startswith("### What is {product_name}?\n{product_name} is a"):
+        print(f"INFO: 无效detail开头，停止插入数据。")
         return
     conn = None
     table_name = "web_navigation"
@@ -77,6 +83,88 @@ async def insert_website_data(connection_string, json_data, tag, category):
             await conn.close()
             print("INFO: Connection closed.")
 
+async def check_existing_data(site_url, tags, category):
+    connection_string = os.getenv('CONNECTION_SUPABASE_URL')
+    print('site tags category:', site_url, tags, category)
+    try:
+        conn = await asyncpg.connect(connection_string)
+        query = """
+        SELECT id FROM web_navigation 
+        WHERE url = $1 
+        AND category_name @> $2::jsonb 
+        AND tag_name @> $3::jsonb
+        """
+        result = await conn.fetchrow(query, site_url, json.dumps([category]), json.dumps(tags))
+        await conn.close()
+        return result is not None
+    except Exception as e:
+        print(f"INFO: Error checking existing data: {e}")
+        return False
+
+# 查找/更新网站的部分数据， field_name区分
+async def update_website_field(connection_string, json_data, tag, category, field_name):
+    # print('update_website_field:', field_name)
+    if json_data is None or not json_data.get("url"):
+        print(f"ERROR: 无效的 json_data 或缺少 URL")
+        return
+    conn = None
+    table_name = "web_navigation"
+
+    try:
+        conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
+        if conn:
+            print("INFO: 成功连接到数据库。")
+        
+        async with conn.transaction():
+            # 查找匹配的记录
+            query = """
+            SELECT id FROM web_navigation 
+            WHERE url = $1 
+            AND category_name @> $2::jsonb 
+            AND tag_name @> $3::jsonb
+            """
+            row = await conn.fetchrow(query, json_data["url"], json.dumps([category]), json.dumps(tag))
+            
+            if row is None:
+                print("INFO: 未找到匹配的记录，无法更新。")
+                return
+
+            record_id = row['id']
+            
+            # print(f"INFO: 正在更新id为{record_id}的{field_name}数据....")
+            # 更新多语言字段
+            for lang_data in json_data.get("languages", []):
+                lang_code = lang_data["language"]
+                lang_suffix = language_map.get(lang_code)
+                if lang_suffix:
+                    column_name = f"{field_name}_{lang_suffix}"
+                    # print('更新数据的：column_name:', column_name)
+                    update_query = f"""
+                    UPDATE {table_name} 
+                    SET {column_name} = $1 
+                    WHERE id = $2
+                    """
+                    await conn.execute(update_query, lang_data[field_name], record_id)
+                    print(f"INFO: 已更新 {column_name}")
+
+            print(f"INFO: {field_name} 数据更新成功。")
+    except Exception as e:
+        print("ERROR: 无法连接到数据库或执行查询。")
+        print(e)
+    finally:
+        if conn:
+            await conn.close()
+            print("INFO: 连接已关闭。")
+
+
+async def update_website_detail(connection_string, json_data, tag, category):
+    await update_website_field(connection_string, json_data, tag, category, "detail")
+
+async def update_website_introduction(connection_string, json_data, tag, category):
+    await update_website_field(connection_string, json_data, tag, category, "introduction")
+
+async def update_features(connection_string, json_data, tag, category):
+    await update_website_field(connection_string, json_data, tag, category, "website_data")
 
 def read_file(file):
     try:
@@ -93,10 +181,10 @@ def read_file(file):
 async def main():
     file_path = './Data/response.json'
     data = read_file(file_path)
+   
     if data is not None:
         connection_string = os.getenv('CONNECTION_SUPABASE_URL')
-        await insert_website_data(connection_string, data)
-
+        # await update_features(connection_string, data, test_tag, test_category)
 
 if __name__ == "__main__":
     asyncio.run(main())
