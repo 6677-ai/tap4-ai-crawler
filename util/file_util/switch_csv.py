@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-# 将json文件转换为cvs文件
 import json
 import csv
 
-
+# 将爬取后的json文件转换为cvs((['category_name', 'tags', 'site', 'name']))文件
 def switch_csv(json_file, csv_file):
     with open(json_file, 'r', encoding='utf-8') as file:
         json_data = json.load(file)

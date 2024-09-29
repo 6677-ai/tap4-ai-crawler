@@ -3,9 +3,6 @@ import csv
 from datetime import datetime
 from insert_data_async import check_existing_data
 # import asyncio
-
-
-
 # 封装请求的函数
 def send_proxy_request(site_url, tags, category, log_file_path):
     headers = {
@@ -91,10 +88,8 @@ def handle_request(site_data, log_file_path):
         with open(log_file_path, 'a') as log_file:
             log_file.write(log_message)
 
-# data_path = './Data/website_data.csv'
-data_path = './Data/feature.csv'
-# data_path = './Data/website_data_test.csv'
-# data_path = './Data/website_data_detail.csv'
+# data_path = './Data/feature.csv'
+data_path = './Data/website_data_test.csv'
 all_site_data = load_site_data(data_path)
 
 # 打开日志文件，以追加模式写入
