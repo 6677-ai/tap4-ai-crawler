@@ -80,7 +80,7 @@ class WebsitCrawler:
             # 获取网页内容
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
-            print('页面内容', soup)
+            # print('页面内容', soup)
             # 通过标签名提取内容
             title = soup.title.string.strip() if soup.title else ''
             # 无title时

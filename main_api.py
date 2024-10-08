@@ -75,7 +75,7 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
         'data': result
     }
 
-    with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
+    with open('./Log/res_data.json', 'a', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
         file.write('\n')
 
@@ -83,7 +83,6 @@ async def scrape(request: URLRequest, authorization: Optional[str] = Header(None
     logger.info("INFO: Scraping data successfully. Waiting insert data to database.")
     await insert_website_data(supabass_url, result, tags, category)
     return response
-
 
 @app.post('/site/crawl_async')
 async def scrape_async(background_tasks: BackgroundTasks, request: AsyncURLRequest,
@@ -137,7 +136,7 @@ async def scrape_detail(request: URLRequest, authorization: Optional[str] = Head
         'data': result
     }
 
-    with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
+    with open('./Data/Log.json', 'a', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
         file.write('\n')
 
@@ -173,7 +172,7 @@ async def scrape_introduction(request: URLRequest, authorization: Optional[str] 
         'data': result
     }
 
-    with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
+    with open('./Log/res_data.json', 'a', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
         file.write('\n')
 
@@ -209,7 +208,7 @@ async def scrape_website_data(request: URLRequest, authorization: Optional[str] 
         'data': result
     }
 
-    with open('./Data/res_data.json', 'a', encoding='utf-8') as file:
+    with open('./Log/res_data.json', 'a', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
         file.write('\n')
 

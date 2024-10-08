@@ -32,10 +32,12 @@ async def insert_website_data(connection_string, json_data, tag, category):
         if conn:
             print("INFO: Connected to the database successfully.")
         async with conn.transaction():
-            max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation')
-            new_id = (max_id + 1) if max_id is not None else 1
-            print('new_id', new_id)
-            print(tag)
+            # 查找相同数据
+            existing_data = await conn.fetchrow(
+                'SELECT * FROM web_navigation WHERE category_name = $1 AND tag_name = $2 AND url = $3',
+                json.dumps([category]), json.dumps(tag), json_data["url"]
+            )
+    
             data = {
                 "id": new_id,
                 "name": json_data["name"],
@@ -59,21 +61,32 @@ async def insert_website_data(connection_string, json_data, tag, category):
             for field in fields:
                 if field not in data:
                     data[field] = None
+            if existing_data:
+                update_id = existing_data['id']
+                print('更新id为:', update_id)
+                update_set = ', '.join(f"{field} = ${i + 1}" for i, field in enumerate(data.keys()))
+                update_query = f'UPDATE {table_name} SET {update_set} WHERE id = {update_id}'
+                await conn.execute(update_query, *data.values(), update_id)
+                print("INFO: Data updated successfully.")
+            else:
+                max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation')
+                new_id = (max_id + 1) if max_id is not None else 1
+                print('new_id', new_id)
+                # print(tag)
+                # 获取表结构中的所有列
+                table_columns = await conn.fetch('SELECT column_name FROM information_schema.columns WHERE table_name = $1',
+                                                table_name)
+                table_columns = [col['column_name'] for col in table_columns]
 
-            # 获取表结构中的所有列
-            table_columns = await conn.fetch('SELECT column_name FROM information_schema.columns WHERE table_name = $1',
-                                             table_name)
-            table_columns = [col['column_name'] for col in table_columns]
+                # 只插入表结构中存在的字段
+                data_to_insert = {k: v for k, v in data.items() if k in table_columns}
 
-            # 只插入表结构中存在的字段
-            data_to_insert = {k: v for k, v in data.items() if k in table_columns}
+                columns = ', '.join(data_to_insert.keys())
+                values = ', '.join(f'${i + 1}' for i in range(len(data_to_insert)))
+                query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
 
-            columns = ', '.join(data_to_insert.keys())
-            values = ', '.join(f'${i + 1}' for i in range(len(data_to_insert)))
-            query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
-
-            await conn.execute(query, *data_to_insert.values())
-            print("INFO: Data inserted successfully.")
+                await conn.execute(query, *data_to_insert.values())
+                print("INFO: Data inserted successfully.")
     except Exception as e:
         print("ERROR: Unable to connect to the database or execute query.")
         print(e)
@@ -154,7 +167,6 @@ async def update_website_field(connection_string, json_data, tag, category, fiel
         if conn:
             await conn.close()
             print("INFO: 连接已关闭。")
-
 
 async def update_website_detail(connection_string, json_data, tag, category):
     await update_website_field(connection_string, json_data, tag, category, "detail")

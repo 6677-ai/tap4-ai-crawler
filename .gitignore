@@ -63,7 +63,7 @@ build/
 
 ./Data/response.json/
 
-./Data/res_data.json/
+./Log/res_data.json/
 
 ./Log/main_api_log.txt/
 
