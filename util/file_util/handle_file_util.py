@@ -1,6 +1,7 @@
 import json
 import csv
-
+import pandas as pd
+import os
 csv_file_path = '../Data/all_website_data.csv'
 output_path = '../Data/website_data.csv'
 
@@ -42,5 +43,31 @@ def read_site_data_file(file_path, output_file_path):
                 except json.JSONDecodeError:
                     print("Error decoding JSON from details:", row['details'])
 
+def handle_submit_data(input_file_path, output_file_path):
+    """
+    处理submit文件里面的数据为爬虫标准输入数据。默认的标签为AI工具/AI常用工具
+    
+    :param input_file_path: 输入 CSV 文件的路径
+    :param output_file_path: 输出 CSV 文件的路径
+    """
+    df = pd.read_csv(input_file_path)
+
+    result = df[['name', 'url']].copy()  
+
+ 
+    result.rename(columns={'url': 'site'}, inplace=True)
+
+    result['category_name'] = 'AI工具'
+    result['tags'] = "['AI常用工具']"
+    result = result[['category_name', 'tags', 'site','name']]
+    if os.path.exists(output_file_path):
+        with open(output_file_path, 'a') as f:
+            f.write('\n')  # 添加换行符
+    result.to_csv(output_file_path, mode='a', header=False, index=False)
+    print("INFO: 文件成功写入")
+
+# 使用示例
 if __name__ == '__main__':
-    read_site_data_file(csv_file_path, output_path)
+    handle_submit_data('../../Data/submit.csv', '../../Data/hulian.csv')
+    # read_site_data_file(csv_file_path, output_path)
+    

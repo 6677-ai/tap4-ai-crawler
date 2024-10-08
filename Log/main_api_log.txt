@@ -1,0 +1,110 @@
+2024-09-29 09:42:30,956 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:43:17,287 - logger_config - INFO - 正在处理网站特性：https://www.yourmusic.fun
+2024-09-29 09:43:25,857 - logger_config - INFO - 正在处理https://www.yourmusic.fun站点，生成zh-CN语言的features
+2024-09-29 09:43:32,932 - logger_config - INFO - 正在处理https://www.yourmusic.fun站点，生成zh-TW语言的features
+2024-09-29 09:43:41,634 - logger_config - INFO - 正在处理https://www.yourmusic.fun站点，生成en语言的features
+2024-09-29 09:43:48,680 - logger_config - INFO - 正在处理https://www.yourmusic.fun站点，生成German语言的features
+2024-09-29 09:43:56,775 - logger_config - INFO - 正在处理https://www.yourmusic.fun站点，生成es语言的features
+2024-09-29 09:44:21,075 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:44:31,423 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:44:35,021 - logger_config - INFO - 处理https://www.yourmusic.fun用时：4 秒
+2024-09-29 09:44:35,022 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 09:47:20,538 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:47:23,814 - logger_config - INFO - 处理https://www.yourmusic.fun用时：3 秒
+2024-09-29 09:47:23,815 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 09:47:52,194 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:47:54,583 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:48:28,208 - logger_config - INFO - 处理https://www.yourmusic.fun用时：34 秒
+2024-09-29 09:48:28,209 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 09:49:39,170 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:49:42,926 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:49:51,695 - logger_config - INFO - 处理https://www.yourmusic.fun用时：9 秒
+2024-09-29 09:49:51,696 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 09:52:51,354 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:52:54,508 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:53:02,581 - logger_config - INFO - 处理https://www.yourmusic.fun用时：8 秒
+2024-09-29 09:53:02,581 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 09:55:47,514 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:55:57,261 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:56:02,650 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:56:10,734 - logger_config - INFO - 处理https://www.yourmusic.fun用时：8 秒
+2024-09-29 09:56:10,734 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 09:56:59,010 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 09:57:01,992 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 09:57:07,537 - logger_config - INFO - url:https://www.yourmusic.fun, title:YourMusic.fun - SUNO中文版, suno.cn, SUNO中文站,AI写歌,AI音乐创作软件,description:YourMusic.fun是SUNO中文版,SUNO中文站,suno.cn, 提供AI写歌,AI作曲的AI音乐创作软件, 使用SUNO v3.5版本API,提供高质量的AI音乐生成服务,帮助您轻松进行AI创作歌曲。
+2024-09-29 09:57:29,599 - logger_config - INFO - 处理https://www.yourmusic.fun用时：28 秒
+2024-09-29 09:57:29,600 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 10:05:52,455 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:06:01,337 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 10:06:11,880 - logger_config - INFO - url:https://www.yourmusic.fun, title:YourMusic.fun - SUNO中文版, suno.cn, SUNO中文站,AI写歌,AI音乐创作软件,description:YourMusic.fun是SUNO中文版,SUNO中文站,suno.cn, 提供AI写歌,AI作曲的AI音乐创作软件, 使用SUNO v3.5版本API,提供高质量的AI音乐生成服务,帮助您轻松进行AI创作歌曲。
+2024-09-29 10:06:33,300 - logger_config - INFO - 正在处理https://www.yourmusic.fun站点，生成zh-CN语言
+2024-09-29 10:09:00,674 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:09:08,547 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 10:09:24,585 - logger_config - INFO - 处理https://www.yourmusic.fun用时：16 秒
+2024-09-29 10:09:24,586 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 10:14:02,717 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:14:06,110 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 10:14:22,374 - logger_config - INFO - 处理https://www.yourmusic.fun用时：16 秒
+2024-09-29 10:14:22,374 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 10:15:44,250 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:15:46,572 - logger_config - INFO - 正在处理：https://www.yourmusic.fun
+2024-09-29 10:16:02,583 - logger_config - INFO - 处理https://www.yourmusic.fun用时：16 秒
+2024-09-29 10:16:02,584 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 10:18:31,525 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:18:36,558 - logger_config - INFO - 正在处理：https://llmgpuhelper.com
+2024-09-29 10:18:51,497 - logger_config - INFO - 处理https://llmgpuhelper.com用时：15 秒
+2024-09-29 10:18:51,497 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 10:19:22,255 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:19:25,872 - logger_config - INFO - 正在处理：https://llmgpuhelper.com
+2024-09-29 10:19:43,028 - logger_config - INFO - url:https://llmgpuhelper.com, title:500 Internal Server Error,description:Discover LLM GPU Helper, your ultimate resource for optimizing GPU performance for large language models. Our expert guides and tools are designed to enhance efficiency and streamline your machine learning workflows. Whether you're a developer or a researcher, LLM GPU Helper provides comprehensive insights and support to help you harness the full power of GPU technology for your AI projects. Visit us to accelerate your model training and improve computational results today.
+2024-09-29 10:20:58,343 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:21:01,491 - logger_config - INFO - 正在处理：https://llmgpuhelper.com
+2024-09-29 10:21:18,694 - logger_config - INFO - url:https://llmgpuhelper.com, title:500 Internal Server Error,description:Discover LLM GPU Helper, your ultimate resource for optimizing GPU performance and enhancing machine learning applications. Our expert guides, tools, and tips provide everything you need to maximize your GPU's potential for deep learning and AI projects. Stay ahead in the competitive landscape of machine learning with LLM GPU Helper, where efficiency meets innovation.
+2024-09-29 10:28:55,849 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:29:02,864 - logger_config - INFO - 正在处理：https://llmgpuhelper.com
+2024-09-29 10:29:19,813 - logger_config - INFO - url:https://llmgpuhelper.com, title:500 Internal Server Error,description:Discover LLM GPU Helper, your ultimate resource for optimizing and enhancing GPU performance for large language models. Our platform provides expert insights, tools, and support tailored for developers and researchers dedicated to maximizing their GPU capabilities in AI projects. Boost your workflow, streamline your processes, and unlock the full potential of your GPU with LLM GPU Helper, the go-to site for GPU optimization in the realm of machine learning and language model development. Join our community now and elevate your AI projects to new heights!
+2024-09-29 10:29:37,176 - logger_config - INFO - 正在处理https://llmgpuhelper.com站点，生成zh-CN语言
+2024-09-29 10:34:27,910 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 10:34:34,200 - logger_config - INFO - 正在处理：https://www.dailyburntracker.com
+2024-09-29 10:34:53,017 - logger_config - INFO - url:https://www.dailyburntracker.com, title:Unlock Your Body’s True Potential,description:Discover Daily Burn Tracker, your ultimate platform for tracking workouts, monitoring fitness goals, and maintaining a healthy lifestyle. Our user-friendly tools make it easy to log daily exercises, track progress, and stay motivated on your journey to better health. Join our community of fitness enthusiasts today and take control of your wellness with Daily Burn Tracker—your go-to resource for fitness tracking and achieving personal health milestones.
+2024-09-29 10:35:17,586 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成zh-CN语言
+2024-09-29 10:35:41,444 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成zh-TW语言
+2024-09-29 10:36:08,598 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成en语言
+2024-09-29 10:36:37,022 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成German语言
+2024-09-29 10:37:04,457 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成es语言
+2024-09-29 10:37:36,701 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成fr语言
+2024-09-29 10:38:03,302 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成Japanese语言
+2024-09-29 10:38:39,029 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成Portuguese语言
+2024-09-29 10:39:01,505 - logger_config - INFO - 正在处理https://www.dailyburntracker.com站点，生成ru语言
+2024-09-29 10:46:43,153 - logger_config - INFO - https://www.dailyburntracker.com站点处理成功
+2024-09-29 10:46:43,153 - logger_config - INFO - 处理https://www.dailyburntracker.com用时：729 秒
+2024-09-29 10:46:43,155 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 11:51:36,179 - main_api.py - <module> - 38 - INFO - Logging to file: ./Log/main_api_log.txt
+2024-09-29 11:51:51,461 - logger_config - INFO - 正在处理：https://llmgpuhelper.com/zh/
+2024-09-29 11:52:05,778 - logger_config - INFO - url:https://llmgpuhelper.com/zh/, title:LLM GPU Helper - Local LLM Deployment & GPU Calculator,description:LLM GPU 助手： 为本地 LLM 部署计算 GPU 内存、获取模型建议并访问人工智能知识库。现在就优化你的人工智能项目！
+2024-09-29 11:52:30,990 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成zh-CN语言
+2024-09-29 11:52:55,895 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成zh-TW语言
+2024-09-29 11:53:24,610 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成en语言
+2024-09-29 11:53:52,812 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成German语言
+2024-09-29 11:54:26,065 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成es语言
+2024-09-29 11:54:51,627 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成fr语言
+2024-09-29 11:55:22,956 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成Japanese语言
+2024-09-29 11:55:59,781 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成Portuguese语言
+2024-09-29 11:56:29,375 - logger_config - INFO - 正在处理https://llmgpuhelper.com/zh/站点，生成ru语言
+2024-09-29 11:57:02,807 - logger_config - INFO - https://llmgpuhelper.com/zh/站点处理成功
+2024-09-29 11:57:02,807 - logger_config - INFO - 处理https://llmgpuhelper.com/zh/用时：311 秒
+2024-09-29 11:57:02,809 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.
+2024-09-29 12:00:16,162 - logger_config - INFO - 正在处理：https://infokeymind.com/
+2024-09-29 12:00:33,257 - logger_config - INFO - url:https://infokeymind.com/, title:InfoKeyMind,description:AI-Powered Knowledge Base
+2024-09-29 12:00:53,137 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成zh-CN语言
+2024-09-29 12:01:17,779 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成zh-TW语言
+2024-09-29 12:01:38,007 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成en语言
+2024-09-29 12:01:55,345 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成German语言
+2024-09-29 12:02:18,644 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成es语言
+2024-09-29 12:02:44,399 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成fr语言
+2024-09-29 12:03:07,594 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成Japanese语言
+2024-09-29 12:03:33,084 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成Portuguese语言
+2024-09-29 12:03:57,475 - logger_config - INFO - 正在处理https://infokeymind.com/站点，生成ru语言
+2024-09-29 12:04:26,271 - logger_config - INFO - https://infokeymind.com/站点处理成功
+2024-09-29 12:04:26,272 - logger_config - INFO - 处理https://infokeymind.com/用时：250 秒
+2024-09-29 12:04:26,273 - main_api.py - scrape - 83 - INFO - INFO: Scraping data successfully. Waiting insert data to database.

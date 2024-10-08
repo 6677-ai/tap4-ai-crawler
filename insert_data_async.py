@@ -27,7 +27,6 @@ async def insert_website_data(connection_string, json_data, tag, category):
     table_name = "web_navigation"
 
     category_name=category
-    # print('database_string:', connection_string)
     try:
         conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
         if conn:
@@ -36,6 +35,7 @@ async def insert_website_data(connection_string, json_data, tag, category):
             max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation')
             new_id = (max_id + 1) if max_id is not None else 1
             print('new_id', new_id)
+            print(tag)
             data = {
                 "id": new_id,
                 "name": json_data["name"],
@@ -45,7 +45,6 @@ async def insert_website_data(connection_string, json_data, tag, category):
                 "thumbnail_url": json_data["screenshot_thumbnail_data"],
                 "category_name": json.dumps([category_name]),
                 "tag_name": json.dumps(tag),
-
             }
             # 添加多语言字段
             for lang_data in json_data.get("languages", []):
@@ -179,12 +178,14 @@ def read_file(file):
 
 
 async def main():
-    file_path = './Data/response.json'
+    file_path = './Data/res_test.json'
     data = read_file(file_path)
-   
+    # test_category = "AI工具"
+    # test_tag = ['AI常用工具']
     if data is not None:
         connection_string = os.getenv('CONNECTION_SUPABASE_URL')
         # await update_features(connection_string, data, test_tag, test_category)
+        # await insert_website_data(connection_string, data, test_tag, test_category)
 
 if __name__ == "__main__":
     asyncio.run(main())

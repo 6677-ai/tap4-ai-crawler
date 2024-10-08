@@ -3,6 +3,7 @@ import csv
 from datetime import datetime
 from insert_data_async import check_existing_data
 # import asyncio
+
 # 封装请求的函数
 def send_proxy_request(site_url, tags, category, log_file_path):
     headers = {
@@ -16,9 +17,9 @@ def send_proxy_request(site_url, tags, category, log_file_path):
         "category": category
     }
     
-    post_url = "http://127.0.0.1:8040/site/website_data"
+    # post_url = "http://127.0.0.1:8040/site/website_data"
     # post_url = "http://127.0.0.1:8040/site/introduction"
-    # post_url = "http://127.0.0.1:8040/site/crawl"
+    post_url = "http://127.0.0.1:8040/site/crawl"
     print(f'Post data: {data}')
     try:
         response = requests.post(

@@ -17,20 +17,15 @@ llm = LLMUtil()
 oss = OSSUtil()
 
 global_agent_headers = [
-    "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/537.75.14",
-    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0)",
-    'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
-    'Opera/9.25 (Windows NT 5.1; U; en)',
-    'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)',
-    'Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Kubuntu)',
-    'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.12) Gecko/20070731 Ubuntu/dapper-security Firefox/1.5.0.12',
-    'Lynx/2.8.5rel.1 libwww-FM/2.14 SSL-MM/1.4.1 GNUTLS/1.2.9',
-    "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.04 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
-    "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 "
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.96 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.96 Safari/537.36 Edg/116.0.1938.54",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.96 Safari/537.36 OPR/102.0.4880.95",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (Android 12; Mobile; LG; Nexus 5X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.96 Mobile Safari/537.36",
+    "Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.96 Mobile Safari/537.36"
 ]
-
 
 class WebsitCrawler:
     def __init__(self):
@@ -66,8 +61,8 @@ class WebsitCrawler:
             retry_delay = 2  # 每次重试之间的等待时间（秒）
             for attempt in range(max_retries):
                 try:
-                    response =  await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle2']})
-                    # break  # 成功加载页面，跳出循环
+                    response =  await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle0']})
+                    
                     if response is None:
                         # logger.error("页面加载失败，无响应")
                         return {'error': '页面加载失败，无响应'}
@@ -78,12 +73,14 @@ class WebsitCrawler:
                         return {'error': '页面加载超时, 达到最大重试次数: {e}'}
                     await asyncio.sleep(retry_delay)  # 等待一段时间后重试
             
-            self.handle_response(response)
-
+            print('INFO：暂停等待页面加载！')
+            await page.waitForSelector('body', timeout=5000)
+            await asyncio.sleep(5)
+            await page.waitFor(5000);
             # 获取网页内容
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
-
+            print('页面内容', soup)
             # 通过标签名提取内容
             title = soup.title.string.strip() if soup.title else ''
             # 无title时
@@ -115,6 +112,7 @@ class WebsitCrawler:
                     deviceScaleFactor: window.devicePixelRatio
                 }};
             }}''', width, height)
+            
             # 截屏并设置图片大小
             screenshot_path = './' + url.replace("https://", "").replace("http://", "").replace("/", "").replace(".",
                                                                                                                  "-") + '.png'
@@ -124,6 +122,7 @@ class WebsitCrawler:
                 'width': dimensions['width'],
                 'height': dimensions['height']
             }})
+            # await page.screenshot({'path': screenshot_path, 'fullPage': True})
             # 上传图片，返回图片地址
             screenshot_key = oss.upload_file_to_r2(screenshot_path, image_key)
 
@@ -132,7 +131,8 @@ class WebsitCrawler:
 
             # 抓取整个网页内容
             content = soup.get_text()
-            
+
+            # return;
             # 使用llm工具处理content
             detail = llm.process_detail(content)
             if not detail:
@@ -149,6 +149,10 @@ class WebsitCrawler:
             if not features:
                 logger.info(url + "站点处理features为空，正在重试")
                 features = llm.process_features(content)
+
+            if not all([detail, introduction, features]):
+                logger.error(f"URL: {url} - 数据有空值，返回错误")
+                return {'error': '处理失败：一个或多个字段为空'}
                 
             await page.close()
 
@@ -157,12 +161,10 @@ class WebsitCrawler:
             processed_languages = []
 
             # 翻译为多语言之前进行数据检查
-
-
             if not all([title, description, detail, introduction, features]):
                 logger.warning(f"URL: {url} - 一个或多个字段为空，跳过多语言处理")
                 return {'error': '有数据不全，返回错误'}
-            if detail.startswith("### What is {product_name}") in detail:
+            if detail.startswith("### What is {product_name}"):
                 logger.warning(f"URL: {url} - detail处理为原模板，生成错误")
                 return {'error': '有数据不全，返回错误'}
 
@@ -228,7 +230,7 @@ class WebsitCrawler:
             if response is None:
                 return {'error': '页面加载失败，无响应'}
 
-            await self.handle_response(response)
+            # await self.handle_response(response)
 
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
@@ -289,7 +291,7 @@ class WebsitCrawler:
             if response is None:
                 return {'error': '页面加载失败，无响应'}
 
-            await self.handle_response(response)
+            # await self.handle_response(response)
 
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
@@ -354,7 +356,7 @@ class WebsitCrawler:
             if response is None:
                 return {'error': '页面加载失败，无响应'}
 
-            await self.handle_response(response)
+            # await self.handle_response(response)
 
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
@@ -393,20 +395,20 @@ class WebsitCrawler:
             logger.info("处理" + url + "特性用时：" + str(execution_time) + " 秒")
 
     # 处理响应
-    async def handle_response(self, response):
-        status = response.status
-        logger.info(f'HTTP响应状态码: {status}')
-        if status == 404:
-            return {'error': '页面无法找到，状态码: 404'}
-        elif status == 403:
-            return {'error': '访问被禁止，状态码: 403'}
-        elif status == 500:
-            return {'error': '服务器错误，状态码: 500'}
-        elif status >= 400 and status < 600:
-            return {'error': f'服务器返回错误状态码: {status}'}
-        elif status == 429:
-            return {'error': '请求被限流，状态码: 429'}
-        elif status == 503:
-            return {'error': '服务不可用，状态码: 503'}
-        else:
-            return
+    # async def handle_response(self, response):
+    #     status = response.status
+    #     logger.info(f'HTTP响应状态码: {status}')
+    #     if status == 404:
+    #         return {'error': '页面无法找到，状态码: 404'}
+    #     elif status == 403:
+    #         return {'error': '访问被禁止，状态码: 403'}
+    #     elif status == 500:
+    #         return {'error': '服务器错误，状态码: 500'}
+    #     elif status >= 400 and status < 600:
+    #         return {'error': f'服务器返回错误状态码: {status}'}
+    #     elif status == 429:
+    #         return {'error': '请求被限流，状态码: 429'}
+    #     elif status == 503:
+    #         return {'error': '服务不可用，状态码: 503'}
+    #     else:
+    #         return
