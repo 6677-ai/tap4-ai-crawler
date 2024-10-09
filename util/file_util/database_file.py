@@ -100,35 +100,3 @@ if __name__ == '__main__':
     output_path = "./web_navigation_resetid.csv"
     # reset_id_column(input_path, output_path)
     check_website_navigation(input_path)
-
-    
-
-
-    """检查条件并将错误数据追加到错误文件中，避免重复"""
-    error_check = df[condition]
-    
-    if not error_check.empty:
-        # 读取现有错误文件
-        existing_errors = pd.read_csv(error_file) if os.path.exists(error_file) else pd.DataFrame()
-        
-        # 检查 existing_errors 是否为空，并初始化列
-        if existing_errors.empty:
-            existing_errors = pd.DataFrame(columns=df.columns)  # 用预期列初始化
-        
-        # 排除文件处理
-        if exclude_files:
-            for exclude_file in exclude_files:
-                if os.path.exists(exclude_file):
-                    exclude_errors = pd.read_csv(exclude_file)
-                    error_check = error_check[~error_check.isin(exclude_errors).all(axis=1)]
-        
-        # 过滤重复错误
-        unique_errors = error_check[~error_check.isin(existing_errors).all(axis=1)]
-        
-        if not unique_errors.empty:
-            print(f"准备将 {len(unique_errors)} 条错误数据追加到 {error_file}...")
-            try:
-                unique_errors.to_csv(error_file, mode='a', index=False)
-                print(f"{len(unique_errors)} 条数据已成功追加到 {error_file}.")
-            except Exception as e:
-                print(f"写入 {error_file} 时出错: {e}")

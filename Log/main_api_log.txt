@@ -1,4 +1,0 @@
-2024-10-08 17:35:16,268 - logger_config - INFO - 正在处理：https://www.instagram.com
-2024-10-08 17:35:36,359 - logger_config - INFO - url:https://www.instagram.com, title:Instagram,description:Create an account or log in to Instagram - Share what you're into with the people who get you.
-2024-10-08 17:36:11,998 - logger_config - INFO - 正在处理https://www.instagram.com站点，生成zh-CN语言
-2024-10-08 17:36:46,955 - logger_config - INFO - 正在处理https://www.instagram.com站点，生成zh-TW语言

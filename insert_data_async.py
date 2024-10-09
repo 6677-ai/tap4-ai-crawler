@@ -32,14 +32,11 @@ async def insert_website_data(connection_string, json_data, tag, category):
         if conn:
             print("INFO: Connected to the database successfully.")
         async with conn.transaction():
-            # 查找相同数据
             existing_data = await conn.fetchrow(
                 'SELECT * FROM web_navigation WHERE category_name = $1 AND tag_name = $2 AND url = $3',
                 json.dumps([category]), json.dumps(tag), json_data["url"]
             )
-    
             data = {
-                "id": new_id,
                 "name": json_data["name"],
                 "collection_time": datetime.now(),
                 "image_url": json_data["screenshot_data"],
@@ -48,7 +45,6 @@ async def insert_website_data(connection_string, json_data, tag, category):
                 "category_name": json.dumps([category_name]),
                 "tag_name": json.dumps(tag),
             }
-            # 添加多语言字段
             for lang_data in json_data.get("languages", []):
                 lang_code = lang_data["language"]
                 lang_suffix = language_map.get(lang_code)
@@ -63,14 +59,23 @@ async def insert_website_data(connection_string, json_data, tag, category):
                     data[field] = None
             if existing_data:
                 update_id = existing_data['id']
-                print('更新id为:', update_id)
+                print('更新id为：', update_id)
+                data.pop("id", None)
                 update_set = ', '.join(f"{field} = ${i + 1}" for i, field in enumerate(data.keys()))
-                update_query = f'UPDATE {table_name} SET {update_set} WHERE id = {update_id}'
+                # print('update_set',update_set)
+                update_query = f'UPDATE {table_name} SET {update_set} WHERE id = ${len(data) + 1}'
+                # print('update_sql',update_query)
+                # if 'collection_time' in data:
+                #     data['collection_time'] = data['collection_time'].isoformat() 
+                # with open('data_output.json', 'w', encoding='utf-8') as f:
+                #     json.dump(data, f, ensure_ascii=False, indent=4)  # 使用 json.dump 以美观的格式写入
+                # print('data', data)
                 await conn.execute(update_query, *data.values(), update_id)
                 print("INFO: Data updated successfully.")
             else:
                 max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation')
                 new_id = (max_id + 1) if max_id is not None else 1
+                data["id"] = new_id
                 print('new_id', new_id)
                 # print(tag)
                 # 获取表结构中的所有列
@@ -192,12 +197,13 @@ def read_file(file):
 async def main():
     file_path = './Data/res_test.json'
     data = read_file(file_path)
-    # test_category = "AI工具"
-    # test_tag = ['AI常用工具']
+    # AI工具,"[""AI常用工具""]"
+    test_category = "AI工具"
+    test_tag = ['AI常用工具']
     if data is not None:
         connection_string = os.getenv('CONNECTION_SUPABASE_URL')
         # await update_features(connection_string, data, test_tag, test_category)
-        # await insert_website_data(connection_string, data, test_tag, test_category)
+        await insert_website_data(connection_string, data, test_tag, test_category)
 
 if __name__ == "__main__":
     asyncio.run(main())
