@@ -60,7 +60,9 @@ build/
 /Log/
 /Data/
 /test/
+/util/file_util/Data
 
+/.env/
 
 
 

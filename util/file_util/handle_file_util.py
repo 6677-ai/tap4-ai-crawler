@@ -2,6 +2,7 @@ import json
 import csv
 import pandas as pd
 import os
+from database_file import reset_id_column
 csv_file_path = '../Data/all_website_data.csv'
 output_path = '../Data/website_data.csv'
 
@@ -45,6 +46,8 @@ def sort_by_category(input_file, output_file):
 
     # 保存排序后的结果到新的 CSV 文件
     df_sorted.to_csv(output_file, index=False)
+
+    reset_id_column(output_file, output_file)
 
     print("排序成功！文件已保存到：", output_file)
 
@@ -109,5 +112,6 @@ def handle_submit_data(input_file_path, output_file_path):
 
 # 使用示例
 if __name__ == '__main__':
-    handle_submit_data('../../Data/submit.csv', '../../Data/hulian.csv')
+    # handle_submit_data('../../Data/submit.csv', '../../Data/hulian.csv')
     # read_site_data_file(csv_file_path, output_path)
+    sort_by_category('./Data/delete_modified_file.csv', './Data/cate.csv')

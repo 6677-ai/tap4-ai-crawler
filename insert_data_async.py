@@ -6,7 +6,7 @@ from config import language_map
 from config import fields
 import os
 from dotenv import load_dotenv
-
+import csv
 load_dotenv()
 
 # 插入数据
@@ -25,7 +25,7 @@ async def insert_website_data(connection_string, json_data, tag, category):
         return
     conn = None
     table_name = "web_navigation"
-
+    
     category_name=category
     try:
         conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
@@ -182,6 +182,40 @@ async def update_website_introduction(connection_string, json_data, tag, categor
 async def update_features(connection_string, json_data, tag, category):
     await update_website_field(connection_string, json_data, tag, category, "website_data")
 
+# 将csv文件里面的数据放入
+async def insert_data_from_csv(connection_string, csv_file_path, table_name):
+    conn = None
+    try:
+        conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0, )
+        print("INFO: Connected to the database successfully.")
+        with open(csv_file_path, mode='r', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                # 构建插入查询
+                columns = ', '.join(row.keys())
+                values = ', '.join(f'${i + 1}' for i in range(len(row)))
+                query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
+                
+                # 将每一行的值解析为合适的类型（假设整数和字符串是主要数据类型）
+                formatted_values = []
+                for value in row.values():
+                    try:
+                        formatted_values.append(int(value))
+                    except ValueError:
+                        formatted_values.append(value)
+
+                await conn.execute(query, *formatted_values)
+                print(f"INFO: Inserted row: {row}")
+
+    except Exception as e:
+        print("ERROR: Unable to connect to the database or execute query.")
+        print(e)
+    finally:
+        if conn:
+            await conn.close()
+            print("INFO: Connection closed.")
+
+
 def read_file(file):
     try:
         with open(file, 'r', encoding='utf-8') as file:
@@ -195,15 +229,22 @@ def read_file(file):
 
 
 async def main():
-    file_path = './Data/res_test.json'
-    data = read_file(file_path)
-    # AI工具,"[""AI常用工具""]"
-    test_category = "AI工具"
-    test_tag = ['AI常用工具']
-    if data is not None:
-        connection_string = os.getenv('CONNECTION_SUPABASE_URL')
-        # await update_features(connection_string, data, test_tag, test_category)
-        await insert_website_data(connection_string, data, test_tag, test_category)
+    connection_string = os.getenv('CONNECTION_SUPABASE_URL')
+    csv_file_path = './util/file_util/Data/tes.csv' 
+    # csv_file_path = './util/file_util/Data/saved_file.csv' 
+    table_name = 'web_navigation'
+    # table_name = '"ziniao"."web_navigation"'
+
+    await insert_data_from_csv(connection_string, csv_file_path, table_name)
+    # file_path = './Data/res_test.json'
+    # data = read_file(file_path)
+    # # AI工具,"[""AI常用工具""]"
+    # test_category = "AI工具"
+    # test_tag = ['AI常用工具']
+    # if data is not None:
+    #     connection_string = os.getenv('CONNECTION_SUPABASE_URL')
+    #     # await update_features(connection_string, data, test_tag, test_category)
+    #     await insert_website_data(connection_string, data, test_tag, test_category)
 
 if __name__ == "__main__":
     asyncio.run(main())
