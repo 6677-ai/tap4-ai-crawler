@@ -1,7 +1,6 @@
 # 处理supabsae数据库中的数据
 import pandas as pd
 import os
-import re
 import csv
 def clean_data(row):
     """清理数据，去掉 category_name 和 tag_name 字段外面的双引号"""

@@ -1,13 +1,15 @@
 import json
 import asyncio
 import asyncpg
+import csv
+import os
 from datetime import datetime
 from config import language_map
 from config import fields
-import os
 from dotenv import load_dotenv
-import csv
-load_dotenv()
+
+load_dotenv(dotenv_path='./.env')
+
 
 # 插入数据
 async def insert_website_data(connection_string, json_data, tag, category):
@@ -26,9 +28,10 @@ async def insert_website_data(connection_string, json_data, tag, category):
     conn = None
     table_name = "web_navigation"
     
+
     category_name=category
     try:
-        conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
+        conn = await asyncpg.connect(dsn=connection_string)
         if conn:
             print("INFO: Connected to the database successfully.")
         async with conn.transaction():
@@ -95,6 +98,10 @@ async def insert_website_data(connection_string, json_data, tag, category):
     except Exception as e:
         print("ERROR: Unable to connect to the database or execute query.")
         print(e)
+        if hasattr(e, 'pgcode'):
+            print(f"Postgres error code: {e.pgcode}")
+        if hasattr(e, 'pgerror'):
+            print(f"Postgres error message: {e.pgerror}")
     finally:
         if conn:
             await conn.close()
@@ -186,8 +193,19 @@ async def update_features(connection_string, json_data, tag, category):
 async def insert_data_from_csv(connection_string, csv_file_path, table_name):
     conn = None
     try:
-        conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0, )
+        conn = await asyncpg.connect(dsn=connection_string, statement_cache_size=0)
         print("INFO: Connected to the database successfully.")
+
+        # 查询目标表的列类型信息
+        query_column_types = f"""
+        SELECT column_name, data_type 
+        FROM information_schema.columns 
+        WHERE table_name = $1;
+        """
+        column_info = await conn.fetch(query_column_types, table_name)
+        
+        column_types = {col['column_name']: col['data_type'] for col in column_info}
+        
         with open(csv_file_path, mode='r', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
@@ -196,13 +214,28 @@ async def insert_data_from_csv(connection_string, csv_file_path, table_name):
                 values = ', '.join(f'${i + 1}' for i in range(len(row)))
                 query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
                 
-                # 将每一行的值解析为合适的类型（假设整数和字符串是主要数据类型）
+                # 将每个字段的数据转换为适合的类型
                 formatted_values = []
-                for value in row.values():
-                    try:
+                for col, value in row.items():
+                    col_type = column_types.get(col)
+
+                    if col_type == 'integer':
                         formatted_values.append(int(value))
-                    except ValueError:
-                        formatted_values.append(value)
+                    elif col_type in ['double precision', 'numeric', 'real']:
+                        formatted_values.append(float(value))
+                    elif col_type == 'boolean':
+                        formatted_values.append(value.lower() in ['true', 't', 'yes', '1'])
+                    elif col_type == 'jsonb':
+                        formatted_values.append(value) 
+                    elif col_type == 'date':
+                        formatted_values.append(datetime.strptime(value, '%Y-%m-%d').date())
+                    elif col_type == 'timestamp' or col_type == 'timestamp with time zone':
+                        try:
+                            formatted_values.append(datetime.strptime(value, '%Y-%m-%d %H:%M:%S'))
+                        except ValueError:
+                            formatted_values.append(datetime.strptime(value, '%Y-%m-%dT%H:%M:%S'))
+                    else:
+                        formatted_values.append(value) 
 
                 await conn.execute(query, *formatted_values)
                 print(f"INFO: Inserted row: {row}")
@@ -229,22 +262,23 @@ def read_file(file):
 
 
 async def main():
-    connection_string = os.getenv('CONNECTION_SUPABASE_URL')
-    csv_file_path = './util/file_util/Data/tes.csv' 
+    # connection_string = os.getenv('CONNECTION_SUPABASE_URL')
+    # csv导入数据
+    # csv_file_path = './util/file_util/Data/tes.csv' 
     # csv_file_path = './util/file_util/Data/saved_file.csv' 
-    table_name = 'web_navigation'
-    # table_name = '"ziniao"."web_navigation"'
+    table_name = 'ziniao.web_navigation'
+    # await insert_data_from_csv(connection_string, csv_file_path, table_name)
 
-    await insert_data_from_csv(connection_string, csv_file_path, table_name)
-    # file_path = './Data/res_test.json'
-    # data = read_file(file_path)
-    # # AI工具,"[""AI常用工具""]"
-    # test_category = "AI工具"
-    # test_tag = ['AI常用工具']
-    # if data is not None:
-    #     connection_string = os.getenv('CONNECTION_SUPABASE_URL')
-    #     # await update_features(connection_string, data, test_tag, test_category)
-    #     await insert_website_data(connection_string, data, test_tag, test_category)
+    file_path = './Data/res_test.json'
+    data = read_file(file_path)
+    # AI工具,"[""AI常用工具""]"
+    test_category = "AI工具"
+    test_tag = ['AI常用工具']
+    if data is not None:
+        connection_string = os.getenv('CONNECTION_SUPABASE_URL')
+        print('',connection_string)
+        # await update_features(connection_string, data, test_tag, test_category)
+        await insert_website_data(connection_string, data, test_tag, test_category)
 
 if __name__ == "__main__":
     asyncio.run(main())

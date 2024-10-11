@@ -1,7 +1,5 @@
 import asyncio
-
 from bs4 import BeautifulSoup
-import logging
 import time
 import random
 from pyppeteer import launch
@@ -76,7 +74,7 @@ class WebsitCrawler:
             print('INFO：暂停等待页面加载！')
             await page.waitForSelector('body', timeout=5000)
             await asyncio.sleep(5)
-            await page.waitFor(5000);
+            await page.waitFor(5000)
             # 获取网页内容
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
@@ -394,21 +392,3 @@ class WebsitCrawler:
             execution_time = int(time.time()) - start_time
             logger.info("处理" + url + "特性用时：" + str(execution_time) + " 秒")
 
-    # 处理响应
-    # async def handle_response(self, response):
-    #     status = response.status
-    #     logger.info(f'HTTP响应状态码: {status}')
-    #     if status == 404:
-    #         return {'error': '页面无法找到，状态码: 404'}
-    #     elif status == 403:
-    #         return {'error': '访问被禁止，状态码: 403'}
-    #     elif status == 500:
-    #         return {'error': '服务器错误，状态码: 500'}
-    #     elif status >= 400 and status < 600:
-    #         return {'error': f'服务器返回错误状态码: {status}'}
-    #     elif status == 429:
-    #         return {'error': '请求被限流，状态码: 429'}
-    #     elif status == 503:
-    #         return {'error': '服务不可用，状态码: 503'}
-    #     else:
-    #         return
