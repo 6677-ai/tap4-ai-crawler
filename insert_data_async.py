@@ -10,33 +10,39 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='./.env')
 
+def validate_json_data(json_data):
+    # print('json_data', json_data)
+    if json_data is None:
+        print("ERROR: 获取数据失败，json_data 为 None")
+        return False
+    if json_data.get("error"):
+        print(f"INFO: 检测到错误信息 '{json_data.get('error')}'，停止插入数据。")
+        return False
+    if json_data.get("title") in ["Just a moment...", "404"]:
+        print(f"INFO: 检测到无效标题 '{json_data.get('title')}'，停止插入数据。")
+        return False
+    if json_data.get("detail", "").startswith("### What is {product_name}?\n{product_name} is a"):
+        print(f"INFO: 无效detail开头，停止插入数据。")
+        return False
+    return True
 
 # 插入数据
 async def insert_website_data(connection_string, json_data, tag, category):
-    if json_data is None:
-        print("ERROR: 获取数据失败，json_data 为 None")
-        return
-    if json_data.get("error"):
-        print(f"INFO: 检测到错误信息 '{json_data.get('error')}'，停止插入数据。")
-        return
-    if json_data.get("title") in ["Just a moment...", "404"]:
-        print(f"INFO: 检测到无效标题 '{json_data.get('title')}'，停止插入数据。")
-        return
-    if json_data.get("detail").startswith("### What is {product_name}?\n{product_name} is a"):
-        print(f"INFO: 无效detail开头，停止插入数据。")
+    """更新/插入数据库数据"""
+    if not validate_json_data(json_data):
         return
     conn = None
+    schema_name = "ziniao"
     table_name = "web_navigation"
-    
-
     category_name=category
     try:
-        conn = await asyncpg.connect(dsn=connection_string)
+        conn = await asyncpg.connect(dsn=connection_string,statement_cache_size=0)
         if conn:
             print("INFO: Connected to the database successfully.")
         async with conn.transaction():
+            select_query = f'SELECT * FROM {schema_name}.{table_name} WHERE category_name = $1 AND tag_name = $2 AND url = $3'
             existing_data = await conn.fetchrow(
-                'SELECT * FROM web_navigation WHERE category_name = $1 AND tag_name = $2 AND url = $3',
+                select_query,
                 json.dumps([category]), json.dumps(tag), json_data["url"]
             )
             data = {
@@ -48,6 +54,7 @@ async def insert_website_data(connection_string, json_data, tag, category):
                 "category_name": json.dumps([category_name]),
                 "tag_name": json.dumps(tag),
             }
+            # 处理多语言
             for lang_data in json_data.get("languages", []):
                 lang_code = lang_data["language"]
                 lang_suffix = language_map.get(lang_code)
@@ -60,35 +67,32 @@ async def insert_website_data(connection_string, json_data, tag, category):
             for field in fields:
                 if field not in data:
                     data[field] = None
+
             if existing_data:
                 update_id = existing_data['id']
                 print('更新id为：', update_id)
                 data.pop("id", None)
                 update_set = ', '.join(f"{field} = ${i + 1}" for i, field in enumerate(data.keys()))
-                # print('update_set',update_set)
-                update_query = f'UPDATE {table_name} SET {update_set} WHERE id = ${len(data) + 1}'
-                # print('update_sql',update_query)
-                # if 'collection_time' in data:
-                #     data['collection_time'] = data['collection_time'].isoformat() 
-                # with open('data_output.json', 'w', encoding='utf-8') as f:
-                #     json.dump(data, f, ensure_ascii=False, indent=4)  # 使用 json.dump 以美观的格式写入
-                # print('data', data)
+                update_query = f'UPDATE {schema_name}.{table_name} SET {update_set} WHERE id = ${len(data) + 1}'
                 await conn.execute(update_query, *data.values(), update_id)
                 print("INFO: Data updated successfully.")
             else:
-                max_id = await conn.fetchval('SELECT MAX(id) FROM web_navigation')
+                select_id_query = f'SELECT MAX(id) FROM {schema_name}.{table_name}'
+                max_id = await conn.fetchval(select_id_query)
                 new_id = (max_id + 1) if max_id is not None else 1
                 data["id"] = new_id
                 print('new_id', new_id)
-                # print(tag)
-                # 获取表结构中的所有列
-                table_columns = await conn.fetch('SELECT column_name FROM information_schema.columns WHERE table_name = $1',
-                                                table_name)
+
+                table_columns = await conn.fetch('SELECT column_name FROM information_schema.columns WHERE table_name = $1 AND table_schema = $2', table_name, schema_name)
+                
                 table_columns = [col['column_name'] for col in table_columns]
 
                 # 只插入表结构中存在的字段
                 data_to_insert = {k: v for k, v in data.items() if k in table_columns}
 
+                if not data_to_insert:
+                    print("ERROR: No data to insert.")
+                    return
                 columns = ', '.join(data_to_insert.keys())
                 values = ', '.join(f'${i + 1}' for i in range(len(data_to_insert)))
                 query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
@@ -107,13 +111,15 @@ async def insert_website_data(connection_string, json_data, tag, category):
             await conn.close()
             print("INFO: Connection closed.")
 
+
+
 async def check_existing_data(site_url, tags, category):
     connection_string = os.getenv('CONNECTION_SUPABASE_URL')
     print('site tags category:', site_url, tags, category)
     try:
         conn = await asyncpg.connect(connection_string)
         query = """
-        SELECT id FROM web_navigation 
+        SELECT id FROM ziniao.web_navigation 
         WHERE url = $1 
         AND category_name @> $2::jsonb 
         AND tag_name @> $3::jsonb
@@ -271,12 +277,11 @@ async def main():
 
     file_path = './Data/res_test.json'
     data = read_file(file_path)
-    # AI工具,"[""AI常用工具""]"
     test_category = "AI工具"
     test_tag = ['AI常用工具']
     if data is not None:
         connection_string = os.getenv('CONNECTION_SUPABASE_URL')
-        print('',connection_string)
+        # print('connection_string',connection_string)
         # await update_features(connection_string, data, test_tag, test_category)
         await insert_website_data(connection_string, data, test_tag, test_category)
 
