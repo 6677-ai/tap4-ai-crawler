@@ -55,8 +55,9 @@ class WebsitCrawler:
             width = 1920  # 默认宽度为 1920
             height = 1080  # 默认高度为 1080
             await page.setViewport({'width': width, 'height': height})
-            max_retries = 3  # 最大重试次数
-            retry_delay = 2  # 每次重试之间的等待时间（秒）
+            max_retries = 3
+            retry_delay = 2 
+
             for attempt in range(max_retries):
                 try:
                     response =  await page.goto(url, {'timeout': 70000, 'waitUntil': ['load', 'networkidle0']})
@@ -71,14 +72,14 @@ class WebsitCrawler:
                         return {'error': '页面加载超时, 达到最大重试次数: {e}'}
                     await asyncio.sleep(retry_delay)  # 等待一段时间后重试
             
-            print('INFO：暂停等待页面加载！')
+            # 等待页面加载，提高获取页面的质量
             await page.waitForSelector('body', timeout=5000)
-            await asyncio.sleep(5)
             await page.waitFor(5000)
+
             # 获取网页内容
             origin_content = await page.content()
             soup = BeautifulSoup(origin_content, 'html.parser')
-            # print('页面内容', soup)
+
             # 通过标签名提取内容
             title = soup.title.string.strip() if soup.title else ''
             # 无title时
@@ -90,12 +91,14 @@ class WebsitCrawler:
             # 获取网页描述
             description = ''
             meta_description = soup.find('meta', attrs={'name': 'description'})
+            
             if meta_description:
                 description = meta_description['content'].strip()
 
             if not description:
                 meta_description = soup.find('meta', attrs={'property': 'og:description'})
                 description = meta_description['content'].strip() if meta_description else ''
+            
             # 使用llm工具生成description
             if not description:
                 description = llm.process_description(url)
@@ -120,7 +123,7 @@ class WebsitCrawler:
                 'width': dimensions['width'],
                 'height': dimensions['height']
             }})
-            # await page.screenshot({'path': screenshot_path, 'fullPage': True})
+
             # 上传图片，返回图片地址
             screenshot_key = oss.upload_file_to_r2(screenshot_path, image_key)
 
@@ -153,7 +156,6 @@ class WebsitCrawler:
                 return {'error': '处理失败：一个或多个字段为空'}
                 
             await page.close()
-
 
             # 循环languages数组， 使用llm工具生成各种语言
             processed_languages = []

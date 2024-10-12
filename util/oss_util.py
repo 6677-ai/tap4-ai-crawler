@@ -60,14 +60,23 @@ class OSSUtil:
         try:
             # 上传文件
             if file_path and 'http' in file_path:
-                # 如果文件路径是URL
                 response = requests.get(file_path, headers={
                     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
                     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
                 })
-                image_data = response.content
-                self.s3.upload_fileobj(BytesIO(image_data), self.S3_BUCKET_NAME, file_key,
-                                       ExtraArgs={'ACL': 'public-read'})
+                
+                if response.status_code == 200 and response.content:
+                    time.sleep(2) 
+                    response = requests.get(file_path, headers={
+                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+                })
+                    image_data = response.content
+                    self.s3.upload_fileobj(BytesIO(image_data), self.S3_BUCKET_NAME, file_key,
+                                        ExtraArgs={'ACL': 'public-read'})
+                else:
+                    logger.error("初次请求失败，或内容为空")
+                    return None
             else:
                 self.s3.upload_file(file_path, self.S3_BUCKET_NAME, file_key, ExtraArgs={'ACL': 'public-read'})
 

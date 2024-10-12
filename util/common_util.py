@@ -39,7 +39,17 @@ class CommonUtil:
             path= urlparse(url).path
             if path and path.endswith("/"):
                 path = path[:-1]
-            return (domain.replace("www.","") + path.replace("/", "-")).replace(".", "-")
+            name =  (domain.replace("www.","") + path.replace("/", "-")).replace(".", "-")
+            if len(name) > 30:
+                # 分割成部分
+                name_parts = name.split("-")
+                
+                # 删除第一个和最后一个部分
+                if len(name_parts) > 2:  
+                    name_parts = name_parts[1:-1]
+                
+                name = "-".join(name_parts)
+            
+            return name[:30]  
         else:
             return None
-
