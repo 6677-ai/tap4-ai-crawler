@@ -194,6 +194,11 @@ The Collection for the AI tools all over the world. | Collect free ChatGPT mirro
 
 Here is the website list for submitting your product to get users. Please visit [StartUp Your Product List](https://github.com/6677-ai/TAP4-AI-Directory/blob/main/Startup-Your-Product-List.md)
 
+### Flux 1.1 Pro - Free Online Flux.1 AI Image Generator
+
+[Flux 1.1 Pro](https://fluxproweb.com/)
+
+
 ### Free Stable Diffusion 3 Online Tool
 
 [Free Stable Diffusion 3 Online](https://stable-diffusion-3.online)
@@ -201,6 +206,10 @@ Here is the website list for submitting your product to get users. Please visit 
 ### Free Tiny Png Tool
 
 [Free Type Png Tool](https://freetinypng.com)
+
+### Flux AI - Flux.1 AI Image Generator
+
+[Flux AI](https://flux-ai.io/)
 
 ### Free GPT2 Output Detector
 
