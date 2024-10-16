@@ -82,7 +82,6 @@ async def insert_website_data(connection_string, json_data, tag, category):
                 new_id = (max_id + 1) if max_id is not None else 1
                 data["id"] = new_id
                 print('new_id', new_id)
-
                 table_columns = await conn.fetch('SELECT column_name FROM information_schema.columns WHERE table_name = $1 AND table_schema = $2', table_name, schema_name)
                 
                 table_columns = [col['column_name'] for col in table_columns]
@@ -93,9 +92,10 @@ async def insert_website_data(connection_string, json_data, tag, category):
                 if not data_to_insert:
                     print("ERROR: No data to insert.")
                     return
+            
                 columns = ', '.join(data_to_insert.keys())
                 values = ', '.join(f'${i + 1}' for i in range(len(data_to_insert)))
-                query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
+                query = f'INSERT INTO {schema_name}.{table_name} ({columns}) VALUES ({values})'
 
                 await conn.execute(query, *data_to_insert.values())
                 print("INFO: Data inserted successfully.")
@@ -110,7 +110,6 @@ async def insert_website_data(connection_string, json_data, tag, category):
         if conn:
             await conn.close()
             print("INFO: Connection closed.")
-
 
 
 async def check_existing_data(site_url, tags, category):
@@ -272,7 +271,6 @@ async def main():
     # csv导入数据
     # csv_file_path = './util/file_util/Data/tes.csv' 
     # csv_file_path = './util/file_util/Data/saved_file.csv' 
-    table_name = 'ziniao.web_navigation'
     # await insert_data_from_csv(connection_string, csv_file_path, table_name)
 
     file_path = './Data/res_test.json'
