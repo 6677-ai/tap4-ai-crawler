@@ -2,6 +2,14 @@ from bs4 import BeautifulSoup
 import logging
 import time
 import random
+
+import os
+
+# 设置pyppeteer的chromium版本
+# https://stackoverflow.com/questions/78023508/python-request-html-is-not-downloading-chromium
+PYPPETEER_CHROMIUM_REVISION = '1263111'
+
+os.environ['PYPPETEER_CHROMIUM_REVISION'] = PYPPETEER_CHROMIUM_REVISION
 from pyppeteer import launch
 
 from util.common_util import CommonUtil
