@@ -186,6 +186,11 @@ Response Params:
 
 ## Link products
 
+### Flux IA
+
+[FLUX IA](https://fluxia.pro)
+Flux AI Image Geneartor Online.
+
 ### TAP4-AI-Directory
 
 The Collection for the AI tools all over the world. | Collect free ChatGPT mirrors, alternatives, prompts, other AI tools, etc. For more, please visit: [Tap4 AI](https://tap4.ai/)
