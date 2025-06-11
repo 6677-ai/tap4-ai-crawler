@@ -124,7 +124,7 @@ AUTH_SECRET=****
 install python 依赖
 
 ```sh
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 运行
